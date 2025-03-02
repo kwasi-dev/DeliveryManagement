@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "resolveJsonModule": true,
+    "paths":{
+      "crypto":["node_modules/crypto-browserify"],
+      "stream":["node_modules/stream-browserify"],
+      "vm":["node_modules/vm-browserify"]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
