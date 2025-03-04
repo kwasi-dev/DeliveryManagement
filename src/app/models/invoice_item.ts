@@ -1,4 +1,4 @@
-export interface Product {
+export interface InvoiceItem {
     itemNo: number;
     numPerPack: number;
     orderNo: number;

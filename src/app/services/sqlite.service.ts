@@ -61,4 +61,5 @@ export class SQLiteService {
     async saveToStore(database: string): Promise<void> {
         return await this.sqliteConnection.saveToStore(database);
     }
+    
 }

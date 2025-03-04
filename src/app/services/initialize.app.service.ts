@@ -19,14 +19,11 @@ export class InitializeAppService {
                     await this.sqliteService.initWebStore();
                 }
 
-                const DB_CUSTOMERS = 'customerdb'
+                const DB_CUSTOMERS = 'deliveryManagementDB'
                 await this.storageService.initializeDatabase(DB_CUSTOMERS);
 
                 // Here Initialize MOCK_DATA if required
-                
-                // DROP DATABASE IF NECESSARY FOR DEV
-                //this.storageService.dropDatabase();
-                
+                                
                 // Initialize whatever database and/or MOCK_DATA you like
 
                 if (this.sqliteService.platform === 'web') {

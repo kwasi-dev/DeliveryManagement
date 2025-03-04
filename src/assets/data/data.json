@@ -2,6 +2,7 @@
   "customer_details": [
     {
       "attributes": {
+        "custno": 200019,
         "addr1": "FAIRCHILD STREET",
         "addr2": "",
         "areano": 0,
@@ -17,6 +18,7 @@
     },
     {
       "attributes": {
+        "custno": 100017,
         "addr1": "BAXTERS ROAD",
         "addr2": "",
         "areano": 6,
@@ -32,6 +34,7 @@
     },
     {
       "attributes": {
+        "custno": 200146,
         "addr1": "SPRY STREET (NEAR ROEBUCK)",
         "addr2": "",
         "areano": 6,
@@ -47,6 +50,7 @@
     },
     {
       "attributes": {
+        "custno": 200267,
         "addr1": "BROAD STREET",
         "addr2": "",
         "areano": 0,
@@ -62,6 +66,7 @@
     },
     {
       "attributes": {
+        "custno": 200315,
         "addr1": "FORMER PRICE SHOPPER BUILDING",
         "addr2": "",
         "areano": 6,
@@ -77,6 +82,7 @@
     },
     {
       "attributes": {
+        "custno": 200316,
         "addr1": "FAIRCHILD STREET",
         "addr2": "",
         "areano": 6,
@@ -92,6 +98,7 @@
     },
     {
       "attributes": {
+        "custno": 200339,
         "addr1": "69 ROEBUCK STREET",
         "addr2": "",
         "areano": 0,
@@ -107,6 +114,7 @@
     },
     {
       "attributes": {
+        "custno": 200463,
         "addr1": "TUDOR BRIDGE ",
         "addr2": "",
         "areano": 6,
@@ -122,6 +130,7 @@
     },
     {
       "attributes": {
+        "custno": 200542,
         "addr1": "ST MICHAEL'S ROW",
         "addr2": "228-3766 (STORE)",
         "areano": 6,
@@ -137,6 +146,7 @@
     },
     {
       "attributes": {
+        "custno": 200598,
         "addr1": "HARBOUR ROAD",
         "addr2": null,
         "areano": 6,
@@ -152,6 +162,7 @@
     },
     {
       "attributes": {
+        "custno": 200195,
         "addr1": "SOL ROEBUCK STREET",
         "addr2": "",
         "areano": 0,
@@ -167,6 +178,7 @@
     },
     {
       "attributes": {
+        "custno": 200701,
         "addr1": "ROEBUCK STREET",
         "addr2": null,
         "areano": 6,
@@ -182,6 +194,7 @@
     },
     {
       "attributes": {
+        "custno": 200768,
         "addr1": "WAREHOUSE # 22 GAS ALLEY",
         "addr2": "",
         "areano": 0,
@@ -197,6 +210,7 @@
     },
     {
       "attributes": {
+        "custno": 200810,
         "addr1": "KEW RD  BANK HALL",
         "addr2": null,
         "areano": 5,
@@ -212,6 +226,7 @@
     },
     {
       "attributes": {
+        "custno": 100669,
         "addr1": "LOWER BROAD STREET",
         "addr2": "",
         "areano": 0,
@@ -227,6 +242,7 @@
     },
     {
       "attributes": {
+        "custno": 200962,
         "addr1": "HAMLET GAP HINDSBURY RD",
         "addr2": null,
         "areano": 0,
@@ -242,6 +258,7 @@
     },
     {
       "attributes": {
+        "custno": 201000,
         "addr1": "SWAN STREET IN FRONT  CHERISH",
         "addr2": "BRIDGETOWN",
         "areano": 0,
@@ -257,6 +274,7 @@
     },
     {
       "attributes": {
+        "custno": 201016,
         "addr1": "BANK HALL MAIN ROAD",
         "addr2": null,
         "areano": 8,
@@ -272,6 +290,7 @@
     },
     {
       "attributes": {
+        "custno": 201050,
         "addr1": "EAGLE HALL (RUBIS)",
         "addr2": null,
         "areano": 6,
@@ -287,6 +306,7 @@
     },
     {
       "attributes": {
+        "custno": 200749,
         "addr1": "SOL BANK HALL",
         "addr2": null,
         "areano": 6,
@@ -302,6 +322,7 @@
     },
     {
       "attributes": {
+        "custno": 201087,
         "addr1": "CNR OF OXLEY STREET,",
         "addr2": null,
         "areano": 0,
@@ -317,6 +338,7 @@
     },
     {
       "attributes": {
+        "custno": 201115,
         "addr1": "BANK HALL",
         "addr2": "MAIN ROAD",
         "areano": 5,
@@ -332,6 +354,7 @@
     },
     {
       "attributes": {
+        "custno": 201103,
         "addr1": "BAXTERS RD",
         "addr2": null,
         "areano": 6,
@@ -347,6 +370,7 @@
     },
     {
       "attributes": {
+        "custno": 200893,
         "addr1": "MARTINDALES ROAD",
         "addr2": null,
         "areano": 0,
@@ -359,7 +383,9 @@
         "terms": null,
         "type": "M"
       }
-    },
+    }
+  ],
+  "invoice_items": [
     {
       "attributes": {
         "creditnotes": 0.0,
@@ -5580,7 +5606,6 @@
       }
     }
   ],
-  "invoice_items": [],
   "invoice_master": [
     {
       "attributes": {

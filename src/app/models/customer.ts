@@ -1,4 +1,5 @@
 export interface Customer {
+    id: number;
     areaNo: number;
     lastInvoiceDate: string;
     company: string;

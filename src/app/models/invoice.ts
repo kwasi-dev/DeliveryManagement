@@ -1,7 +1,7 @@
 export interface Invoice {
     invoiceNo: number;
-    orderNo: number;
-    custNo: number;
+    orderNo: number; // links to InvoiceItem OrderNo
+    custNo: number; // custNo
     routeNo: string;
     standingDay: string;
     invoiceDate: string;

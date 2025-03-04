@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { StorageService } from '../../services/storage.service';
 import { Customer } from '../../models/customer';
 import { of, switchMap } from 'rxjs';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-users',
@@ -19,10 +20,13 @@ export class UsersComponent implements OnInit {
   userList: Customer[] = []
   isWeb: any
 
-  constructor(private storage: StorageService) { }
+  constructor(private storage: StorageService, private dataService: DataService) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     try {
+      if (this.storage.databaseState()) {
+        this.dataService.getData();
+      }
       this.storage.databaseState().pipe(
         switchMap(res => {
           if (res) {
