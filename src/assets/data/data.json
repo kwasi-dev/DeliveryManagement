@@ -1,0 +1,6187 @@
+{
+  "customer_details": [
+    {
+      "attributes": {
+        "custno": 200019,
+        "addr1": "FAIRCHILD STREET",
+        "addr2": "",
+        "areano": 0,
+        "company": "K.F.C FAIRCHILD",
+        "contact": "",
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "537-1510",
+        "state": "ST MICHAEL",
+        "terms": "C",
+        "type": "M"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 100017,
+        "addr1": "BAXTERS ROAD",
+        "addr2": "",
+        "areano": 6,
+        "company": "JORDAN'S SUPERMARKET (BX RD)",
+        "contact": "MS.COREEN RAMSEY",
+        "emailaddress": "jordans@caribsurf.com",
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "417-5706",
+        "state": "ST. MICHAEL",
+        "terms": "C",
+        "type": "M"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200146,
+        "addr1": "SPRY STREET (NEAR ROEBUCK)",
+        "addr2": "",
+        "areano": 6,
+        "company": "POPULAR DISCOUNTS (ROEBUCK)",
+        "contact": "",
+        "emailaddress": "payables@bjsvaluemarket.bb",
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "227-1100",
+        "state": "BRIDGETOWN ",
+        "terms": "C",
+        "type": "M"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200267,
+        "addr1": "BROAD STREET",
+        "addr2": "",
+        "areano": 0,
+        "company": "K.F.C HADLEY'S HOUSE",
+        "contact": "MR DAVIS",
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-18T00:00:00",
+        "phone": "5371500EXT1544",
+        "state": "BRIDGETOWN",
+        "terms": "C",
+        "type": "M"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200315,
+        "addr1": "FORMER PRICE SHOPPER BUILDING",
+        "addr2": "",
+        "areano": 6,
+        "company": "POPULAR DISCOUNTS (SMR)",
+        "contact": "",
+        "emailaddress": "payables@bjsvaluemarket.bb",
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "227-1100",
+        "state": "SPRY STREET ",
+        "terms": "C",
+        "type": "M"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200316,
+        "addr1": "FAIRCHILD STREET",
+        "addr2": "",
+        "areano": 6,
+        "company": "JORDANS SUPERMARKET (FC)",
+        "contact": "",
+        "emailaddress": "jordansfchild@caribsurf.com",
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "417-5707",
+        "state": "BRIDGETOWN",
+        "terms": "C",
+        "type": "M"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200339,
+        "addr1": "69 ROEBUCK STREET",
+        "addr2": "",
+        "areano": 0,
+        "company": "LIONEL C. HILL LTD.",
+        "contact": "MR HILL",
+        "emailaddress": "hillmilling3@caribsurf.com",
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "426-5442",
+        "state": "ST MICHAEL",
+        "terms": "C",
+        "type": "M"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200463,
+        "addr1": "TUDOR BRIDGE ",
+        "addr2": "",
+        "areano": 6,
+        "company": "R.L. SEALE  THE PEOPLE MARKET",
+        "contact": "",
+        "emailaddress": "julia_blackette@rlseale.com.bb",
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "629-4500",
+        "state": "ST MICHAEL",
+        "terms": "C",
+        "type": "M"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200542,
+        "addr1": "ST MICHAEL'S ROW",
+        "addr2": "228-3766 (STORE)",
+        "areano": 6,
+        "company": "SAVINGS PLUS ST MICHAELS ROW",
+        "contact": "EDWIN",
+        "emailaddress": "savingsplusrockdundo@ymail.com",
+        "lastinvoicedate": "2024-09-19T00:00:00",
+        "phone": "2283766",
+        "state": "",
+        "terms": "C",
+        "type": "W"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200598,
+        "addr1": "HARBOUR ROAD",
+        "addr2": null,
+        "areano": 6,
+        "company": "SAVINGS PLUS HARBOUR ROAD",
+        "contact": null,
+        "emailaddress": "savingsplusrockdundo@ymail.com",
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "434-0081",
+        "state": null,
+        "terms": null,
+        "type": "W"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200195,
+        "addr1": "SOL ROEBUCK STREET",
+        "addr2": "",
+        "areano": 0,
+        "company": "LEOMAY INC",
+        "contact": "",
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-19T00:00:00",
+        "phone": "436-0414",
+        "state": "",
+        "terms": "C",
+        "type": "C"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200701,
+        "addr1": "ROEBUCK STREET",
+        "addr2": null,
+        "areano": 6,
+        "company": "INDEX TRADING",
+        "contact": "GINA",
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-19T00:00:00",
+        "phone": "427-5342",
+        "state": "OPP NULOOK BOUTIQUE",
+        "terms": null,
+        "type": "C"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200768,
+        "addr1": "WAREHOUSE # 22 GAS ALLEY",
+        "addr2": "",
+        "areano": 0,
+        "company": "RESTAURANT ASSOCIATES B'DOS LTD B.KING",
+        "contact": "RYAN WALTERS",
+        "emailaddress": " accounts@ralbb.com",
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "5371936/5371912",
+        "state": "CANE GARDEN ST THOMA",
+        "terms": null,
+        "type": "M"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200810,
+        "addr1": "KEW RD  BANK HALL",
+        "addr2": null,
+        "areano": 5,
+        "company": "DEGIYA WHOLESALE AND RETAIL INC",
+        "contact": "DEGIYA",
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-19T00:00:00",
+        "phone": "4268741/8258209",
+        "state": " RED CONTAINER UP HI",
+        "terms": null,
+        "type": "C"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 100669,
+        "addr1": "LOWER BROAD STREET",
+        "addr2": "",
+        "areano": 0,
+        "company": "LAS VEGAS SLOTS",
+        "contact": "VICTORIA EVELYN",
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "5372054",
+        "state": "NEXT TO CHEFETTE",
+        "terms": "C",
+        "type": "C"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200962,
+        "addr1": "HAMLET GAP HINDSBURY RD",
+        "addr2": null,
+        "areano": 0,
+        "company": "TROTMAN VARIETY",
+        "contact": null,
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "2376973/4264023",
+        "state": "ST MICHAEL",
+        "terms": null,
+        "type": "C"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 201000,
+        "addr1": "SWAN STREET IN FRONT  CHERISH",
+        "addr2": "BRIDGETOWN",
+        "areano": 0,
+        "company": "LAS VEGAS SLOTS",
+        "contact": null,
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "8432304/5370450",
+        "state": null,
+        "terms": null,
+        "type": "C"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 201016,
+        "addr1": "BANK HALL MAIN ROAD",
+        "addr2": null,
+        "areano": 8,
+        "company": "SAWH GROCERIES",
+        "contact": null,
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-19T00:00:00",
+        "phone": "4268892",
+        "state": null,
+        "terms": null,
+        "type": "C"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 201050,
+        "addr1": "EAGLE HALL (RUBIS)",
+        "addr2": null,
+        "areano": 6,
+        "company": "PETROLEUM SOLUTION LTD",
+        "contact": null,
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-19T00:00:00",
+        "phone": "426-4753",
+        "state": "ST MICHAEL",
+        "terms": null,
+        "type": "C"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200749,
+        "addr1": "SOL BANK HALL",
+        "addr2": null,
+        "areano": 6,
+        "company": "G D A INVESTMENTS INC",
+        "contact": null,
+        "emailaddress": "gdabankhall@gmail.com",
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "436-2506",
+        "state": "ST MICHAEL",
+        "terms": null,
+        "type": "W"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 201087,
+        "addr1": "CNR OF OXLEY STREET,",
+        "addr2": null,
+        "areano": 0,
+        "company": "BAY EATS",
+        "contact": "TERRY",
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "238-0728",
+        "state": "COMBERMERE STREET",
+        "terms": null,
+        "type": "C"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 201115,
+        "addr1": "BANK HALL",
+        "addr2": "MAIN ROAD",
+        "areano": 5,
+        "company": "LADHA MINIMART & VARIETY",
+        "contact": null,
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-19T00:00:00",
+        "phone": "2572646",
+        "state": null,
+        "terms": null,
+        "type": "C"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 201103,
+        "addr1": "BAXTERS RD",
+        "addr2": null,
+        "areano": 6,
+        "company": "LEE- J'S SUPERMARKET",
+        "contact": null,
+        "emailaddress": null,
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "433-2871",
+        "state": "ST MICHAEL",
+        "terms": null,
+        "type": "C"
+      }
+    },
+    {
+      "attributes": {
+        "custno": 200893,
+        "addr1": "MARTINDALES ROAD",
+        "addr2": null,
+        "areano": 0,
+        "company": "THE QUEEN ELIZABETH HOSPITAL",
+        "contact": "YVONNE BURKE",
+        "emailaddress": "",
+        "lastinvoicedate": "2024-09-20T00:00:00",
+        "phone": "426-2653EXT 647",
+        "state": "BARBADOS BB 11155",
+        "terms": null,
+        "type": "M"
+      }
+    }
+  ],
+  "invoice_items": [
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448390,
+        "num_per_pack": 1.0,
+        "orderno": 1028936,
+        "packs": 10.0,
+        "partno": "KDRP",
+        "qty": 20.0,
+        "returnsno": 0.0,
+        "storedprice": 4.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448391,
+        "num_per_pack": 1.0,
+        "orderno": 1028936,
+        "packs": 30.0,
+        "partno": "KSBP",
+        "qty": 30.0,
+        "returnsno": 0.0,
+        "storedprice": 3.56,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448688,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 2.0,
+        "partno": "BDRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 6.05,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448689,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 15.0,
+        "partno": "BSAP",
+        "qty": 12.0,
+        "returnsno": 0.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448691,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 2.0,
+        "partno": "DROP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448692,
+        "num_per_pack": 8.0,
+        "orderno": 1028951,
+        "packs": 10.0,
+        "partno": "HBBP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448694,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 3.0,
+        "partno": "HCCP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 2.79,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448695,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 17.0,
+        "partno": "HCOP",
+        "qty": 12.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448696,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 4.0,
+        "partno": "HCSP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.53,
+        "vatamount": 2.47,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448697,
+        "num_per_pack": 8.0,
+        "orderno": 1028951,
+        "packs": 10.0,
+        "partno": "HDRP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448699,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 4.0,
+        "partno": "JPUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 1.76,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448700,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 13.0,
+        "partno": "LBSP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 6.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448701,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 2.0,
+        "partno": "LCCP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 1.86,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448702,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 4.0,
+        "partno": "LHDP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 4.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448703,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 8.0,
+        "partno": "LSAP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 7.15,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448704,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 10.0,
+        "partno": "MSAP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448705,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 4.0,
+        "partno": "NLIP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 4.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448706,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 5.0,
+        "partno": "RBRP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 6.0,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448707,
+        "num_per_pack": 2.0,
+        "orderno": 1028951,
+        "packs": 12.0,
+        "partno": "RCTP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 5.27,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448708,
+        "num_per_pack": 12.0,
+        "orderno": 1028951,
+        "packs": 12.0,
+        "partno": "SARP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 4.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448709,
+        "num_per_pack": 6.0,
+        "orderno": 1028951,
+        "packs": 4.0,
+        "partno": "SBRP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448710,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 8.0,
+        "partno": "SBUP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448711,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 4.0,
+        "partno": "SCCP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 3.49,
+        "vatamount": 2.44,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448712,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 6.0,
+        "partno": "SCHP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448713,
+        "num_per_pack": 4.0,
+        "orderno": 1028951,
+        "packs": 3.0,
+        "partno": "SFUP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448714,
+        "num_per_pack": 2.0,
+        "orderno": 1028951,
+        "packs": 6.0,
+        "partno": "SROP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448715,
+        "num_per_pack": 6.0,
+        "orderno": 1028951,
+        "packs": 3.0,
+        "partno": "SSUP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 5.65,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448716,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 3.0,
+        "partno": "TGRP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 7.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448717,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 7.0,
+        "partno": "TUTP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 1.96,
+        "vatamount": 2.4,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448718,
+        "num_per_pack": 8.0,
+        "orderno": 1028951,
+        "packs": 10.0,
+        "partno": "WHBP",
+        "qty": 7.0,
+        "returnsno": 0.0,
+        "storedprice": 4.7,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448719,
+        "num_per_pack": 6.0,
+        "orderno": 1028951,
+        "packs": 9.0,
+        "partno": "WSBP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 4.75,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448720,
+        "num_per_pack": 2.0,
+        "orderno": 1028951,
+        "packs": 4.0,
+        "partno": "WSRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.95,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448722,
+        "num_per_pack": 1.0,
+        "orderno": 1028951,
+        "packs": 2.0,
+        "partno": "WWHP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.4,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448728,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 11.0,
+        "partno": "BSAP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448730,
+        "num_per_pack": 8.0,
+        "orderno": 1028953,
+        "packs": 10.0,
+        "partno": "HBBP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448732,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 2.0,
+        "partno": "HCCP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448733,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 12.0,
+        "partno": "HCOP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448734,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 3.0,
+        "partno": "HCSP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.53,
+        "vatamount": 1.85,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448735,
+        "num_per_pack": 8.0,
+        "orderno": 1028953,
+        "packs": 8.0,
+        "partno": "HDRP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448737,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 4.0,
+        "partno": "JPUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 1.76,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448738,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 11.0,
+        "partno": "LBSP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 6.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448739,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 4.0,
+        "partno": "LCCP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 3.72,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448740,
+        "num_per_pack": 6.0,
+        "orderno": 1028953,
+        "packs": 5.0,
+        "partno": "LHDP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 4.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448741,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 10.0,
+        "partno": "LSAP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 7.15,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448742,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 10.0,
+        "partno": "MSAP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448743,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 4.0,
+        "partno": "NLIP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 4.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448744,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 3.0,
+        "partno": "RBRP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 6.0,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448745,
+        "num_per_pack": 2.0,
+        "orderno": 1028953,
+        "packs": 10.0,
+        "partno": "RCTP",
+        "qty": 7.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 4.39,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448746,
+        "num_per_pack": 12.0,
+        "orderno": 1028953,
+        "packs": 14.0,
+        "partno": "SARP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 4.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448747,
+        "num_per_pack": 6.0,
+        "orderno": 1028953,
+        "packs": 16.0,
+        "partno": "SBRP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448748,
+        "num_per_pack": 8.0,
+        "orderno": 1028953,
+        "packs": 14.0,
+        "partno": "SBUP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448749,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 5.0,
+        "partno": "SCCP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 3.49,
+        "vatamount": 3.05,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448750,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 6.0,
+        "partno": "SCHP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448751,
+        "num_per_pack": 4.0,
+        "orderno": 1028953,
+        "packs": 2.0,
+        "partno": "SFUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448752,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 2.0,
+        "partno": "SROP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448753,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 2.0,
+        "partno": "SSUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.65,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448754,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 3.0,
+        "partno": "TGRP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 7.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448755,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 2.0,
+        "partno": "TUTP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 1.96,
+        "vatamount": 0.69,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448756,
+        "num_per_pack": 8.0,
+        "orderno": 1028953,
+        "packs": 11.0,
+        "partno": "WHBP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 4.7,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448757,
+        "num_per_pack": 6.0,
+        "orderno": 1028953,
+        "packs": 11.0,
+        "partno": "WSBP",
+        "qty": 7.0,
+        "returnsno": 0.0,
+        "storedprice": 4.75,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448758,
+        "num_per_pack": 2.0,
+        "orderno": 1028953,
+        "packs": 2.0,
+        "partno": "WSRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.95,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5448760,
+        "num_per_pack": 1.0,
+        "orderno": 1028953,
+        "packs": 2.0,
+        "partno": "WWHP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 5.4,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449002,
+        "num_per_pack": 1.0,
+        "orderno": 1028964,
+        "packs": 6.0,
+        "partno": "KDRP",
+        "qty": 20.0,
+        "returnsno": 0.0,
+        "storedprice": 4.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449003,
+        "num_per_pack": 1.0,
+        "orderno": 1028964,
+        "packs": 20.0,
+        "partno": "KSBP",
+        "qty": 20.0,
+        "returnsno": 0.0,
+        "storedprice": 3.56,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449045,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 14.0,
+        "partno": "BSAP",
+        "qty": 14.0,
+        "returnsno": 0.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449047,
+        "num_per_pack": 8.0,
+        "orderno": 1028969,
+        "packs": 10.0,
+        "partno": "HBBP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449049,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 2.0,
+        "partno": "HCCP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449050,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 16.0,
+        "partno": "HCOP",
+        "qty": 14.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449051,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 4.0,
+        "partno": "HCSP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.53,
+        "vatamount": 2.47,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449052,
+        "num_per_pack": 8.0,
+        "orderno": 1028969,
+        "packs": 10.0,
+        "partno": "HDRP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449054,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 4.0,
+        "partno": "JPUP",
+        "qty": 2.0,
+        "returnsno": 3.0,
+        "storedprice": 2.51,
+        "vatamount": 1.76,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449055,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 14.0,
+        "partno": "LBSP",
+        "qty": 14.0,
+        "returnsno": 0.0,
+        "storedprice": 6.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449056,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 4.0,
+        "partno": "LCCP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 3.72,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449057,
+        "num_per_pack": 6.0,
+        "orderno": 1028969,
+        "packs": 4.0,
+        "partno": "LHDP",
+        "qty": 4.0,
+        "returnsno": 3.0,
+        "storedprice": 4.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449058,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 12.0,
+        "partno": "LSAP",
+        "qty": 12.0,
+        "returnsno": 0.0,
+        "storedprice": 7.15,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449059,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 12.0,
+        "partno": "MSAP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449060,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 4.0,
+        "partno": "NLIP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 4.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449061,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 3.0,
+        "partno": "RBRP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 6.0,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449062,
+        "num_per_pack": 2.0,
+        "orderno": 1028969,
+        "packs": 10.0,
+        "partno": "RCTP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 4.39,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449063,
+        "num_per_pack": 12.0,
+        "orderno": 1028969,
+        "packs": 13.0,
+        "partno": "SARP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 4.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449064,
+        "num_per_pack": 6.0,
+        "orderno": 1028969,
+        "packs": 12.0,
+        "partno": "SBRP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449065,
+        "num_per_pack": 8.0,
+        "orderno": 1028969,
+        "packs": 14.0,
+        "partno": "SBUP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449066,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 4.0,
+        "partno": "SCCP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.49,
+        "vatamount": 2.44,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449067,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 6.0,
+        "partno": "SCHP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449068,
+        "num_per_pack": 4.0,
+        "orderno": 1028969,
+        "packs": 3.0,
+        "partno": "SFUP",
+        "qty": 3.0,
+        "returnsno": 2.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449069,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 2.0,
+        "partno": "SROP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449070,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 3.0,
+        "partno": "SSUP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 5.65,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449071,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 1.0,
+        "partno": "TGRP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 7.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449072,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 4.0,
+        "partno": "TUTP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 1.96,
+        "vatamount": 1.37,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449073,
+        "num_per_pack": 8.0,
+        "orderno": 1028969,
+        "packs": 17.0,
+        "partno": "WHBP",
+        "qty": 17.0,
+        "returnsno": 0.0,
+        "storedprice": 4.7,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449074,
+        "num_per_pack": 6.0,
+        "orderno": 1028969,
+        "packs": 8.0,
+        "partno": "WSBP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 4.75,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449075,
+        "num_per_pack": 2.0,
+        "orderno": 1028969,
+        "packs": 4.0,
+        "partno": "WSRP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.95,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449077,
+        "num_per_pack": 1.0,
+        "orderno": 1028969,
+        "packs": 1.0,
+        "partno": "WWHP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 5.4,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449078,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 2.0,
+        "partno": "BDRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 6.05,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449079,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 20.0,
+        "partno": "BSAP",
+        "qty": 15.0,
+        "returnsno": 0.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449081,
+        "num_per_pack": 8.0,
+        "orderno": 1028970,
+        "packs": 8.0,
+        "partno": "HBBP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449083,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 7.0,
+        "partno": "HCCP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 6.52,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449084,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 19.0,
+        "partno": "HCOP",
+        "qty": 15.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449085,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 6.0,
+        "partno": "HCSP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 3.53,
+        "vatamount": 3.71,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449086,
+        "num_per_pack": 8.0,
+        "orderno": 1028970,
+        "packs": 10.0,
+        "partno": "HDRP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449088,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 4.0,
+        "partno": "JPUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 1.76,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449089,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 20.0,
+        "partno": "LBSP",
+        "qty": 15.0,
+        "returnsno": 0.0,
+        "storedprice": 6.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449090,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 7.0,
+        "partno": "LCCP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 6.52,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449091,
+        "num_per_pack": 6.0,
+        "orderno": 1028970,
+        "packs": 8.0,
+        "partno": "LHDP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 4.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449092,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 17.0,
+        "partno": "LSAP",
+        "qty": 15.0,
+        "returnsno": 0.0,
+        "storedprice": 7.15,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449093,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 13.0,
+        "partno": "MSAP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449094,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 12.0,
+        "partno": "NLIP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 4.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449095,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 8.0,
+        "partno": "RBRP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 6.0,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449096,
+        "num_per_pack": 2.0,
+        "orderno": 1028970,
+        "packs": 28.0,
+        "partno": "RCTP",
+        "qty": 22.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 12.3,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449097,
+        "num_per_pack": 12.0,
+        "orderno": 1028970,
+        "packs": 16.0,
+        "partno": "SARP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 4.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449098,
+        "num_per_pack": 6.0,
+        "orderno": 1028970,
+        "packs": 10.0,
+        "partno": "SBRP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449099,
+        "num_per_pack": 8.0,
+        "orderno": 1028970,
+        "packs": 23.0,
+        "partno": "SBUP",
+        "qty": 15.0,
+        "returnsno": 0.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449100,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 6.0,
+        "partno": "SCCP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.49,
+        "vatamount": 3.66,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449101,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 10.0,
+        "partno": "SCHP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449102,
+        "num_per_pack": 4.0,
+        "orderno": 1028970,
+        "packs": 2.0,
+        "partno": "SFUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449103,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 4.0,
+        "partno": "SROP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449104,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 2.0,
+        "partno": "SSUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.65,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449105,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 12.0,
+        "partno": "TGRP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 7.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449106,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 25.0,
+        "partno": "TUTP",
+        "qty": 25.0,
+        "returnsno": 0.0,
+        "storedprice": 1.96,
+        "vatamount": 8.58,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449107,
+        "num_per_pack": 8.0,
+        "orderno": 1028970,
+        "packs": 24.0,
+        "partno": "WHBP",
+        "qty": 20.0,
+        "returnsno": 0.0,
+        "storedprice": 4.7,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449108,
+        "num_per_pack": 6.0,
+        "orderno": 1028970,
+        "packs": 11.0,
+        "partno": "WSBP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 4.75,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449109,
+        "num_per_pack": 2.0,
+        "orderno": 1028970,
+        "packs": 6.0,
+        "partno": "WSRP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.95,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449111,
+        "num_per_pack": 1.0,
+        "orderno": 1028970,
+        "packs": 8.0,
+        "partno": "WWHP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 5.4,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449142,
+        "num_per_pack": 1.0,
+        "orderno": 1028972,
+        "packs": 2.0,
+        "partno": "BSAP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449143,
+        "num_per_pack": 1.0,
+        "orderno": 1028972,
+        "packs": 2.0,
+        "partno": "HBBP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449144,
+        "num_per_pack": 1.0,
+        "orderno": 1028972,
+        "packs": 2.0,
+        "partno": "HCOP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449145,
+        "num_per_pack": 1.0,
+        "orderno": 1028972,
+        "packs": 1.0,
+        "partno": "HDRP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449146,
+        "num_per_pack": 1.0,
+        "orderno": 1028972,
+        "packs": 2.0,
+        "partno": "LBSP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 6.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 2.0,
+        "itemno": 5449147,
+        "num_per_pack": 1.0,
+        "orderno": 1028972,
+        "packs": 2.0,
+        "partno": "MSAP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449148,
+        "num_per_pack": 1.0,
+        "orderno": 1028972,
+        "packs": 2.0,
+        "partno": "RBRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 6.0,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449149,
+        "num_per_pack": 1.0,
+        "orderno": 1028972,
+        "packs": 2.0,
+        "partno": "SARP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 4.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449150,
+        "num_per_pack": 1.0,
+        "orderno": 1028972,
+        "packs": 2.0,
+        "partno": "SBRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449151,
+        "num_per_pack": 1.0,
+        "orderno": 1028972,
+        "packs": 3.0,
+        "partno": "SBUP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449152,
+        "num_per_pack": 8.0,
+        "orderno": 1028972,
+        "packs": 2.0,
+        "partno": "WHBP",
+        "qty": 16.0,
+        "returnsno": 0.0,
+        "storedprice": 4.7,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449268,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 2.0,
+        "partno": "BDRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 4.96,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449269,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 5.0,
+        "partno": "BSAP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 4.47,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449270,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 4.0,
+        "partno": "HBBP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.69,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449272,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 5.0,
+        "partno": "HCOP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 4.02,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449273,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 3.0,
+        "partno": "HDRP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 3.69,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449275,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 3.0,
+        "partno": "LBSP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 5.62,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449276,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 4.0,
+        "partno": "LHDP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.98,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449277,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 3.0,
+        "partno": "LSAP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 5.86,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449278,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 3.0,
+        "partno": "MSAP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 4.31,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 3.0,
+        "itemno": 5449279,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 3.0,
+        "partno": "RBRP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 4.92,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449280,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 3.0,
+        "partno": "SARP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 3.49,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449281,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 3.0,
+        "partno": "SBRP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 3.12,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449282,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 4.0,
+        "partno": "SBUP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.16,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449283,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 4.0,
+        "partno": "SCHP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 4.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449284,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 2.0,
+        "partno": "TGRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.95,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449285,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 15.0,
+        "partno": "TUTP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 1.61,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449286,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 6.0,
+        "partno": "WHBP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449287,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 2.0,
+        "partno": "WSBP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449288,
+        "num_per_pack": 1.0,
+        "orderno": 1028983,
+        "packs": 3.0,
+        "partno": "WWHP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 4.43,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 8.0,
+        "itemno": 5449525,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 8.0,
+        "partno": "BSAP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 4.0,
+        "itemno": 5449527,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 6.0,
+        "partno": "HBBP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449529,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 2.0,
+        "partno": "HCCP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449530,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 8.0,
+        "partno": "HCOP",
+        "qty": 8.0,
+        "returnsno": 2.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449531,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 4.0,
+        "partno": "HCSP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.53,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449532,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 6.0,
+        "partno": "HDRP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449534,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 2.0,
+        "partno": "JPUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449535,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 10.0,
+        "partno": "LBSP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 6.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449536,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 2.0,
+        "partno": "LCCP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449537,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 3.0,
+        "partno": "LHDP",
+        "qty": 3.0,
+        "returnsno": 1.0,
+        "storedprice": 4.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449538,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 6.0,
+        "partno": "LSAP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 7.15,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 2.0,
+        "itemno": 5449539,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 6.0,
+        "partno": "MSAP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449540,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 3.0,
+        "partno": "NLIP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 4.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449541,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 3.0,
+        "partno": "RBRP",
+        "qty": 3.0,
+        "returnsno": 1.0,
+        "storedprice": 6.0,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449542,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 8.0,
+        "partno": "RCTP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449543,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 10.0,
+        "partno": "SARP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 4.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449544,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 6.0,
+        "partno": "SBRP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449545,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 12.0,
+        "partno": "SBUP",
+        "qty": 12.0,
+        "returnsno": 0.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449546,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 3.0,
+        "partno": "SCCP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 3.49,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 4.0,
+        "itemno": 5449547,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 4.0,
+        "partno": "SCHP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449548,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 1.0,
+        "partno": "SFUP",
+        "qty": 1.0,
+        "returnsno": 1.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449549,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 4.0,
+        "partno": "SROP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449550,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 1.0,
+        "partno": "SSUP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 5.65,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 1.0,
+        "itemno": 5449551,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 1.0,
+        "partno": "TGRP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 7.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449552,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 2.0,
+        "partno": "TUTP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 1.96,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 8.0,
+        "itemno": 5449553,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 8.0,
+        "partno": "WHBP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 4.7,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449554,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 4.0,
+        "partno": "WSBP",
+        "qty": 4.0,
+        "returnsno": 1.0,
+        "storedprice": 4.75,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449555,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 2.0,
+        "partno": "WSRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.95,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 2.0,
+        "itemno": 5449557,
+        "num_per_pack": 1.0,
+        "orderno": 1028998,
+        "packs": 2.0,
+        "partno": "WWHP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.4,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449655,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 1.0,
+        "partno": "BDRP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 6.05,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 5.0,
+        "itemno": 5449656,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 5.0,
+        "partno": "BSAP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449658,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 1.0,
+        "partno": "DROP",
+        "qty": 1.0,
+        "returnsno": 1.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449659,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 4.0,
+        "partno": "HBBP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449661,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 2.0,
+        "partno": "HCCP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449662,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 6.0,
+        "partno": "HCOP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 3.0,
+        "itemno": 5449663,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 3.0,
+        "partno": "HCSP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 3.53,
+        "vatamount": 1.85,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449664,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 3.0,
+        "partno": "HDRP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449666,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 2.0,
+        "partno": "JPUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449667,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 5.0,
+        "partno": "LBSP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 6.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449668,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 2.0,
+        "partno": "LCCP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449669,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 2.0,
+        "partno": "LHDP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 4.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449670,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 4.0,
+        "partno": "LSAP",
+        "qty": 4.0,
+        "returnsno": 4.0,
+        "storedprice": 7.15,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 4.0,
+        "itemno": 5449671,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 4.0,
+        "partno": "MSAP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449672,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 3.0,
+        "partno": "NLIP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 4.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449673,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 2.0,
+        "partno": "RBRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 6.0,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 4.0,
+        "itemno": 5449674,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 4.0,
+        "partno": "RCTP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 1.76,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449675,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 5.0,
+        "partno": "SARP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 4.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449676,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 4.0,
+        "partno": "SBRP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449677,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 6.0,
+        "partno": "SBUP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449678,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 3.0,
+        "partno": "SCCP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 3.49,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 2.0,
+        "itemno": 5449679,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 2.0,
+        "partno": "SCHP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449680,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 2.0,
+        "partno": "SFUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449681,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 1.0,
+        "partno": "SROP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449682,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 2.0,
+        "partno": "SSUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.65,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 2.0,
+        "itemno": 5449683,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 2.0,
+        "partno": "TGRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 7.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 7.0,
+        "itemno": 5449684,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 7.0,
+        "partno": "TUTP",
+        "qty": 7.0,
+        "returnsno": 0.0,
+        "storedprice": 1.96,
+        "vatamount": 2.4,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449685,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 6.0,
+        "partno": "WHBP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 4.7,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449686,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 5.0,
+        "partno": "WSBP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 4.75,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449687,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 1.0,
+        "partno": "WSRP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 3.95,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 2.0,
+        "itemno": 5449689,
+        "num_per_pack": 1.0,
+        "orderno": 1029004,
+        "packs": 2.0,
+        "partno": "WWHP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.4,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449703,
+        "num_per_pack": 1.0,
+        "orderno": 1029006,
+        "packs": 2.0,
+        "partno": "BSAP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449704,
+        "num_per_pack": 1.0,
+        "orderno": 1029006,
+        "packs": 2.0,
+        "partno": "HBBP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449705,
+        "num_per_pack": 1.0,
+        "orderno": 1029006,
+        "packs": 3.0,
+        "partno": "HCOP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449707,
+        "num_per_pack": 1.0,
+        "orderno": 1029006,
+        "packs": 2.0,
+        "partno": "MSAP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449708,
+        "num_per_pack": 1.0,
+        "orderno": 1029006,
+        "packs": 5.0,
+        "partno": "RCTP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449709,
+        "num_per_pack": 1.0,
+        "orderno": 1029006,
+        "packs": 2.0,
+        "partno": "TUTP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 1.96,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449710,
+        "num_per_pack": 1.0,
+        "orderno": 1029007,
+        "packs": 5.0,
+        "partno": "BSAP",
+        "qty": 5.0,
+        "returnsno": 2.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449712,
+        "num_per_pack": 1.0,
+        "orderno": 1029007,
+        "packs": 4.0,
+        "partno": "HCOP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449713,
+        "num_per_pack": 1.0,
+        "orderno": 1029007,
+        "packs": 3.0,
+        "partno": "HDRP",
+        "qty": 3.0,
+        "returnsno": 3.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449715,
+        "num_per_pack": 1.0,
+        "orderno": 1029007,
+        "packs": 12.0,
+        "partno": "JPUP",
+        "qty": 12.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449716,
+        "num_per_pack": 1.0,
+        "orderno": 1029007,
+        "packs": 3.0,
+        "partno": "MSAP",
+        "qty": 3.0,
+        "returnsno": 2.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449717,
+        "num_per_pack": 1.0,
+        "orderno": 1029007,
+        "packs": 3.0,
+        "partno": "RBRP",
+        "qty": 3.0,
+        "returnsno": 1.0,
+        "storedprice": 6.0,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449718,
+        "num_per_pack": 1.0,
+        "orderno": 1029007,
+        "packs": 4.0,
+        "partno": "SBRP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449719,
+        "num_per_pack": 1.0,
+        "orderno": 1029007,
+        "packs": 9.0,
+        "partno": "TUTP",
+        "qty": 9.0,
+        "returnsno": 0.0,
+        "storedprice": 1.96,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449870,
+        "num_per_pack": 6.0,
+        "orderno": 1029021,
+        "packs": 40.0,
+        "partno": "BKQP",
+        "qty": 120.0,
+        "returnsno": 0.0,
+        "storedprice": 3.4,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449890,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 8.0,
+        "partno": "BSAP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449893,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 3.0,
+        "partno": "HCOP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449894,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 6.0,
+        "partno": "HCSP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 3.53,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449895,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 2.0,
+        "partno": "HDRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449897,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 12.0,
+        "partno": "JPUP",
+        "qty": 12.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449898,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 8.0,
+        "partno": "MSAP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449899,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 3.0,
+        "partno": "RBRP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 6.0,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449900,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 12.0,
+        "partno": "RCTP",
+        "qty": 12.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449901,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 5.0,
+        "partno": "SARP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 4.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449902,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 5.0,
+        "partno": "SBRP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449903,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 3.0,
+        "partno": "SCHP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449904,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 2.0,
+        "partno": "SSUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.65,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449905,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 3.0,
+        "partno": "WSBP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 4.75,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5449906,
+        "num_per_pack": 1.0,
+        "orderno": 1029024,
+        "packs": 2.0,
+        "partno": "WWHP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.4,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450247,
+        "num_per_pack": 1.0,
+        "orderno": 1029045,
+        "packs": 10.0,
+        "partno": "HDRP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450248,
+        "num_per_pack": 1.0,
+        "orderno": 1029045,
+        "packs": 10.0,
+        "partno": "SBRP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450289,
+        "num_per_pack": 1.0,
+        "orderno": 1029048,
+        "packs": 8.0,
+        "partno": "BSAP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450290,
+        "num_per_pack": 1.0,
+        "orderno": 1029048,
+        "packs": 6.0,
+        "partno": "HCOP",
+        "qty": 6.0,
+        "returnsno": 2.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450291,
+        "num_per_pack": 1.0,
+        "orderno": 1029048,
+        "packs": 2.0,
+        "partno": "LBSP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 6.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450292,
+        "num_per_pack": 1.0,
+        "orderno": 1029048,
+        "packs": 2.0,
+        "partno": "LSAP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 7.15,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450293,
+        "num_per_pack": 1.0,
+        "orderno": 1029048,
+        "packs": 3.0,
+        "partno": "MSAP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450294,
+        "num_per_pack": 1.0,
+        "orderno": 1029048,
+        "packs": 1.0,
+        "partno": "NLIP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 4.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450295,
+        "num_per_pack": 1.0,
+        "orderno": 1029048,
+        "packs": 2.0,
+        "partno": "RBRP",
+        "qty": 2.0,
+        "returnsno": 2.0,
+        "storedprice": 6.0,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450296,
+        "num_per_pack": 1.0,
+        "orderno": 1029048,
+        "packs": 1.0,
+        "partno": "SBUP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450297,
+        "num_per_pack": 1.0,
+        "orderno": 1029048,
+        "packs": 5.0,
+        "partno": "SCHP",
+        "qty": 5.0,
+        "returnsno": 1.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450298,
+        "num_per_pack": 1.0,
+        "orderno": 1029048,
+        "packs": 1.0,
+        "partno": "SSSP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 5.95,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450299,
+        "num_per_pack": 1.0,
+        "orderno": 1029048,
+        "packs": 2.0,
+        "partno": "WWHP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.4,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450384,
+        "num_per_pack": 1.0,
+        "orderno": 1029058,
+        "packs": 12.0,
+        "partno": "HDRP",
+        "qty": 12.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450385,
+        "num_per_pack": 1.0,
+        "orderno": 1029058,
+        "packs": 12.0,
+        "partno": "SBRP",
+        "qty": 12.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450430,
+        "num_per_pack": 1.0,
+        "orderno": 1029062,
+        "packs": 4.0,
+        "partno": "HCOP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450432,
+        "num_per_pack": 1.0,
+        "orderno": 1029062,
+        "packs": 4.0,
+        "partno": "SBUP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450433,
+        "num_per_pack": 1.0,
+        "orderno": 1029062,
+        "packs": 3.0,
+        "partno": "SCCP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 3.49,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450434,
+        "num_per_pack": 1.0,
+        "orderno": 1029062,
+        "packs": 4.0,
+        "partno": "SCHP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450435,
+        "num_per_pack": 1.0,
+        "orderno": 1029062,
+        "packs": 6.0,
+        "partno": "TUTP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 1.96,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450481,
+        "num_per_pack": 1.0,
+        "orderno": 1029068,
+        "packs": 8.0,
+        "partno": "BSAP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450483,
+        "num_per_pack": 1.0,
+        "orderno": 1029068,
+        "packs": 5.0,
+        "partno": "HBBP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450485,
+        "num_per_pack": 1.0,
+        "orderno": 1029068,
+        "packs": 5.0,
+        "partno": "HCOP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450486,
+        "num_per_pack": 1.0,
+        "orderno": 1029068,
+        "packs": 4.0,
+        "partno": "HCSP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.53,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450488,
+        "num_per_pack": 1.0,
+        "orderno": 1029068,
+        "packs": 8.0,
+        "partno": "MSAP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450489,
+        "num_per_pack": 1.0,
+        "orderno": 1029068,
+        "packs": 10.0,
+        "partno": "RCTP",
+        "qty": 10.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450490,
+        "num_per_pack": 1.0,
+        "orderno": 1029068,
+        "packs": 4.0,
+        "partno": "SARP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 4.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450491,
+        "num_per_pack": 1.0,
+        "orderno": 1029068,
+        "packs": 4.0,
+        "partno": "SBUP",
+        "qty": 4.0,
+        "returnsno": 0.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450492,
+        "num_per_pack": 1.0,
+        "orderno": 1029068,
+        "packs": 3.0,
+        "partno": "SCCP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 3.49,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450493,
+        "num_per_pack": 1.0,
+        "orderno": 1029068,
+        "packs": 3.0,
+        "partno": "SCHP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450494,
+        "num_per_pack": 1.0,
+        "orderno": 1029068,
+        "packs": 6.0,
+        "partno": "TUTP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 1.96,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450496,
+        "num_per_pack": 1.0,
+        "orderno": 1029068,
+        "packs": 5.0,
+        "partno": "WWHP",
+        "qty": 5.0,
+        "returnsno": 0.0,
+        "storedprice": 5.4,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450511,
+        "num_per_pack": 1.0,
+        "orderno": 1029070,
+        "packs": 15.0,
+        "partno": "LHDP",
+        "qty": 15.0,
+        "returnsno": 0.0,
+        "storedprice": 3.88,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450531,
+        "num_per_pack": 1.0,
+        "orderno": 1029080,
+        "packs": 2.0,
+        "partno": "HBBP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450532,
+        "num_per_pack": 1.0,
+        "orderno": 1029080,
+        "packs": 8.0,
+        "partno": "LHDP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 4.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450533,
+        "num_per_pack": 1.0,
+        "orderno": 1029080,
+        "packs": 1.0,
+        "partno": "SSSP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 5.95,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450616,
+        "num_per_pack": 1.0,
+        "orderno": 1029087,
+        "packs": 1.0,
+        "partno": "BSAP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450618,
+        "num_per_pack": 1.0,
+        "orderno": 1029087,
+        "packs": 2.0,
+        "partno": "HCOP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450619,
+        "num_per_pack": 1.0,
+        "orderno": 1029087,
+        "packs": 2.0,
+        "partno": "HDRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 4.5,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450620,
+        "num_per_pack": 1.0,
+        "orderno": 1029087,
+        "packs": 1.0,
+        "partno": "LSAP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 7.15,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450621,
+        "num_per_pack": 1.0,
+        "orderno": 1029087,
+        "packs": 1.0,
+        "partno": "MSAP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450622,
+        "num_per_pack": 1.0,
+        "orderno": 1029087,
+        "packs": 1.0,
+        "partno": "RBRP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 6.0,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450623,
+        "num_per_pack": 1.0,
+        "orderno": 1029087,
+        "packs": 3.0,
+        "partno": "RCTP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 2.51,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450624,
+        "num_per_pack": 1.0,
+        "orderno": 1029087,
+        "packs": 2.0,
+        "partno": "SBRP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450625,
+        "num_per_pack": 1.0,
+        "orderno": 1029087,
+        "packs": 2.0,
+        "partno": "SBUP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450626,
+        "num_per_pack": 1.0,
+        "orderno": 1029087,
+        "packs": 1.0,
+        "partno": "SCCP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 3.49,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450627,
+        "num_per_pack": 1.0,
+        "orderno": 1029087,
+        "packs": 1.0,
+        "partno": "SCHP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450628,
+        "num_per_pack": 1.0,
+        "orderno": 1029087,
+        "packs": 1.0,
+        "partno": "WWHP",
+        "qty": 1.0,
+        "returnsno": 0.0,
+        "storedprice": 5.4,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450720,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 6.0,
+        "partno": "BSAP",
+        "qty": 6.0,
+        "returnsno": 1.0,
+        "storedprice": 5.45,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450721,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 2.0,
+        "partno": "HCCP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 5.32,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450722,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 14.0,
+        "partno": "HCOP",
+        "qty": 14.0,
+        "returnsno": 0.0,
+        "storedprice": 4.9,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450723,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 2.0,
+        "partno": "HCSP",
+        "qty": 2.0,
+        "returnsno": 0.0,
+        "storedprice": 3.53,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450724,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 6.0,
+        "partno": "LBSP",
+        "qty": 6.0,
+        "returnsno": 2.0,
+        "storedprice": 6.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450725,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 5.0,
+        "partno": "LSAP",
+        "qty": 5.0,
+        "returnsno": 1.0,
+        "storedprice": 7.15,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450726,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 5.0,
+        "partno": "MSAP",
+        "qty": 5.0,
+        "returnsno": 3.0,
+        "storedprice": 5.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450727,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 6.0,
+        "partno": "SARP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 4.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450728,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 8.0,
+        "partno": "SBRP",
+        "qty": 8.0,
+        "returnsno": 0.0,
+        "storedprice": 3.8,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450729,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 6.0,
+        "partno": "SBUP",
+        "qty": 6.0,
+        "returnsno": 1.0,
+        "storedprice": 3.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450730,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 3.0,
+        "partno": "SCHP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 5.85,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450731,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 2.0,
+        "partno": "TGRP",
+        "qty": 2.0,
+        "returnsno": 2.0,
+        "storedprice": 7.25,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450732,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 10.0,
+        "partno": "TUTP",
+        "qty": 10.0,
+        "returnsno": 1.0,
+        "storedprice": 1.96,
+        "vatamount": 0.0,
+        "vatrate": 17.5
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450733,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 3.0,
+        "partno": "WHBP",
+        "qty": 3.0,
+        "returnsno": 0.0,
+        "storedprice": 4.7,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450734,
+        "num_per_pack": 1.0,
+        "orderno": 1029100,
+        "packs": 5.0,
+        "partno": "WWHP",
+        "qty": 5.0,
+        "returnsno": 5.0,
+        "storedprice": 5.4,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450764,
+        "num_per_pack": 1.0,
+        "orderno": 1029104,
+        "packs": 6.0,
+        "partno": "MSAP",
+        "qty": 6.0,
+        "returnsno": 0.0,
+        "storedprice": 3.6,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "creditnotes": 0.0,
+        "discount": 0.0,
+        "discrepencies": 0.0,
+        "itemno": 5450765,
+        "num_per_pack": 1.0,
+        "orderno": 1029104,
+        "packs": 57.0,
+        "partno": "WWHP",
+        "qty": 57.0,
+        "returnsno": 0.0,
+        "storedprice": 3.7,
+        "vatamount": 0.0,
+        "vatrate": 0.0
+      }
+    }
+  ],
+  "invoice_master": [
+    {
+      "attributes": {
+        "custdiscount": 0.0,
+        "custno": 200019,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913468,
+        "orderno": 1028936,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 0.0,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 151.3,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 0.0,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 100017,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913482,
+        "orderno": 1028951,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 176.48,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 980.46,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 15.58,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 200146,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913484,
+        "orderno": 1028953,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 169.68,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 942.67,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 14.21,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 0.0,
+        "custno": 200267,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913495,
+        "orderno": 1028964,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 0.0,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 97.9,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 0.0,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 200315,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913500,
+        "orderno": 1028969,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 184.59,
+        "totaldiscount_adjdown": 10.94,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 1025.48,
+        "totalitems_adjdown": 60.78,
+        "totalitems_adjup": 0.0,
+        "totalvat": 14.78,
+        "totalvat_adjdown": 1.08,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 200316,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913501,
+        "orderno": 1028970,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 291.84,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 1621.32,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 35.29,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 200339,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913503,
+        "orderno": 1028972,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 19.34,
+        "totaldiscount_adjdown": 1.89,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 107.45,
+        "totalitems_adjdown": 10.5,
+        "totalitems_adjup": 0.0,
+        "totalvat": 0.0,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 0.0,
+        "custno": 200463,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913514,
+        "orderno": 1028983,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 0.0,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 288.16,
+        "totalitems_adjdown": 14.76,
+        "totalitems_adjup": 0.0,
+        "totalvat": 4.23,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 200542,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913529,
+        "orderno": 1028998,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 116.12,
+        "totaldiscount_adjdown": 32.73,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 645.09,
+        "totalitems_adjdown": 181.8,
+        "totalitems_adjup": 0.0,
+        "totalvat": 10.75,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 200598,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913535,
+        "orderno": 1029004,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 84.45,
+        "totaldiscount_adjdown": 27.73,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 469.17,
+        "totalitems_adjdown": 154.05,
+        "totalitems_adjup": 0.0,
+        "totalvat": 10.21,
+        "totalvat_adjdown": 4.93,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 0.0,
+        "custno": 200195,
+        "generalnote": null,
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913537,
+        "orderno": 1029006,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 0.0,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 61.57,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 2.88,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 200701,
+        "generalnote": null,
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913538,
+        "orderno": 1029007,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 28.27,
+        "totaldiscount_adjdown": 7.36,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 157.06,
+        "totalitems_adjdown": 40.9,
+        "totalitems_adjup": 0.0,
+        "totalvat": 6.86,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 0.0,
+        "custno": 200768,
+        "generalnote": "BRIDGE STREET",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913551,
+        "orderno": 1029021,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 0.0,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 136.0,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 0.0,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 200810,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913554,
+        "orderno": 1029024,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 54.52,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 302.87,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 11.69,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 0.0,
+        "custno": 100669,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913575,
+        "orderno": 1029045,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 0.0,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 83.0,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 0.0,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 200962,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913578,
+        "orderno": 1029048,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 33.01,
+        "totaldiscount_adjdown": 4.98,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 183.4,
+        "totalitems_adjdown": 27.65,
+        "totalitems_adjup": 0.0,
+        "totalvat": 0.0,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 201000,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913587,
+        "orderno": 1029058,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 17.93,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 99.6,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 0.0,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 201016,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913591,
+        "orderno": 1029062,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 14.51,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 80.63,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 3.19,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 201050,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913596,
+        "orderno": 1029068,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 48.78,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 271.0,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 8.82,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 0.0,
+        "custno": 200749,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913598,
+        "orderno": 1029070,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 0.0,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 58.2,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 0.0,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 201087,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913607,
+        "orderno": 1029080,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 9.68,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 53.75,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 0.0,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 201115,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913614,
+        "orderno": 1029087,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 14.44,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 80.22,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 1.58,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 18.0,
+        "custno": 201103,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913627,
+        "orderno": 1029100,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 70.89,
+        "totaldiscount_adjdown": 16.08,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 393.85,
+        "totalitems_adjdown": 89.36,
+        "totalitems_adjup": 0.0,
+        "totalvat": 5.35,
+        "totalvat_adjdown": 0.28,
+        "totalvat_adjup": 0.0
+      }
+    },
+    {
+      "attributes": {
+        "custdiscount": 0.0,
+        "custno": 200893,
+        "generalnote": "",
+        "generate": "N",
+        "invoicedate": "2024-09-02T00:00:00",
+        "invoiceno": 913631,
+        "orderno": 1029104,
+        "routeno": "ROUTE1",
+        "standing_day": "MON",
+        "taxrate": 0.0,
+        "terms": null,
+        "totaldiscount": 0.0,
+        "totaldiscount_adjdown": 0.0,
+        "totaldiscount_adjup": 0.0,
+        "totalitems": 232.5,
+        "totalitems_adjdown": 0.0,
+        "totalitems_adjup": 0.0,
+        "totalvat": 0.0,
+        "totalvat_adjdown": 0.0,
+        "totalvat_adjup": 0.0
+      }
+    }
+  ]
+}
