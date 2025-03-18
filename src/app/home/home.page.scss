@@ -1,27 +1,57 @@
-#container {
+.small-header ion-toolbar {
+  height: 40px;
+  font-size: 14px;
+}
+
+.summary {
   text-align: center;
+  background: #f4f4f4;
+  padding: 10px;
+}
 
+.summary-item {
+  border-right: 1px solid #ddd;
+}
+
+.invoice-card {
+  margin: 10px;
+  padding: 10px;
+}
+
+ion-footer {
+  background: #f8f8f8;
+  padding: 10px;
+  text-align: center;
+}
+
+ion-button {
+  width: 100%;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+#filter-button {
+  margin-left: 5px;
+  font-size: 0.8em;
+  padding: 5px;
+}
+
+#filter-dropdown {
+  display: none;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  background: white;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 200px;
+  z-index: 1000;
+  margin-right: 10px;
+  padding: 10px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+#filter-dropdown.show {
+  display: block !important;
 }
