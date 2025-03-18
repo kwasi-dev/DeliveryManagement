@@ -1,27 +1,96 @@
-#container {
+.small-header ion-toolbar {
+  height: 40px;
+  font-size: 14px;
+}
+
+.summary {
   text-align: center;
+  background: transparent;
+  padding: 10px;
+}
 
+.summary-item {
+  border-right: 1px solid #ddd;
+}
+
+.invoice-card {
+  margin: 10px;
+  padding: 10px;
+}
+
+ion-footer {
+  background: #f8f8f8;
+  padding: 10px;
+  text-align: center;
+}
+
+ion-button {
+  width: 100%;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+#filter-button {
+  margin-left: 5px;
+  font-size: 0.8em;
+  padding: 5px;
+}
+
+#filter-dropdown {
+  display: none;
   position: absolute;
+  background: white;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 200px;
+  z-index: 1000;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+#filter-dropdown.show {
+  display: block !important;
+}
+
+.bottom-navbar {
+  position: fixed;
+  bottom: env(safe-area-inset-bottom, 10px); /* Ensures space above gesture bar */
   left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 100%;
+  background: #181818; /* Match your theme */
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5); /* ✅ Soft shadow for floating effect */
+  
+  /* ✅ Clip content to maintain a smooth, rounded look */
+  overflow: hidden; 
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-tab-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: #181818; /* Ensure background doesn’t interfere */
+
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-tab-button {
+  flex: 1;
+  text-align: center;
+  color: #7b7b7b; /* Default icon color */
+  transition: all 0.3s ease-in-out;
 }
 
-#container a {
-  text-decoration: none;
+ion-tab-button:hover {
+  color: #ffffff; /* Hover effect */
+}
+
+ion-icon {
+  font-size: 24px; /* Adjust icon size */
 }
