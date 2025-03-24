@@ -9,10 +9,10 @@ import { environment } from './environments/environment';
 import { defineCustomElements as pwaElements } from '@ionic/pwa-elements/loader';
 import { defineCustomElements as jeepSqlite } from 'jeep-sqlite/loader';
 import { Capacitor } from '@capacitor/core';
-import { InitializeAppService } from './app/services/initialize.app.service';
-import { SQLiteService } from './app/services/sqlite.service';
-import { StorageService } from './app/services/storage.service';
-import { DbnameVersionService } from './app/services/dbname-version.service';
+import { InitializeAppService } from './app/services/database/initialize.app.service';
+import { SQLiteService } from './app/services/database/sqlite.service';
+import { StorageService } from './app/services/database/storage.service';
+import { DbnameVersionService } from './app/services/database/dbname-version.service';
 import { provideHttpClient } from '@angular/common/http';
 
 if (environment.production) {
