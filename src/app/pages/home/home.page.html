@@ -1,0 +1,49 @@
+<!-- Invoice Management Page -->
+<ion-header [translucent]="true">
+  <ion-toolbar *ngIf="showToolbar">
+    <ion-tab-bar class="top-tab-bar">
+      <ion-tab-button [class.selected]="selectedTab === 'all'" (click)="setTopTab('all')">
+        <div class="tab-count">{{ totalCount }}</div>
+        <ion-label>All</ion-label>
+      </ion-tab-button>
+      <ion-tab-button [class.selected]="selectedTab === 'delivered'" (click)="setTopTab('delivered')">
+        <div class="tab-count">{{ deliveredCount }}</div>
+        <ion-label>Delivered</ion-label>
+      </ion-tab-button>
+      <ion-tab-button [class.selected]="selectedTab === 'pending'" (click)="setTopTab('pending')">
+        <div class="tab-count">{{ undeliveredCount }}</div>
+        <ion-label>Pending</ion-label>
+      </ion-tab-button>
+      <ion-tab-button [class.selected]="selectedTab === 'returns'" (click)="setTopTab('returns')">
+        <div class="tab-count">{{ returnsCount }}</div>
+        <ion-label>Returns</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-toolbar>
+
+  <ion-toolbar *ngIf="showSearch">
+    <ion-searchbar #searchBar mode="ios" [(ngModel)]="searchQuery" (ionInput)="filterInvoices($event)" [showCancelButton]="true" (ionCancel)="cancelSearch()"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-card class="invoice-card" *ngFor="let invoice of filteredInvoices" (click)="openInvoiceDetails(invoice)">
+      <ion-card-header>
+        <ion-card-title> {{invoice.invoiceNo}} </ion-card-title>
+        <ion-card-subtitle> <ion-icon name="person-circle"></ion-icon> {{ invoice.company }} </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+      <span>
+        <ion-icon name="calendar"></ion-icon> {{ invoice.invoiceDate }}<br>
+      </span>
+      <span>
+        <ion-icon name="cash-outline"></ion-icon> <b> $ {{ invoice.totalItems }}</b><br>
+      </span>
+      <span>
+        <ion-icon name="notifications" [style.color]="invoice.generate === 'Y' ? 'green' : 'orange'"></ion-icon> <b>Status -</b> {{ invoice.generate === 'Y' ? 'Delivered' : 'Not Delivered' }}
+      </span>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

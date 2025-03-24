@@ -1,27 +1,6 @@
-.small-header ion-toolbar {
-  height: 40px;
-  font-size: 14px;
-}
-
-.summary {
-  text-align: center;
-  background: transparent;
-  padding: 10px;
-}
-
-.summary-item {
-  border-right: 1px solid #ddd;
-}
-
 .invoice-card {
   margin: 10px;
   padding: 10px;
-}
-
-ion-footer {
-  background: #f8f8f8;
-  padding: 10px;
-  text-align: center;
 }
 
 ion-button {
@@ -56,28 +35,10 @@ ion-button {
   display: block !important;
 }
 
-.bottom-navbar {
-  position: fixed;
-  bottom: env(safe-area-inset-bottom, 10px); /* Ensures space above gesture bar */
-  left: 0;
-  width: 100%;
-  background: #181818; /* Match your theme */
-  padding: 15px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5); /* ✅ Soft shadow for floating effect */
-  
-  /* ✅ Clip content to maintain a smooth, rounded look */
-  overflow: hidden; 
-}
-
 ion-tab-bar {
   display: flex;
-  justify-content: space-between;
   width: 100%;
   background: #181818; /* Ensure background doesn’t interfere */
-
 }
 
 ion-tab-button {
@@ -85,12 +46,27 @@ ion-tab-button {
   text-align: center;
   color: #7b7b7b; /* Default icon color */
   transition: all 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 ion-tab-button:hover {
   color: #ffffff; /* Hover effect */
 }
 
+ion-tab-button.selected {
+  background-color: green;
+}
+
 ion-icon {
   font-size: 24px; /* Adjust icon size */
+}
+
+.tab-count {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+ion-card {
+  border-radius: 16px;
+  background-color: #273746;
 }

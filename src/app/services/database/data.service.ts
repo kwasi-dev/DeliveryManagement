@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';  
 import { StorageService } from './storage.service';
-import data from '../../assets/data/data.json';
-import { Customer } from '../models/customer';
-import { InvoiceItem } from '../models/invoice_item';
-import { Invoice } from '../models/invoice';
+import data from '../../../assets/data/data.json';
+import { Customer } from '../../models/customer';
+import { InvoiceItem } from '../../models/invoice_item';
+import { Invoice } from '../../models/invoice';
 import { Toast } from '@capacitor/toast';
 
 @Injectable({

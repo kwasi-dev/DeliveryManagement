@@ -2,10 +2,10 @@ import { CapacitorSQLite, SQLiteDBConnection } from '@capacitor-community/sqlite
 import { Injectable } from '@angular/core';
 import { SQLiteService } from './sqlite.service';
 import { DbnameVersionService } from './dbname-version.service';
-import { UserUpgradeStatements } from '../upgrades/user.upgrade.statements';
-import { Customer } from '../models/customer';
-import { InvoiceItem } from '../models/invoice_item';
-import { Invoice } from '../models/invoice';
+import { UserUpgradeStatements } from '../../upgrades/user.upgrade.statements';
+import { Customer } from '../../models/customer';
+import { InvoiceItem } from '../../models/invoice_item';
+import { Invoice } from '../../models/invoice';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { DataService } from './data.service';
 import { Toast } from '@capacitor/toast';

@@ -1,0 +1,16 @@
+<ion-tabs>
+  <ion-tab-bar class="bottom-tab-bar">
+    <ion-tab-button tab="home">
+      <ion-icon [name]="selectedBottomTab === 'home' ? 'home' : 'home-outline'"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="search" (click)="toggleSearch()">
+      <ion-icon [name]="selectedBottomTab === 'search' ? 'search' : 'search-outline'"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="upload">
+      <ion-icon [name]="selectedBottomTab === 'upload' ? 'cloud-upload' : 'cloud-upload-outline'"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="settings">
+      <ion-icon [name]="selectedBottomTab === 'settings' ? 'settings' : 'settings-outline'"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

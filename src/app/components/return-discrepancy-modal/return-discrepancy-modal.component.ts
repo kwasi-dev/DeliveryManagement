@@ -4,7 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';  // ✅ Import FormsModule
 import { CommonModule } from '@angular/common';
 import { AddItemModalComponent } from '../add-item-modal/add-item-modal.component';
-import { StorageService } from 'src/app/services/storage.service';
+import { StorageService } from 'src/app/services/database/storage.service';
 
 @Component({
   selector: 'app-return-discrepancy-modal',
