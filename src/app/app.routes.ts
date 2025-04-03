@@ -15,6 +15,10 @@ export const routes: Routes = [
         redirectTo: 'home'
       },
       {
+        path: 'upload',
+        loadComponent: () => import('./pages/sync/sync.page').then((m)=> m.SyncPage),
+      },
+      {
         path: 'settings',
         loadComponent: () => import('./pages/settings/settings.page').then( m => m.SettingsPage)
       },
@@ -29,5 +33,10 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'navbar',
     pathMatch: 'full',
+  },
+  {
+    path: 'sync',
+    loadComponent: () => import('./pages/sync/sync.page').then( m => m.SyncPage)
   }
+
 ];

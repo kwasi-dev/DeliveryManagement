@@ -16,6 +16,8 @@ dependencies {
     implementation project(':capacitor-keyboard')
     implementation project(':capacitor-status-bar')
     implementation project(':capacitor-toast')
+    implementation project(':jcesarmobile-ssl-skip')
+    implementation project(':nyx-printer')
 
 }
 

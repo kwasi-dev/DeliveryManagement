@@ -1,4 +1,4 @@
-import { CapacitorSQLite, SQLiteDBConnection } from '@capacitor-community/sqlite';
+import { SQLiteDBConnection } from '@capacitor-community/sqlite';
 import { Injectable } from '@angular/core';
 import { SQLiteService } from './sqlite.service';
 import { DbnameVersionService } from './dbname-version.service';
@@ -7,14 +7,13 @@ import { Customer } from '../../models/customer';
 import { InvoiceItem } from '../../models/invoice_item';
 import { Invoice } from '../../models/invoice';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { DataService } from './data.service';
 import { Toast } from '@capacitor/toast';
 
 @Injectable()
 export class StorageService {
-    public customerList: BehaviorSubject<Customer[]> = new BehaviorSubject<Customer[]>([]);
-    public invoiceItemList: BehaviorSubject<InvoiceItem[]> = new BehaviorSubject<InvoiceItem[]>([]);
-    public invoiceList: BehaviorSubject<Invoice[]> = new BehaviorSubject<Invoice[]>([]);
+    public homePageList: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
+    public returnsList: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
+
     private databaseName: string = "";
     private uUpdStmts: UserUpgradeStatements = new UserUpgradeStatements();
     private versionUpgrades;
@@ -32,43 +31,11 @@ export class StorageService {
         await this.sqliteService.addUpgradeStatement({ database: this.databaseName, upgrade: this.versionUpgrades });
         this.db = await this.sqliteService.openDatabase(this.databaseName, false, 'no-encryption', this.loadToVersion, false);
         this.dbVerService.set(this.databaseName, this.loadToVersion);
-        await this.loadAllData();
+        await this.loadData();
     }
 
     databaseState() {
         return this.isDatabaseReady.asObservable();
-    }
-
-    fetchCustomers(): Observable<Customer[]> {
-        return this.customerList.asObservable();
-    }
-
-    fetchProducts(): Observable<InvoiceItem[]> {
-        return this.invoiceItemList.asObservable();
-    }
-
-    fetchInvoices(): Observable<Invoice[]> {
-        return this.invoiceList.asObservable();
-    }
-
-    async loadCustomers() {
-        const customers: Customer[] = (await this.db.query('SELECT * FROM customers;')).values as Customer[];
-        this.customerList.next(customers);
-    }
-
-    async loadInvoiceItems() {
-        const products: InvoiceItem[] = (await this.db.query('SELECT * FROM invoiceitems')).values as InvoiceItem[];
-        this.invoiceItemList.next(products);
-    }
-
-    async loadInvoices() {
-        const invoices: Invoice[] = (await this.db.query('SELECT * FROM invoices')).values as Invoice[];
-        this.invoiceList.next(invoices);
-    }
-
-    async loadAllData() {
-        await Promise.all([this.loadCustomers(), this.loadInvoiceItems(), this.loadInvoices()]);
-        this.isDatabaseReady.next(true);
     }
 
     // Adds a single customer
@@ -88,19 +55,19 @@ export class StorageService {
             customer.addr1,
             customer.addr2 || null
         ]);
-        await this.loadCustomers();
+        await this.loadData();
     }
 
     // Adds a list of customers
     async addCustomers(customers: Customer[]) {
-        const sql = `INSERT INTO customers (id, areaNo, lastInvoiceDate, company, contact, email, phone, terms, type, addr1, addr2)
+        const sql = `INSERT OR IGNORE INTO customers (id, areaNo, lastInvoiceDate, company, contact, email, phone, terms, type, addr1, addr2)
         VALUES `;
 
         var values = customers.map(customer => `(${customer.id}, ${customer.areaNo}, '${customer.lastInvoiceDate.replace(/'/g, "''")}', '${customer.company.replace(/'/g, "''")}', '${customer.contact.replace(/'/g, "''")}', '${customer.email.replace(/'/g, "''")}', '${customer.phone.replace(/'/g, "''")}', '${customer.terms.replace(/'/g, "''")}', '${customer.type.replace(/'/g, "''")}', '${customer.addr1.replace(/'/g, "''")}', '${customer.addr2.replace(/'/g, "''")}')`).join(",\n");
         values += ';';
 
         await this.db.execute(sql + values);
-        await this.loadCustomers();
+        await this.loadData();
     }
 
     // Adds a single invoice item
@@ -123,7 +90,7 @@ export class StorageService {
             item.discount,
             item.creditNotes
         ]);
-        await this.loadInvoiceItems();
+        await this.loadData();
     }
 
     // Adds a list of invoice items
@@ -135,7 +102,7 @@ export class StorageService {
         values += ';';
 
         await this.db.execute(sql + values);
-        await this.loadInvoiceItems();
+        await this.loadData();
     }
 
     // Adds a single invoice
@@ -165,7 +132,7 @@ export class StorageService {
             invoice.totalVat_adjdown,
             invoice.totalVat_adjup
         ]);
-        await this.loadAllData();
+        await this.loadData();
     }
 
     // Adds a list of invoices
@@ -178,113 +145,76 @@ export class StorageService {
         values += ';';
 
         await this.db.execute(sql + values);
-        await this.loadInvoices();
+        await this.loadData();
     }
-
-    // Queries
 
     // Gets all items on an invoice by order number
     async getInvoiceItems(orderNo: number) {
-        try {
-            const result: InvoiceItem[] = (await this.db.query('SELECT * FROM invoiceitems WHERE orderNo = ?', [orderNo])).values as InvoiceItem[];
-            if (result.length > 0) {
-                return result;
-            } else {
-                return [];
-            }
-        } catch (erorr) {
-            console.log("Error");
-            return [];
+        const result: InvoiceItem[] = (await this.db.query('SELECT * FROM invoiceitems WHERE orderNo = ?', [orderNo])).values as InvoiceItem[];
+        if (result.length > 0) {
+            return result;
+        } else {
+            return null;
         }
     }
 
     // Get invoice item by orderNo and itemNo
     async getSingleInvoiceItem(itemNo: number, orderNo: number) {
-        try {
-            const result: InvoiceItem[] = (await this.db.query('SELECT * FROM invoiceitems WHERE itemNo = ? AND orderNo = ?', [itemNo, orderNo,])).values as InvoiceItem[];
-            if (result.length > 0) {
-                return result;
-            } else {
-                return null;
-            }
-        } catch (error) {
-            console.log("Error querying invoiceitem by itemNo and orderNo ...", error);
-            return -999;
+        const result: InvoiceItem[] = (await this.db.query('SELECT * FROM invoiceitems WHERE itemNo = ? AND orderNo = ?', [itemNo, orderNo,])).values as InvoiceItem[];
+        if (result.length > 0) {
+            return result;
+        } else {
+            return null;
         }
     }
 
     // Gets a customer by customer ID
     async getCustomer(custNo: number) {
-        try {
-            const result: Customer[] = (await this.db.query('SELECT * FROM customers WHERE id = ?', [custNo])).values as Customer[];
-            if (result.length > 0) {
-                return result;
-            } else {
-                return null;
-            }
-        } catch (error) {
-            console.log("Error querying customer ...", error);
-            return -999;
+        const result: Customer[] = (await this.db.query('SELECT * FROM customers WHERE id = ?', [custNo])).values as Customer[];
+        if (result.length > 0) {
+            return result;
+        } else {
+            return null;
         }
     }
 
     // Gets a customer by invoice number
     async getCustomerbyInvoice(invoiceNo: number) {
-        try {
-            const result: Customer[] = (await this.db.query('SELECT c.* FROM customers c JOIN invoices i ON c.id = i.custNo WHERE i.invoiceNo = ?', [invoiceNo])).values as Customer[];
-            if (result.length > 0) {
-                return result;
-            } else {
-                return null;
-            }
-        } catch (error) {
-            console.log("Error querying customer by invoice ...", error);
-            return -999;
+        const result: Customer[] = (await this.db.query('SELECT c.* FROM customers c JOIN invoices i ON c.id = i.custNo WHERE i.invoiceNo = ?', [invoiceNo])).values as Customer[];
+        if (result.length > 0) {
+            return result;
+        } else {
+            return null;
         }
     }
 
     // Gets invoices by invoice number
     async getInvoice(invoiceNo: number) {
-        try {
-            const result: Invoice[] = (await this.db.query('SELECT * FROM invoices WHERE invoiceNo = ?', [invoiceNo])).values as Invoice[];
-            if (result.length > 0) {
-                return result;
-            } else {
-                return null;
-            }
-        } catch (error) {
-            console.log("Error querying invoice ...", error);
-            return -999;
+        const result: Invoice[] = (await this.db.query('SELECT * FROM invoices WHERE invoiceNo = ?', [invoiceNo])).values as Invoice[];
+        if (result.length > 0) {
+            return result;
+        } else {
+            return null;
         }
     }
 
     // Gets invoice by order number
     async getInvoicebyOrderNo(orderNo: number) {
-        try {
-            const result: Invoice[] = (await this.db.query('SELECT * FROM invoices where orderNo = ?', [orderNo])).values as Invoice[];
-            if (result.length > 0) {
-                return result;
-            } else {
-                return null;
-            }
-        } catch (error) {
-            console.log("Error querying invoice ...", error);
-            return -999;
+        const result: Invoice[] = (await this.db.query('SELECT * FROM invoices where orderNo = ?', [orderNo])).values as Invoice[];
+        if (result.length > 0) {
+            return result;
+        } else {
+            return null;
         }
     }
 
     // Gets invoice by customer ID
     async getInvoicesbyCustNo(custNo: number) {
-        try {
-            const result: Invoice[] = (await this.db.query('SELECT * FROM invoices WHERE custNo = ?', [custNo])).values as Invoice[];
-            if (result.length > 0) {
-                return result;
-            } else {
-                return null;
-            }
-        } catch (error) {
-            console.log("Error querying invoice by custNo ...", error);
-            return -999;
+        const result: Invoice[] = (await this.db.query('SELECT * FROM invoices WHERE custNo = ?', [custNo])).values as Invoice[];
+        if (result.length > 0) {
+            return result;
+        } else {
+            return null;
         }
     }
 
@@ -292,13 +222,48 @@ export class StorageService {
     async logReturn(itemNo: number, orderNo: number, returnsNo: number, generalNote: string | null) {
         var invoice = this.getInvoicebyOrderNo(orderNo);
         var item = this.getSingleInvoiceItem(itemNo, orderNo);
-        if ((item != null || item != -999) && (invoice != null || invoice != -999)) {
+        if (item != null && invoice != null) {
             await this.db.run('UPDATE invoiceitems SET returnsNo = ? WHERE orderNo = ?', [returnsNo, orderNo]);
             if (generalNote != null) {
                 await this.db.run('UPDATE invoices SET generalNote = ? WHERE orderNo = ?', [generalNote, orderNo]);
             }
+            await this.loadData();
         } else {
-            console.log("Error logging return ...");
+            await Toast.show({
+                text: 'Error logging return!',
+                duration: 'short',
+                position: 'bottom'
+            });
+        }
+    }
+
+    async logReturns( items: { itemNo: number, orderNo: number, returnsNo: number, generalNote: string | null}[]) {
+        try {
+            //await this.db.execute('BEGIN TRANSACTION;');
+
+            for (const item of items) {
+                const { itemNo, orderNo, returnsNo, generalNote } = item;
+                await this.db.run(
+                    'UPDATE invoiceitems SET returnsNo = ? WHERE itemNo = ? AND orderNo = ?',
+                    [returnsNo, itemNo, orderNo]);
+
+                if (generalNote != null) {
+                    await this.db.run(
+                        'UPDATE invoices SET generalNote = ? WHERE orderNo = ?',
+                        [generalNote, orderNo]
+                    );
+                }
+            }
+
+            //await this.db.execute('COMMIT');
+            await this.loadData();
+        } catch (error) {
+            await this.db.execute('ROLLBACK');
+            await Toast.show({
+                text: 'Error logging returns!',
+                duration: 'short',
+                position: 'bottom',
+            });
         }
     }
 
@@ -306,13 +271,18 @@ export class StorageService {
     async logDiscrepency(itemNo: number, orderNo: number, discrepencies: number, generalNote: string | null) {
         var invoice = this.getInvoicebyOrderNo(orderNo);
         var item = this.getSingleInvoiceItem(itemNo, orderNo);
-        if ((item != null || item != -999) && (invoice != null || invoice != -999)) {
+        if (item != null && invoice != null) {
             await this.db.run('UPDATE invoiceitems SET discrepancies = ? WHERE orderNo = ?', [discrepencies, orderNo]);
             if (generalNote != null) {
                 await this.db.run('UPDATE invoices SET generalNote = ? WHERE orderNo = ?', [generalNote, orderNo]);
             }
+            await this.loadData();
         } else {
-            console.log("Error logging discrepency ...");
+            await Toast.show({
+                text: 'Error logging discrepancy!',
+                duration: 'short',
+                position: 'bottom'
+            });
         }
     }
 
@@ -320,49 +290,74 @@ export class StorageService {
     async logCreditNote(itemNo: number, orderNo: number, creditNotes: number, generalNote: string | null) {
         var invoice = this.getInvoicebyOrderNo(orderNo);
         var item = this.getSingleInvoiceItem(itemNo, orderNo);
-        if ((item != null || item != -999) && (invoice != null || invoice != -999)) {
+        if (item != null && invoice != null) {
             await this.db.run('UPDATE invoiceitems SET creditNotes = ? WHERE orderNo = ?', [creditNotes, orderNo]);
             if (generalNote != null) {
                 await this.db.run('UPDATE invoices SET generalNote = ? WHERE orderNo = ?', [generalNote, orderNo]);
             }
+            await this.loadData();
         } else {
-            console.log("Error logging credit note ...");
+            await Toast.show({
+                text: 'Error logging credit note!',
+                duration: 'short',
+                position: 'bottom'
+            });
         }
     }
 
-    // Update Invoice Generated Status
+    // Mark Invoice Delivered
     async updateInvoiceStatus(invoiceNo: number, status: string) {
         var invoice = this.getInvoice(invoiceNo);
         if (invoice != null) {
             await this.db.run('UPDATE invoices SET generate = ? WHERE invoiceNo = ?', [status, invoiceNo])
+            await this.loadData();
         } else {
-            console.log("Error updating status ...");
-        }
-    }
-    
-    async getInvoices(): Promise<Record<string, any>[]> {
-        try {
-            const result = await this.db.query(`
-                SELECT i.*, c.company 
-                FROM invoices i
-                JOIN customers c ON i.custNo = c.id;
-            `);
-    
-            return result.values ?? []; // ✅ Ensure result.values is always an array
-        } catch (error) {
-            console.error("Error querying invoices:", error);
-            return []; // ✅ Return an empty array on failure
+            await Toast.show({
+                text: 'Error updating delivery status!',
+                duration: 'short',
+                position: 'bottom'
+            });
         }
     }
 
-    async isDatabaseEmpty(): Promise<boolean> {
-        const invoices = await this.getInvoices()
-        if (invoices.length == 0) {
-            return true
-        }
-        return false
+    // Loads Invoices Data into homePageList
+    async loadHomePageData() {
+        const result = await this.db.query(`SELECT i.*, c.company FROM invoices i JOIN customers c ON i.custNo = c.id;`);
+        this.homePageList.next(result.values || []);
     }
 
-    
+    // Loads Returns Data into returnsList
+    async loadReturnsData() {
+        const result = (await this.db.query('SELECT inv.*, inv_item.* FROM invoices inv JOIN invoiceitems inv_item ON inv.orderNo = inv_item.orderNo WHERE inv_item.returnsNo > 0'))
+        const results = result.values
+        if (results != null) {
+            const grouped: any = {};
 
+            results.forEach(row => {
+                const orderNo = row.orderNo;
+                if (!grouped[orderNo]) {
+                    grouped[orderNo] = {
+                        ...row,
+                        items: []
+                    };
+                }
+                grouped[orderNo].items.push({
+                    'itemNo': row.itemNo,
+                    'returnsNo': row.returnsNo,
+                    'discrepancies': row.discrepancies,
+                });
+            });
+
+            const groupedArr = Object.values(grouped);
+            this.returnsList.next(groupedArr);
+        } else {
+            this.returnsList.next([]);
+        }
+    }
+
+    // Refreshes All Data
+    async loadData() {
+        await Promise.all([this.loadHomePageData(), this.loadReturnsData()]);
+        this.isDatabaseReady.next(true);
+    }
 }
