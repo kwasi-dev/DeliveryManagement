@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { StorageService } from '../../services/database/storage.service';
 import { Invoice } from '../../models/invoice';
 import { InvoicedetailsComponent } from '../../components/invoicedetails/invoicedetails.component';
-import { FormsModule } from '@angular/forms';  // ✅ Import FormsModule
+import { FormsModule } from '@angular/forms';
 import { ModalController } from '@ionic/angular'
 import { InvoiceItem } from '../../models/invoice_item';
 import { IonSearchbar } from '@ionic/angular';
 import { ViewChild } from '@angular/core';
 import { SearchService } from 'src/app/services/search/search.service';
+import { PopoverController } from "@ionic/angular";
+import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter-popover.component';
 
  @Component({
  selector: 'app-home',
@@ -22,9 +24,13 @@ import { SearchService } from 'src/app/services/search/search.service';
  export class HomePage implements OnInit {
     invoices: any[] = []; // Stores all invoices
     filteredInvoices: any[] = []; // Stores filtered invoices
+    returnInvoices: any[] = []; // Invoices that has returns
+
     shownInvoices: any[] = [];
+    shownReturns: any[] = [];
 
     searchQuery: string = ''; // Stores the search input
+    filterParameter: string = 'Today';
 
     deliveredCount: number = 0;
     undeliveredCount: number = 0;
@@ -34,13 +40,24 @@ import { SearchService } from 'src/app/services/search/search.service';
     showSearch: boolean = false;
     showToolbar: boolean = true;
 
-  constructor(private storage: StorageService, private modalCtrl: ModalController, private searchService: SearchService) {}
+    returnSelected: boolean = false;
 
+    startDate: any = null;
+    endDate: any = null;
+
+  constructor(private storage: StorageService, private modalCtrl: ModalController, private searchService: SearchService, private popOverCtrl: PopoverController) {}
+
+  // Listen for data updates and auto update UI
   async ngOnInit() {
-    this.invoices = await this.storage.getInvoices();
-    this.convertDates();
-    this.filteredInvoices = [...this.invoices];
-    this.updateInvoiceSummary();
+    this.storage.homePageList.subscribe(async data => {
+      this.invoices = data;
+      await this.filter(this.filterParameter, this.startDate, this.endDate);
+    })
+
+    this.storage.returnsList.subscribe(async data => {
+      this.returnInvoices = data;
+      await this.filter(this.filterParameter, this.startDate, this.endDate);
+    })
     
     this.searchService.showSearch$.subscribe(state => {
       if (state === true) {
@@ -62,10 +79,9 @@ import { SearchService } from 'src/app/services/search/search.service';
 
   // Dynamically Update the Toolbar upon changes
   updateInvoiceSummary() {
-    this.deliveredCount = this.invoices.filter(inv => inv.generate === 'Y').length;
-    this.undeliveredCount = this.invoices.filter(inv => inv.generate !== 'Y').length;
-    this.returnsCount = this.invoices.reduce((total, inv) => total + (inv.returnsNo || 0), 0);
-    this.totalCount = this.invoices.length;
+    this.deliveredCount =  this.shownInvoices.filter(inv => inv.generate === 'Y').length;
+    this.undeliveredCount = this.shownInvoices.filter(inv => inv.generate !== 'Y').length;
+    this.returnsCount = this.shownReturns.reduce((total, inv) => total + (inv.returnsNo || 0), 0);
   }
 
   // Search based on Company Name, Invoice number and Date.
@@ -79,25 +95,94 @@ import { SearchService } from 'src/app/services/search/search.service';
              normalize(invoice.invoiceDate).includes(query); // ✅ this line
     });
   }
-  
+
+  // Filter Button Functions
+
+  filterByToday() {
+    const date = '2024-09-02';
+    this.shownInvoices = this.invoices.filter(invoice => invoice.invoiceDate.includes(date));
+    this.shownReturns = this.returnInvoices.filter(inv => inv.invoiceDate.includes(date));
+    this.filterParameter = 'Today';
+  }
+
+  filterByDate(date: string) {
+    const dateString = date.split('T')[0];
+    this.shownInvoices = this.invoices.filter(invoice => invoice.invoiceDate.includes(dateString));
+    this.shownReturns = this.returnInvoices.filter(inv => inv.invoiceDate.includes(dateString));
+    this.filterParameter = 'Specific Date';
+  }
+
+  filterByAll() {
+    this.returnSelected = false;
+    this.shownInvoices = this.invoices;
+    this.shownReturns = this.returnInvoices;
+    this.filterParameter = 'All';
+  }
+
+  filterByRange(start: string, end: string) {
+    const startDate = new Date(start).toISOString().split('T')[0];
+    const endDate = new Date(end).toISOString().split('T')[0];
+
+    this.shownInvoices = this.invoices.filter(invoice => {
+      const invDate = new Date(invoice.invoiceDate).toISOString().split('T')[0];
+      return invDate >= startDate && invDate <= endDate;
+    });
+
+    this.shownReturns = this.returnInvoices.filter(inv => {
+      const invDate = new Date(inv.invoiceDate).toISOString().split('T')[0];
+      return invDate >= startDate && invDate <= endDate;
+    });
+
+    this.filterParameter = 'Range';
+  }
+
+  async filter(type: string, start: string | null, end: string | null) {
+    switch (type) {
+      case 'All':
+        this.filterByAll();
+        this.setTopTab(this.selectedTab);
+        this.updateInvoiceSummary();
+        break;
+      case 'Today':
+        this.filterByToday();
+        this.setTopTab(this.selectedTab);
+        this.updateInvoiceSummary();
+        break;
+      case 'Range':
+        if (start != null && end != null) {
+        this.filterByRange(start, end);
+        this.setTopTab(this.selectedTab);
+        this.updateInvoiceSummary();
+        }
+        break;
+      case 'Specific Date':
+        if (start != null) {
+          this.filterByDate(start);
+          this.setTopTab(this.selectedTab);
+          this.updateInvoiceSummary();
+        }
+        break;
+    }
+  }
+
   // Creates Modal for Invoice Details
   async openInvoiceDetails(invoice: Invoice) {
     const items = await this.storage.getInvoiceItems(invoice.orderNo)
     const modal = await this.modalCtrl.create({
       component: InvoicedetailsComponent,
-      componentProps: { invoice, items }, // Pass invoice data to modal
+      componentProps: { 
+        invoice, 
+        items
+      }, // Pass invoice data to modal
     });
     return await modal.present();
   }
 
   // Selects a specific tab in the header bar and filters the results
-  selectedTab = 'all';
-  setTopTab(tab: string) {
+  selectedTab = 'delivered';
+  async setTopTab(tab: string) {
     this.selectedTab = tab;
     switch (tab) {
-      case 'all':
-        this.showAll();
-        break;
       case 'delivered':
         this.showDelivered();
         break;
@@ -109,35 +194,44 @@ import { SearchService } from 'src/app/services/search/search.service';
         break;
     }
   }
- 
-  // Shows all invoices
-  showAll() {
-    this.shownInvoices = this.invoices
-    this.filteredInvoices = this.shownInvoices
-  }
 
   // Shows Delivered invoices
   showDelivered() {
-    this.shownInvoices = this.invoices.filter(invoice => invoice.generate === 'Y')
-    this.filteredInvoices = this.shownInvoices
+    this.returnSelected = false
+    this.filteredInvoices = this.shownInvoices.filter(invoice => invoice.generate === 'Y')
   }
 
   // Shows undelivered invoices
   showPending() {
-    this.shownInvoices = this.invoices.filter(invoice => invoice.generate === 'N')
-    this.filteredInvoices = this.shownInvoices
+    this.returnSelected = false;
+    this.filteredInvoices = this.shownInvoices.filter(invoice => invoice.generate === 'N')
   }
 
   // Show returns
   showReturns() {
-    this.shownInvoices = this.invoices
-    this.filteredInvoices = this.shownInvoices
+    this.returnSelected = true;
+    this.filteredInvoices = [];
   }
 
-  // Convert the date in invoice array to a readable format and return the invoices
-  convertDates() {
-    for (let i = 0; i < this.invoices.length; i++) {
-      this.invoices[i].invoiceDate = formatDate(this.invoices[i].invoiceDate)
+  async openFilterPopover(ev: any) {
+    const popover = await this.popOverCtrl.create({
+      component: FilterPopoverComponent,
+      event: ev,
+      translucent: true,
+      showBackdrop: false
+    });
+  
+    await popover.present();
+
+    const { data, role } = await popover.onWillDismiss();
+    if(role === "confirm" && data?.filter) {
+      if (data.filter === 'Range') {
+        await this.filter(data.filter, data.start, data.end);
+      } else if (data.filter === 'Specific Date') {
+        await this.filter(data.filter, data.date, null)
+      } else {
+        await this.filter(data.filter, null, null);
+      }
     }
   }
 

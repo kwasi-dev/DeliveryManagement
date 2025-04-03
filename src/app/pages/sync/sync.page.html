@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Synchronization</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-title>Download Data</ion-card-title>
+    <ion-item>
+      <ion-input [(ngModel)]="routeNo" label="Route Number" labelPlacement="stacked" placeholder="Enter number"></ion-input>
+    </ion-item>
+    <ion-datetime presentation="date" [(ngModel)]="selectedDate" (ionChange)="onDateSelected($event)" [min]="minDate" [max]="maxDate" color="primary"></ion-datetime>
+    <ion-button (click)="downloadAndSave()" >Download</ion-button>
+  </ion-card>
+</ion-content>

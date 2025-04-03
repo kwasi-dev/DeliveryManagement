@@ -13,7 +13,7 @@
   <!-- Product Name & ID Row -->
   <ion-grid>
     <ion-row>
-      <ion-col size="8">
+      <ion-col>
         <ion-item>
           <ion-label><b>Product Name</b></ion-label>
           <ion-select [(ngModel)]="selectedProduct">
@@ -28,7 +28,6 @@
 
   <!-- Quantity Input -->
   <ion-item>
-    <ion-label><b>Quantity </b></ion-label>
     <ion-input type="number" [(ngModel)]="quantity" placeholder="Enter amount"></ion-input>
   </ion-item>
 </ion-content>

@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AddItemModalComponent {
   @Input() productList!: any[]; // Receive product list from parent
-  selectedProduct: any;
+  selectedProduct!: any;
   quantity: number = 1;
 
   constructor(private modalCtrl: ModalController) {}

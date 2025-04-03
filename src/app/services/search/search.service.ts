@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class SearchService {
   private _showSearch = new BehaviorSubject<boolean>(false);
   private _showToolbar = new BehaviorSubject<boolean>(false);
-  showSearch$ = this._showSearch.asObservable(); // ✅ other components can subscribe
+  showSearch$ = this._showSearch.asObservable();
   showToolbar$ = this._showToolbar.asObservable();
 
   toggle() {

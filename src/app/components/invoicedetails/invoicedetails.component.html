@@ -24,7 +24,7 @@
       <div class="date-section">
         <div>
           <p><b>Issued</b></p>
-          <p>{{ invoice.invoiceDate }}</p>
+          <p>{{ invoice.invoiceDate | date: 'MMM dd yyyy' }}</p>
         </div>
       </div>
     </ion-card-content>

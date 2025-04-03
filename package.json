@@ -26,9 +26,9 @@
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
     "@capacitor-community/sqlite": "^7.0.0",
-    "@capacitor/android": "7.0.1",
+    "@capacitor/android": "7.1.0",
     "@capacitor/app": "7.0.0",
-    "@capacitor/core": "7.1.0",
+    "@capacitor/core": "^7.0.1",
     "@capacitor/filesystem": "^7.0.0",
     "@capacitor/haptics": "7.0.0",
     "@capacitor/keyboard": "7.0.0",
@@ -36,8 +36,12 @@
     "@capacitor/toast": "^7.0.0",
     "@ionic/angular": "^8.0.0",
     "@ionic/pwa-elements": "^3.3.0",
+    "@jcesarmobile/ssl-skip": "0.4.0",
+    "capacitor": "^0.5.6",
     "deliverymanagement": "file:",
     "ionicons": "^7.0.0",
+    "nyx-printer": "file:nyx-printer",
+    "nyx-printer-plugin": "file:../path-to-your-plugin",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -52,7 +56,7 @@
     "@angular/cli": "^19.0.0",
     "@angular/compiler-cli": "^19.0.0",
     "@angular/language-service": "^19.0.0",
-    "@capacitor/cli": "7.1.0",
+    "@capacitor/cli": "^7.1.0",
     "@ionic/angular-toolkit": "^12.0.0",
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
@@ -73,5 +77,13 @@
     "stream-browserify": "^3.0.0",
     "typescript": "~5.6.3",
     "vm-browserify": "^1.1.2"
-  }
+  },
+  "browserslist": [
+    "Chrome >=79",
+    "ChromeAndroid >=79",
+    "Firefox >=70",
+    "Edge >=79",
+    "Safari >=14",
+    "iOS >=14"
+  ]
 }

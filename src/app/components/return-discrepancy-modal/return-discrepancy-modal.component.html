@@ -39,8 +39,8 @@
           <ion-col><b>Item</b></ion-col>
           <ion-col><b>Qty</b></ion-col>
         </ion-row>
-        <ion-row *ngFor="let item of items">
-          <ion-col>{{ item.name }}</ion-col>
+        <ion-row *ngFor="let item of selectedItems">
+          <ion-col>{{ item.product.itemNo }}</ion-col>
           <ion-col>
             <ion-input type="number" [(ngModel)]="item.quantity"></ion-input>
           </ion-col>
