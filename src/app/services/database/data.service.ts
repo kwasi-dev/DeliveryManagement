@@ -35,6 +35,8 @@ export class DataService {
         });
     
         await this.store();
+        //console.log(this.storage.getInvoice(913468));
+        //console.log(this.storage.getInvoiceItems(1028936));
       },
       error: (error) => console.log("Ionic Error requesting: ", error.message)
     });
@@ -87,4 +89,6 @@ export class DataService {
     await this.storage.addInvoices(this.invoiceList);
     await this.storage.addInvoiceItems(this.invoiceItemList);
   }
+
+
 }
