@@ -38,10 +38,10 @@ import { DataService } from '../../services/database/data.service';
   async ngOnInit() {
     await this.loadAllInvoiceItems();
 
-    // get all invoice records method here
+    
   }
 
- /* async loadInvoiceItems(invoiceNo: string) {
+ /* async loadInvoiceItems(invoiceNo: string) {               // this method was used to load a single invoice before(it works for testing just uncomment and use any invoice number)
     
     await this.dataService.fetchData(invoiceNo); // fetch data from db
     
