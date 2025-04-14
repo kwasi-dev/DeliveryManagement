@@ -38,6 +38,38 @@ export class StorageService {
         return this.isDatabaseReady.asObservable();
     }
 
+    // Adds a single customer
+    async addCustomer(customer: Customer) {
+        const sql = `INSERT INTO customers (id, areaNo, lastInvoiceDate, company, contact, email, phone, terms, type, addr1, addr2)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`;
+        await this.db.run(sql, [
+            customer.id,
+            customer.areaNo ?? 0,
+            customer.lastInvoiceDate,
+            customer.company,
+            customer.contact || null,
+            customer.email || null,
+            customer.phone,
+            customer.terms,
+            customer.type,
+            customer.addr1,
+            customer.addr2 || null
+        ]);
+        await this.loadData();
+    }
+
+    // Adds a list of customers
+    async addCustomers(customers: Customer[]) {
+        const sql = `INSERT OR IGNORE INTO customers (id, areaNo, lastInvoiceDate, company, contact, email, phone, terms, type, addr1, addr2)
+        VALUES `;
+
+        var values = customers.map(customer => `(${customer.id}, ${customer.areaNo}, '${customer.lastInvoiceDate.replace(/'/g, "''")}', '${customer.company.replace(/'/g, "''")}', '${customer.contact.replace(/'/g, "''")}', '${customer.email.replace(/'/g, "''")}', '${customer.phone.replace(/'/g, "''")}', '${customer.terms.replace(/'/g, "''")}', '${customer.type.replace(/'/g, "''")}', '${customer.addr1.replace(/'/g, "''")}', '${customer.addr2.replace(/'/g, "''")}')`).join(",\n");
+        values += ';';
+
+        await this.db.execute(sql + values);
+        await this.loadData();
+    }
+
     // Adds a single invoice item
     async addInvoiceItem(item: InvoiceItem) {
         const sql = `INSERT INTO invoiceitems (itemNo, numPerPack, orderNo, packs, partNo, quantity, returnsNo, price, vat, vatRate, discrepancies, discount, creditNotes)
@@ -50,6 +82,7 @@ export class StorageService {
             item.partNo,
             item.quantity,
             item.returnsNo,
+            item.price,
             item.price,
             item.vat,
             item.vatRate,
@@ -135,10 +168,24 @@ export class StorageService {
         }
     }
 
-    // used to pull all invoice records from database
-    async getAllInvoices(){
-        const result: Invoice[] = (await this.db.query('SELECT * FROM INVOICES')).values as Invoice[];
-        return result; // add error checking
+    // Gets a customer by customer ID
+    async getCustomer(custNo: number) {
+        const result: Customer[] = (await this.db.query('SELECT * FROM customers WHERE id = ?', [custNo])).values as Customer[];
+        if (result.length > 0) {
+            return result;
+        } else {
+            return null;
+        }
+    }
+
+    // Gets a customer by invoice number
+    async getCustomerbyInvoice(invoiceNo: number) {
+        const result: Customer[] = (await this.db.query('SELECT c.* FROM customers c JOIN invoices i ON c.id = i.custNo WHERE i.invoiceNo = ?', [invoiceNo])).values as Customer[];
+        if (result.length > 0) {
+            return result;
+        } else {
+            return null;
+        }
     }
 
     // Gets invoices by invoice number
@@ -275,8 +322,8 @@ export class StorageService {
 
     // Loads Invoices Data into homePageList
     async loadHomePageData() {
-        //const result = await this.db.query(`SELECT i.*, c.company FROM invoices i JOIN customers c ON i.custNo = c.id;`);
-        //this.homePageList.next(result.values || []);
+        const result = await this.db.query(`SELECT i.*, c.company FROM invoices i JOIN customers c ON i.custNo = c.id;`);
+        this.homePageList.next(result.values || []);
     }
 
     // Loads Returns Data into returnsList
@@ -302,9 +349,9 @@ export class StorageService {
             });
 
             const groupedArr = Object.values(grouped);
-            //this.returnsList.next(groupedArr);
+            this.returnsList.next(groupedArr);
         } else {
-           // this.returnsList.next([]);
+            this.returnsList.next([]);
         }
     }
 
