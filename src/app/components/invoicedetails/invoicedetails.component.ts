@@ -52,17 +52,7 @@ export class InvoicedetailsComponent {
   }
 
   async generateReceipt() {
-    this.receipt = `\n\n Confirmation of Delivery \n\n 
-                    ${this.invoice.company} \n\n 
-                    Invoice: ${this.invoice.invoiceNo} \n 
-                    Route: ${this.invoice.routeNo} \n 
-                    Customer: ${this.invoice.custNo} \n
-                    Date: ${this.invoice.invoiceDate} \n
-                    Note: ${this.invoice.generalNote} \n
-                    Total: ${this.invoice.totalItems.toFixed(2)} \n\n\n
-                    ____________________________\n
-                    Signature\n\n
-                    ` ;
+    this.receipt = `Confirmation of Delivery\n${this.invoice.company}\nInvoice: ${this.invoice.invoiceNo}\nRoute: ${this.invoice.routeNo}\nCustomer: ${this.invoice.custNo}\nDate: ${this.invoice.invoiceDate.split('T')[0]}\nNote: ${this.invoice.generalNote}\nTotal: ${this.invoice.totalItems.toFixed(2)}\n\n\n____________________________\nSignature\n\n\n`;
   }
 
   async ngOnInit() {
