@@ -20,6 +20,10 @@ export class DataService {
   constructor(private storage: StorageService, private http: HttpClient) {}
 
   async fetchData(date: string, route: string) {
+    this.customerList = [];
+    this.invoiceItemList = [];
+    this.invoiceList = [];
+    
     const url = `${this.baseURL}/${date}/${route}`
 
     this.http.get(url).subscribe({
