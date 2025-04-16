@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule, LoadingController } from '@ionic/angular';
+import { IonicModule, LoadingController, NavController } from '@ionic/angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DataService } from 'src/app/services/database/data.service';
 import { ToastController } from '@ionic/angular';
@@ -21,11 +21,19 @@ export class SyncPage implements OnInit {
   baseURL: string = "http://3.208.13.82:2078/akiproorders/downloadinvoices"
   routes: string[] = ['ROUTE1', 'ROUTE2', 'ROUTE3', 'ROUTE4', 'ROUTE5', 'ROUTE6', 'ROUTE7', 'ROUTE8', 'ROUTE9', 'ROUTE10']
 
-  constructor(private loadingCtrl: LoadingController, private http: HttpClient, private data: DataService, private toastController: ToastController, private storage: StorageService) { }
+  constructor(private loadingCtrl: LoadingController, private http: HttpClient, private data: DataService, private toastController: ToastController, private storage: StorageService, private navCtrl: NavController) { }
 
   ngOnInit() {
   }
 
+
+  
+  goBack() {
+    setTimeout(() => {
+      this.navCtrl.back();
+    }, 200)
+  }
+  
   minDate = '2024-08-01'
   // get minDate() {
   //   const min = new Date();

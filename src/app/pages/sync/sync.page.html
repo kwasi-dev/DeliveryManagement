@@ -1,6 +1,6 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
+<ion-header>
+  <ion-toolbar color="translucent">
+    <ion-buttons slot="start" (click)="goBack()">
       <ion-button>
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content color="secondary">
   <ion-card>
     <ion-card-title>Download Data</ion-card-title>
 
@@ -18,7 +18,7 @@
       <ion-list>
         <ion-radio-group [(ngModel)]="routeNo">
           <ion-item *ngFor="let route of routes" color="translucent" lines="none">
-            <ion-radio [value]="route">{{route}}</ion-radio>
+            <ion-radio [value]="route" color="dark">{{route}}</ion-radio>
           </ion-item>
         </ion-radio-group>
       </ion-list>
@@ -26,15 +26,15 @@
 
     <div class="datetime-container">
       <ion-datetime presentation="date" [(ngModel)]="selectedDate" (ionChange)="onDateSelected($event)" [min]="minDate"
-        [max]="maxDate" color="primary"></ion-datetime>
+        [max]="maxDate" color="dark"></ion-datetime>
     </div>
 
     <div class="download-button-container">
-      <ion-button class="download-button" (click)="downloadAndSave()" color="tertiary">Download</ion-button>
+      <ion-button class="download-button" (click)="downloadAndSave()" color="success">Download</ion-button>
     </div>
   </ion-card>
 
   <div class="upload-container">
-    <ion-button class="upload-button" (click)="uploadChanges()">Upload Changes</ion-button>
+    <ion-button class="upload-button" (click)="uploadChanges()" color="warning">Upload Changes</ion-button>
   </div>
 </ion-content>

@@ -20,21 +20,27 @@ ion-icon {
 
 ion-card {
   border-radius: 16px;
-  background-color: var(--ion-color-primary);
-}
-
-ion-tab-button.selected {
-  color: var(--ion-color-primary);
+  background-color: var(--ion-color-secondary);
 }
 
 /* Padding to avoid overflow with android notification bar*/
 ion-header {
   padding-top: 24px;
+  background-color: var(--ion-color-secondary);
 }
 
 /* Top Navigation Bar*/
 ion-tab-bar {
+  background-color: var(--ion-color-lightblue);
+}
+
+ion-tab-button {
   background-color: transparent;
+  color: var(--ion-color-black);
+}
+
+ion-tab-button.selected {
+  color: var(--ion-color-orange);
 }
 
 ion-searchbar {
@@ -52,4 +58,8 @@ ion-searchbar {
 
 .align-center {
   text-align: center;
+}
+
+ion-searchbar {
+  background-color: var(--ion-color-lightblue);
 }

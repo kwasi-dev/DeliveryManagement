@@ -61,3 +61,15 @@ ion-datetime {
     width: 95%;
     height: 8vh;
 }
+
+ion-content {
+    background-color: var(--ion-color-secondary);
+}
+
+ion-toolbar {
+    background-color: var(--ion-color-lightblue);
+}
+
+ion-header {
+    background-color: var(--ion-color-secondary);
+}

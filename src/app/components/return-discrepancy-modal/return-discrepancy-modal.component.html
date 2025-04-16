@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding" color="secondary">
   <ion-item>
     <ion-label><b>Select Type</b></ion-label>
     <ion-select [(ngModel)]="selectedType">
@@ -35,7 +35,7 @@
           <ion-col class="item-number">{{ item.itemNo }}</ion-col>
           <ion-col>
             <div class="quantity-toggle">
-              <ion-button size="small" (click)="decrease(i)" [disabled]="quantityArr[i] == 0">-</ion-button>
+              <ion-button size="small" (click)="decrease(i)" [disabled]="quantityArr[i] == 0" color="tertiary">-</ion-button>
 
               <ion-input type="number" [(ngModel)]="quantityArr[i]" (ionChange)="validateInput(i)" [ngClass]="{
                         'valid-input': quantityArr[i] <= items[i].quantity && quantityArr[i] >= 0,
@@ -44,7 +44,7 @@
               </ion-input>
 
               <ion-button size="small" (click)="increase(i)"
-                [disabled]="quantityArr[i] >= items[i].quantity">+</ion-button>
+                [disabled]="quantityArr[i] >= items[i].quantity" color="tertiary">+</ion-button>
             </div>
           </ion-col>
         </ion-row>
@@ -54,5 +54,5 @@
 </ion-content>
 
 <ion-footer>
-  <ion-button expand="full" (click)="postChange()" class="confirm-button">Post Change</ion-button>
+  <ion-button expand="full" (click)="postChange()" class="confirm-button" color="success">Post Change</ion-button>
 </ion-footer>
