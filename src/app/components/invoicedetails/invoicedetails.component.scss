@@ -1,21 +1,34 @@
-.items-list {
-    max-height: 60vh; /* Adjust height to fit the modal */
-    overflow-y: auto;  /* Enables vertical scrolling */
+  ion-header {
+    padding-top: 24px;
   }
-  
-  .date-section {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
+
+  ion-title {
+    font-size: 1.5rem;
+    font-weight: 600;
   }
-  
-  ion-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: transparent; /* Ensures the footer stands out */
-    padding: 10px;
+
+  ion-card {
+    background-color: var(--ion-color-primary);
   }
-  
+
+  ion-card-title {
+    text-align: center;
+    border-bottom: 1px solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .bold-note {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  ion-item.transparent-item {
+    --background: transparent;
+  }
+
+  .column-headings {
+    border-top: 2px solid;
+  }

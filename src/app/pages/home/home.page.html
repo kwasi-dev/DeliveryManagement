@@ -21,20 +21,22 @@
     </ion-tab-bar>
   </ion-toolbar>
 
-  <ion-toolbar *ngIf="showSearch">
-    <ion-searchbar #searchBar mode="ios" [(ngModel)]="searchQuery" (ionInput)="filterInvoices($event)"
-      [showCancelButton]="true" (ionCancel)="cancelSearch()"></ion-searchbar>
-  </ion-toolbar>
+  <ion-searchbar *ngIf="showSearch" #searchBar mode="ios" [(ngModel)]="searchQuery" (ionInput)="filterInvoices($event)"
+    show-cancel-button="always" cancel-button-text="Cancel Search" (ionCancel)="cancelSearch()" placeholder="Search by Customer">
+  </ion-searchbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-list *ngIf="!returnSelected">
+  <div>
     <ion-card class="invoice-card" *ngFor="let invoice of filteredInvoices" (click)="openInvoiceDetails(invoice)">
       <ion-card-header>
         <ion-card-title> {{invoice.invoiceNo}} </ion-card-title>
         <ion-card-subtitle> <ion-icon name="person-circle"></ion-icon> {{ invoice.company }} </ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
+        <span>
+          Customer Number: <b>{{invoice.custNo}}</b> <br>
+        </span>
         <span>
           <ion-icon name="calendar"></ion-icon> {{ invoice.invoiceDate | date: 'MMM dd yyyy' }}<br>
         </span>
@@ -47,15 +49,31 @@
         </span>
       </ion-card-content>
     </ion-card>
-  </ion-list>
+  </div>
 
   <ion-list *ngIf="returnSelected">
     <ion-card class="return-card" *ngFor="let invoice of shownReturns">
       <ion-card-header>
-        <ion-card-title> {{invoice.invoiceNo}} </ion-card-title>
-        <ion-item class="return-item" *ngFor="let item of invoice.items"> 
-          {{item.itemNo}}: {{item.returnsNo}}
+        <ion-card-title class="returns-title"> {{invoice.invoiceNo}} </ion-card-title>
+        
+        <ion-item class="return-heading" color="translucent">
+          <ion-grid>
+            <ion-row>
+              <ion-col>Item Number</ion-col>
+              <ion-col class="align-center">Quantity</ion-col>
+            </ion-row>
+          </ion-grid>
         </ion-item>
+
+        <ion-item class="return-item" *ngFor="let item of invoice.items" color="transparent" lines="none">
+          <ion-grid>
+            <ion-row>
+              <ion-col>{{item.itemNo}}</ion-col>
+              <ion-col class="align-center">{{item.returnsNo}}</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+
       </ion-card-header>
     </ion-card>
   </ion-list>

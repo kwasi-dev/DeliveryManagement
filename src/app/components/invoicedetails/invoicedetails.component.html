@@ -5,72 +5,103 @@
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Invoice#{{ invoice.invoiceNo }}</ion-title>
+    <ion-title>Invoice# {{ invoice.invoiceNo }} - ${{invoice.totalItems | number:'1.2-2'}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <!-- Billing Section -->
   <ion-card>
+    <ion-card-title>{{ invoice.company }}</ion-card-title>
     <ion-card-content>
-      <div class="header-row">
-        <span><b>Billing</b></span>
-        <ion-badge color="warning">{{ invoice.generate === 'Y' ? 'Delivered' : 'To be delivered' }}</ion-badge>
-      </div>
+      <ion-item lines="none" class="transparent-item">
+        <ion-label>Order Number:</ion-label>
+        <ion-note slot="end" class="bold-note">{{ invoice.orderNo }}</ion-note>
+      </ion-item>
+      
+      <ion-item lines="none" class="transparent-item">
+        <ion-label>Customer Number:</ion-label>
+        <ion-note slot="end" class="bold-note">{{ invoice.custNo }}</ion-note>
+      </ion-item>
 
-      <h2>{{ invoice.company }}</h2>
+      <ion-item lines="none" class="transparent-item">
+        <ion-label>Route:</ion-label>
+        <ion-note slot="end" class="bold-note">{{ invoice.routeNo }}</ion-note>
+      </ion-item>
 
-      <!-- Issue & Due Date Section -->
-      <div class="date-section">
-        <div>
-          <p><b>Issued</b></p>
-          <p>{{ invoice.invoiceDate | date: 'MMM dd yyyy' }}</p>
-        </div>
-      </div>
+      <ion-item lines="none" class="transparent-item">
+        <ion-label>Date:</ion-label>
+        <ion-note slot="end" class="bold-note">{{ invoice.invoiceDate | date: 'MMM dd yyyy' }}</ion-note>
+      </ion-item>
+
+      <ion-item lines="none" class="transparent-item">
+        <ion-label>Delivery Status: </ion-label>
+        <ion-note slot="end" class="bold-note">{{ invoice.generate === 'Y' ? 'Delivered' : 'Not Delivered' }}</ion-note>
+      </ion-item>
+
+      <ion-item lines="none" class="transparent-item" *ngIf="invoice.generalNote">
+        <ion-label>Note:</ion-label>
+        <ion-note slot="end" class="bold-note">{{invoice.generalNote}}</ion-note>
+      </ion-item>
+
+      <ion-item lines="none" class="transparent-item" *ngIf="invoice.terms">
+        <ion-label>Terms: </ion-label>
+        <ion-note slot="end" class="bold-note">{{invoice.terms}}</ion-note>
+      </ion-item>
+
+
+      <ion-grid class="column-headings">
+        <ion-row>
+          <ion-col><b>Item</b></ion-col>
+          <ion-col><b>Unit Price</b></ion-col>
+          <ion-col><b>Quantity</b></ion-col>
+          <ion-col><b>Total Price</b></ion-col>
+        </ion-row>
+
+        <ion-row *ngFor="let item of items">
+          <ion-col>{{ item.itemNo }}</ion-col>
+          <ion-col>{{ item.price.toFixed(2) }}</ion-col>
+          <ion-col>{{ item.quantity }}</ion-col>
+          <ion-col>${{ (item.price * item.quantity).toFixed(2) }}</ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid class="column-headings">
+        <ion-row>
+          <ion-col><b>Subtotal</b></ion-col>
+          <ion-col></ion-col>
+          <ion-col>${{ total.toFixed(2) }}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col><b>VAT</b></ion-col>
+          <ion-col></ion-col>
+          <ion-col>${{ vat.toFixed(2) }}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col><b>Tax</b></ion-col>
+          <ion-col></ion-col>
+          <ion-col>${{ total * invoice.taxRate / 100 }}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col><b>Discount</b></ion-col>
+          <ion-col></ion-col>
+          <ion-col>${{ invoice.totalItems * invoice.taxRate / 100 }}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col><b>Amount Due</b></ion-col>
+          <ion-col></ion-col>
+          <ion-col>${{ invoice.totalItems.toFixed(2) }}</ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-card-content>
   </ion-card>
-
-   <!-- Scrollable Items List -->
-   <div class="items-list">
-    <ion-card>
-      <ion-card-content>
-        <ion-grid>
-          <ion-row>
-            <ion-col><b>Item</b></ion-col>
-            <ion-col><b>QTY</b></ion-col>
-            <ion-col><b>Price</b></ion-col>
-          </ion-row>
-          <ion-row *ngFor="let item of items">
-            <ion-col>{{ item.itemNo }}</ion-col>
-            <ion-col>{{ item.quantity }}</ion-col>
-            <ion-col>${{ item.price.toFixed(2) }}</ion-col>
-          </ion-row>
-        </ion-grid>
-
-
-        <ion-grid>
-          <ion-row>
-            <ion-col><b>Total</b></ion-col>
-            <ion-col></ion-col>
-            <ion-col>${{ invoice.totalItems.toFixed(2) }}</ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col><b>Tax</b></ion-col>
-            <ion-col></ion-col>
-            <ion-col>${{ 0 }}</ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col><b>Amount Due</b></ion-col>
-            <ion-col></ion-col>
-            <ion-col>${{ invoice.totalItems.toFixed(2) }}</ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-card-content>
-    </ion-card>
-  </div>
+</ion-content>
 
   <ion-footer>
-    <ion-toolbar>
+    <ion-toolbar class="footer-buttons">
       <ion-grid>
         <ion-row>
           <ion-col size="6">
@@ -87,4 +118,3 @@
       </ion-grid>
     </ion-toolbar>
   </ion-footer>
-</ion-content>

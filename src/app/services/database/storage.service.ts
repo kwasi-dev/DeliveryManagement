@@ -355,6 +355,33 @@ export class StorageService {
         }
     }
 
+    async getAllData() {
+        const result: any[] = (await this.db.query('SELECT * FROM invoices JOIN invoiceitems ON invoiceitems.orderNo = invoices.orderNo')).values as any[];
+        if (result.length > 0) {
+            return result;
+        } else {
+            return null;
+        }
+    }
+
+    async getAllInvoices() {
+        const result: Invoice[] = (await this.db.query('SELECT * FROM invoices')).values as Invoice[];
+        if (result.length > 0) {
+            return result;
+        } else {
+            return null;
+        }
+    }
+
+    async getAllInvoiceItems() {
+        const result: InvoiceItem[] = (await this.db.query('SELECT * FROM invoiceitems')).values as InvoiceItem[];
+        if (result.length > 0) {
+            return result;
+        } else {
+            return null;
+        }
+    }
+
     // Refreshes All Data
     async loadData() {
         await Promise.all([this.loadHomePageData(), this.loadReturnsData()]);

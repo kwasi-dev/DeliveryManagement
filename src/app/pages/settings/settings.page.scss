@@ -4,6 +4,10 @@ ion-card {
     border-radius: 20px;
 }
 
+ion-card-content {
+    color: black;
+}
+
 ion-list {
     height: 95%;
 }
@@ -11,4 +15,8 @@ ion-list {
 ion-toggle {
     --handle-background: #999;         /* color of the knob when OFF */
     --track-background: #ccc;          /* background bar when OFF */
-  }
+}
+
+ion-header {
+    padding-top: 24px;
+}
