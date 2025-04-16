@@ -1,3 +1,7 @@
 ion-tabs {
     padding-bottom: calc(16px + env(safe-area-inset-bottom));
 }
+
+ion-tab-button.active-tab {
+    --color: #81BFDA;
+}

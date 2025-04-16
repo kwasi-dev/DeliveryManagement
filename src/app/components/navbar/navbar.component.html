@@ -1,15 +1,15 @@
 <ion-tabs>
   <ion-tab-bar class="bottom-tab-bar">
-    <ion-tab-button tab="home">
+    <ion-tab-button tab="home" [ngClass]="{ 'active-tab': selectedBottomTab === 'home' }">
       <ion-icon [name]="selectedBottomTab === 'home' ? 'home' : 'home-outline'"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button tab="search" (click)="toggleSearch()">
+    <ion-tab-button tab="search" (click)="toggleSearch()" [ngClass]="{ 'active-tab': selectedBottomTab === 'search' }">
       <ion-icon [name]="selectedBottomTab === 'search' ? 'search' : 'search-outline'"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button tab="upload">
+    <ion-tab-button tab="upload" [ngClass]="{ 'active-tab': selectedBottomTab === 'upload' }">
       <ion-icon [name]="selectedBottomTab === 'upload' ? 'cloud-upload' : 'cloud-upload-outline'"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button tab="settings">
+    <ion-tab-button tab="settings" [ngClass]="{ 'active-tab': selectedBottomTab === 'settings' }">
       <ion-icon [name]="selectedBottomTab === 'settings' ? 'settings' : 'settings-outline'"></ion-icon>
     </ion-tab-button>
   </ion-tab-bar>

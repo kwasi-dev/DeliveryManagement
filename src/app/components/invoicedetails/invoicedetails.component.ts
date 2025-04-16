@@ -18,8 +18,12 @@ import { NyxPrinter } from 'nyx-printer/src';
 export class InvoicedetailsComponent {
   @Input() invoice!: any;
   @Input() items!: any;
+  receipt: string = '';
+  total: number = 0;
+  vat: number = 0;
 
-  constructor(private modalCtrl: ModalController, private storage: StorageService) { }
+  constructor(private modalCtrl: ModalController, private storage: StorageService) {
+  }
 
   close() {
     this.modalCtrl.dismiss();
@@ -27,10 +31,11 @@ export class InvoicedetailsComponent {
 
   async confirmDelivery() {
     await this.storage.updateInvoiceStatus(this.invoice.invoiceNo, 'Y');
+    this.generateReceipt();
     console.log("Delivery confirmed for Invoice:", this.invoice.invoiceNo);
     NyxPrinter.isReady().then(res => {
       if (res.connected) {
-        NyxPrinter.printText({ text: 'Hello from Ionic' });
+        NyxPrinter.printText({ text: this.receipt });
       } else {
         console.error('Printer service not ready yet');
       }
@@ -44,5 +49,26 @@ export class InvoicedetailsComponent {
       componentProps: { invoice: this.invoice }
     });
     return await modal.present();
+  }
+
+  async generateReceipt() {
+    this.receipt = `\n\n Confirmation of Delivery \n\n 
+                    ${this.invoice.company} \n\n 
+                    Invoice: ${this.invoice.invoiceNo} \n 
+                    Route: ${this.invoice.routeNo} \n 
+                    Customer: ${this.invoice.custNo} \n
+                    Date: ${this.invoice.invoiceDate} \n
+                    Note: ${this.invoice.generalNote} \n
+                    Total: ${this.invoice.totalItems.toFixed(2)} \n\n\n
+                    ____________________________\n
+                    Signature\n\n
+                    ` ;
+  }
+
+  async ngOnInit() {
+    for (const item of this.items) {
+      this.total += item.price * item.quantity;
+      this.vat += item.vat;
+    }
   }
 }

@@ -92,7 +92,8 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
     this.filteredInvoices = this.invoices.filter(invoice => {
       return normalize(invoice.company).includes(query) ||
              invoice.invoiceNo.toString().includes(query) ||
-             normalize(invoice.invoiceDate).includes(query); // ✅ this line
+             normalize(invoice.invoiceDate).includes(query) ||
+             invoice.custNo?.toString().includes(query);
     });
   }
 
