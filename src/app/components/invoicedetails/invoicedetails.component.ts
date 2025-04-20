@@ -22,7 +22,7 @@ export class InvoicedetailsComponent {
   total: number = 0;
   vat: number = 0;
 
-  constructor(private modalCtrl: ModalController, private storage: StorageService) {
+  constructor(public modalCtrl: ModalController, private storage: StorageService) {
   }
 
   close() {
@@ -52,7 +52,11 @@ export class InvoicedetailsComponent {
   }
 
   async generateReceipt() {
-    this.receipt = `Confirmation of Delivery\n${this.invoice.company}\nInvoice: ${this.invoice.invoiceNo}\nRoute: ${this.invoice.routeNo}\nCustomer: ${this.invoice.custNo}\nDate: ${this.invoice.invoiceDate.split('T')[0]}\nNote: ${this.invoice.generalNote}\nTotal: ${this.invoice.totalItems.toFixed(2)}\n\n\n____________________________\nSignature\n\n\n`;
+    this.receipt = `Confirmation of Delivery\n${this.invoice.company}\nInvoice: ${this.invoice.invoiceNo}\nRoute: ${this.invoice.routeNo}\nCustomer: ${this.invoice.custNo}\nDate: ${this.invoice.invoiceDate.split('T')[0]}\nNote: ${this.invoice.generalNote}\n\nList of Items:\n`;
+    for (const item of this.items) {
+      this.receipt += `${item.itemNo} x ${item.quantity} units\n` 
+    }
+    this.receipt += `Total: ${this.invoice.totalItems.toFixed(2)}\n\n\n____________________________\nSignature\n\n\n`;
   }
 
   async ngOnInit() {

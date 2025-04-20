@@ -3,12 +3,22 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 export const routes: Routes = [
   {
-    path: 'navbar',
+    path: '',
+    redirectTo: 'router',
+    pathMatch: 'full',
+  },
+  {
+    path: 'router',
     component: NavbarComponent,
     children: [
       {
         path: 'home',
         loadComponent: () => import('./pages/home/home.page').then((m) => m.HomePage),
+      },
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
       },
       {
         path: 'search',
@@ -21,22 +31,7 @@ export const routes: Routes = [
       {
         path: 'settings',
         loadComponent: () => import('./pages/settings/settings.page').then( m => m.SettingsPage)
-      },
-      {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full',
       }
     ],
   },
-  {
-    path: '',
-    redirectTo: 'navbar',
-    pathMatch: 'full',
-  },
-  {
-    path: 'sync',
-    loadComponent: () => import('./pages/sync/sync.page').then( m => m.SyncPage)
-  }
-
 ];
