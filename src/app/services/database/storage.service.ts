@@ -1,4 +1,4 @@
-import { SQLiteDBConnection } from '@capacitor-community/sqlite';
+import { DBSQLiteValues, SQLiteDBConnection } from '@capacitor-community/sqlite';
 import { Injectable } from '@angular/core';
 import { SQLiteService } from './sqlite.service';
 import { DbnameVersionService } from './dbname-version.service';
@@ -189,13 +189,12 @@ export class StorageService {
     }
 
     // Gets invoices by invoice number
-    async getInvoice(invoiceNo: number) {
-        const result: Invoice[] = (await this.db.query('SELECT * FROM invoices WHERE invoiceNo = ?', [invoiceNo])).values as Invoice[];
-        if (result.length > 0) {
-            return result;
-        } else {
-            return null;
+    async getInvoice(invoiceNo: number): Promise<Invoice | null> {
+        const result: DBSQLiteValues = await this.db.query('SELECT * FROM invoices WHERE invoiceNo = ?', [invoiceNo]);
+        if (result.values && result.values.length > 0) {
+          return result.values[0] as Invoice;
         }
+        return null;
     }
 
     // Gets invoice by order number
@@ -220,8 +219,8 @@ export class StorageService {
 
     // Log Return by ItemNo and OrderNo
     async logReturn(itemNo: number, orderNo: number, returnsNo: number, generalNote: string | null) {
-        var invoice = this.getInvoicebyOrderNo(orderNo);
-        var item = this.getSingleInvoiceItem(itemNo, orderNo);
+        var invoice = await this.getInvoicebyOrderNo(orderNo);
+        var item = await this.getSingleInvoiceItem(itemNo, orderNo);
         if (item != null && invoice != null) {
             await this.db.run('UPDATE invoiceitems SET returnsNo = ? WHERE orderNo = ?', [returnsNo, orderNo]);
             if (generalNote != null) {
@@ -269,8 +268,8 @@ export class StorageService {
 
     // Log Discrepency by ItemNo and OrderNo
     async logDiscrepency(itemNo: number, orderNo: number, discrepencies: number, generalNote: string | null) {
-        var invoice = this.getInvoicebyOrderNo(orderNo);
-        var item = this.getSingleInvoiceItem(itemNo, orderNo);
+        var invoice = await this.getInvoicebyOrderNo(orderNo);
+        var item = await this.getSingleInvoiceItem(itemNo, orderNo);
         if (item != null && invoice != null) {
             await this.db.run('UPDATE invoiceitems SET discrepancies = ? WHERE orderNo = ?', [discrepencies, orderNo]);
             if (generalNote != null) {
@@ -307,8 +306,8 @@ export class StorageService {
 
     // Mark Invoice Delivered
     async updateInvoiceStatus(invoiceNo: number, status: string) {
-        var invoice = this.getInvoice(invoiceNo);
-        if (invoice != null) {
+        var invoice = await this.getInvoice(invoiceNo);
+        if ((invoice != null) && (invoice.generate != status)) {
             await this.db.run('UPDATE invoices SET generate = ? WHERE invoiceNo = ?', [status, invoiceNo])
             await this.loadData();
         } else {

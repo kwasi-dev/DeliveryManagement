@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">DMS</string>
     <string name="title_activity_main">DMS</string>
-    <string name="package_name">ionic.deliverymanagement</string>
-    <string name="custom_url_scheme">ionic.deliverymanagement</string>
+    <string name="package_name">ionic.deliverymanagementapp</string>
+    <string name="custom_url_scheme">ionic.deliverymanagementapp</string>
 </resources>

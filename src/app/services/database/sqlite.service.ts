@@ -27,7 +27,7 @@ export class SQLiteService {
             await this.sqliteConnection.initWebStore();
         } catch (err: any) {
             const msg = err.message ? err.message : err;
-            return Promise.reject(`initWebStore: ${err}`);
+            return Promise.reject(`initWebStore: ${msg}`);
         }
     }
 
