@@ -27,14 +27,14 @@ export class SyncPage implements OnInit {
   }
 
 
-  
+
   goBack() {
     setTimeout(() => {
       this.navCtrl.back();
     }, 200)
   }
-  
-  minDate = '2024-08-01'
+
+  minDate = '2024-06-01'
   // get minDate() {
   //   const min = new Date();
   //   min.setDate(min.getDate() - 14);

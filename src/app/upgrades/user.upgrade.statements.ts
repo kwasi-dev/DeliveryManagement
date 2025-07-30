@@ -56,16 +56,20 @@ export class UserUpgradeStatements {
             discount REAL,
             creditNotes INTEGER,
             FOREIGN KEY (orderNo) REFERENCES invoices(orderNo) ON DELETE CASCADE
-            );`
+            );`,
+          `CREATE TABLE IF NOT EXISTS products(
+            description TEXT NOT NULL,
+            partNo TEXT NOT NULL
+          );`
         ]
         },
         //{
             /*
         toVersion: 2,
         statements: [
-            
+
         ]
             */
        // },
     ]
-}    
+}

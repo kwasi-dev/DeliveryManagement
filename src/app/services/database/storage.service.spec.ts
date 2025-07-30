@@ -203,7 +203,7 @@ describe('StorageService', () => {
             dbConnectionSpy.run.and.returnValue(Promise.resolve({ changes: { changes: 1 } } as capSQLiteChanges));
 
             // Act
-            await service.addInvoiceItem(mockInvoiceItem);
+            await service.addInvoiceItems([mockInvoiceItem]);
 
             // Assert
             expect(dbConnectionSpy.run).toHaveBeenCalledWith(
@@ -252,7 +252,7 @@ describe('StorageService', () => {
             dbConnectionSpy.run.and.returnValue(Promise.resolve({ changes: { changes: 1 } } as capSQLiteChanges));
 
             // Act
-            await service.addInvoice(mockInvoice);
+            await service.addInvoices([mockInvoice]);
 
             // Assert
             expect(dbConnectionSpy.run).toHaveBeenCalledWith(
@@ -625,7 +625,7 @@ describe('StorageService', () => {
 
             // Assert
             expect(dbConnectionSpy.run).not.toHaveBeenCalled();
-            
+
         });
     });
 
@@ -675,10 +675,10 @@ describe('StorageService', () => {
           service['db'] = dbConnectionSpy;
           console.log('service.db:', service['db']);
           console.log('dbConnectionSpy.query:', dbConnectionSpy.query);
-      
+
           // Act
           await service.loadReturnsData();
-      
+
           // Assert
           console.log('dbConnectionSpy.query calls:', dbConnectionSpy.query.calls.all());
           console.log('returnsListSpy calls:', returnsListSpy.calls.all());
@@ -692,7 +692,7 @@ describe('StorageService', () => {
             }
           ]);
         });
-      
+
         it('should update returnsList with empty array if no data', async () => {
           // Arrange
           dbConnectionSpy.query.calls.reset(); // Clear previous calls
@@ -702,10 +702,10 @@ describe('StorageService', () => {
           service['db'] = dbConnectionSpy;
           console.log('service.db:', service['db']);
           console.log('dbConnectionSpy.query:', dbConnectionSpy.query);
-      
+
           // Act
           await service.loadReturnsData();
-      
+
           // Assert
           console.log('dbConnectionSpy.query calls:', dbConnectionSpy.query.calls.all());
           console.log('returnsListSpy calls:', returnsListSpy.calls.all());
@@ -715,7 +715,7 @@ describe('StorageService', () => {
           expect(returnsListSpy).toHaveBeenCalledWith([]);
         });
       });
-      
+
     describe('getAllData', () => {
         it('should return all data from invoices and invoiceitems', async () => {
             // Arrange

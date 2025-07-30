@@ -8,6 +8,7 @@ import { InvoiceItem } from '../../models/invoice_item';
 import { Invoice } from '../../models/invoice';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Toast } from '@capacitor/toast';
+import {Product} from "../../models/product";
 
 @Injectable()
 export class StorageService {
@@ -60,84 +61,56 @@ export class StorageService {
 
     // Adds a list of customers
     async addCustomers(customers: Customer[]) {
+      if (customers.length > 0){
         const sql = `INSERT OR IGNORE INTO customers (id, areaNo, lastInvoiceDate, company, contact, email, phone, terms, type, addr1, addr2)
         VALUES `;
 
         var values = customers.map(customer => `(${customer.id}, ${customer.areaNo}, '${customer.lastInvoiceDate.replace(/'/g, "''")}', '${customer.company.replace(/'/g, "''")}', '${customer.contact.replace(/'/g, "''")}', '${customer.email.replace(/'/g, "''")}', '${customer.phone.replace(/'/g, "''")}', '${customer.terms.replace(/'/g, "''")}', '${customer.type.replace(/'/g, "''")}', '${customer.addr1.replace(/'/g, "''")}', '${customer.addr2.replace(/'/g, "''")}')`).join(",\n");
         values += ';';
-
         await this.db.execute(sql + values);
         await this.loadData();
-    }
+      } else {
+        console.log(`Customers list empty, skipping save`);
 
-    // Adds a single invoice item
-    async addInvoiceItem(item: InvoiceItem) {
-        const sql = `INSERT INTO invoiceitems (itemNo, numPerPack, orderNo, packs, partNo, quantity, returnsNo, price, vat, vatRate, discrepancies, discount, creditNotes)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`;
-        await this.db.run(sql, [
-            item.itemNo,
-            item.numPerPack,
-            item.orderNo,
-            item.packs,
-            item.partNo,
-            item.quantity,
-            item.returnsNo,
-            item.price,
-            item.price,
-            item.vat,
-            item.vatRate,
-            item.discrepancies,
-            item.discount,
-            item.creditNotes
-        ]);
-        await this.loadData();
+      }
+
     }
 
     // Adds a list of invoice items
     async addInvoiceItems(items: InvoiceItem[]) {
+      if (items.length > 0 ){
         const sql = `INSERT INTO invoiceitems (itemNo, numPerPack, orderNo, packs, partNo, quantity, returnsNo, price, vat, vatRate, discrepancies, discount, creditNotes)
         VALUES `;
 
         var values = items.map(item => `(${item.itemNo}, ${item.numPerPack}, ${item.orderNo}, ${item.packs}, '${item.partNo.replace(/'/g, "''")}', ${item.quantity}, ${item.returnsNo}, ${item.price}, ${item.vat}, ${item.vatRate}, ${item.discrepancies}, ${item.discount}, ${item.creditNotes})`).join(",\n");
         values += ';';
+        await this.db.execute(sql + values);
+        await this.loadData();
+      }else {
+        console.log(`InvoiceItems list empty, skipping save`);
+      }
+
+    }
+
+    async addProductItems(products: Product[]){
+      if (products.length > 0){
+        const sql = `INSERT INTO products (description, partNo) VALUES `;
+
+        var values = products.map(item => `( '${item.description.replace(/'/g, "''")}','${item.partNo.replace(/'/g, "''")}' )`).join(",\n");
+        values += ';';
 
         await this.db.execute(sql + values);
         await this.loadData();
-    }
+      }else {
+        console.log(`Products list empty, skipping save`);
+      }
 
-    // Adds a single invoice
-    async addInvoice(invoice: Invoice) {
-        const sql = `INSERT INTO invoices (invoiceNo, orderNo, custNo, routeNo, standingDay, invoiceDate, generate, generalNote, custDiscount, taxRate, terms,
-                    totalDiscount, totalDiscount_adjdown, totalDiscount_adjup, totalItems, totalItems_adjdown, totalItems_adjup, totalVat, totalVat_adjdown, totalVat_adjup)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`;
-        await this.db.run(sql, [
-            invoice.invoiceNo,
-            invoice.orderNo,
-            invoice.custNo,
-            invoice.routeNo,
-            invoice.standingDay,
-            invoice.invoiceDate,
-            invoice.generate,
-            invoice.generalNote || null,
-            invoice.custDiscount,
-            invoice.taxRate,
-            invoice.terms || null,
-            invoice.totalDiscount,
-            invoice.totalDiscount_adjdown,
-            invoice.totalDiscount_adjup,
-            invoice.totalItems,
-            invoice.totalItems_adjdown,
-            invoice.totalItems_adjup,
-            invoice.totalVat,
-            invoice.totalVat_adjdown,
-            invoice.totalVat_adjup
-        ]);
-        await this.loadData();
     }
 
     // Adds a list of invoices
     async addInvoices(invoices: Invoice[]) {
-        const sql = `INSERT INTO invoices (invoiceNo, orderNo, custNo, routeNo, standingDay, invoiceDate, generate, generalNote, custDiscount, taxRate, terms,
+      if (invoices.length > 0){
+        const sql = `INSERT or IGNORE INTO invoices (invoiceNo, orderNo, custNo, routeNo, standingDay, invoiceDate, generate, generalNote, custDiscount, taxRate, terms,
         totalDiscount, totalDiscount_adjdown, totalDiscount_adjup, totalItems, totalItems_adjdown, totalItems_adjup, totalVat, totalVat_adjdown, totalVat_adjup)
         VALUES `;
 
@@ -146,7 +119,13 @@ export class StorageService {
 
         await this.db.execute(sql + values);
         await this.loadData();
-    }
+      } else {
+        console.log(`Invoices list empty, skipping save`);
+
+      }
+
+
+}
 
     // Gets all items on an invoice by order number
     async getInvoiceItems(orderNo: number) {

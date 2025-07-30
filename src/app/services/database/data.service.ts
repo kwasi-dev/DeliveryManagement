@@ -5,6 +5,7 @@ import { InvoiceItem } from '../../models/invoice_item';
 import { Invoice } from '../../models/invoice';
 import { HttpClient } from '@angular/common/http';
 import { NyxPrinter } from 'nyx-printer/src';
+import {Product} from "../../models/product";
 
 
 @Injectable({
@@ -16,6 +17,7 @@ export class DataService {
   private customerList: Customer[] = [];
   private invoiceItemList: InvoiceItem[] = [];
   private invoiceList: Invoice[] = [];
+  private productList: Product[] = [];
 
   constructor(private storage: StorageService, private http: HttpClient) {}
 
@@ -23,7 +25,8 @@ export class DataService {
     this.customerList = [];
     this.invoiceItemList = [];
     this.invoiceList = [];
-    
+    this.productList = [];
+
     const url = `${this.baseURL}/${date}/${route}`
 
     this.http.get(url).subscribe({
@@ -32,13 +35,13 @@ export class DataService {
         const customers_items = (data as any).customer_details;
 
         if (customers_items) {
-          customers_items.forEach(async (record: any) => {
+          for (const record of customers_items) {
             if (this.checkRecord(record) == 'customer') {
               this.pushCustomer(record);
             } else {
               this.pushInvoiceItem(record);
             }
-          });
+          }
         }
 
         const invoices = (data as any).invoice_master;
@@ -47,6 +50,16 @@ export class DataService {
             this.pushInvoice(record);
           })
         }
+
+        const products = (data as any).products;
+        if (products){
+          products.forEach((record: any) =>{
+            if (record.attributes){
+              this.pushProduct(record);
+            }
+          });
+        }
+
 
         this.mapCust();
         await this.store();
@@ -136,6 +149,12 @@ export class DataService {
       'totalVat_adjup': invoice.attributes.totalvat_adjup
     });
   }
+  pushProduct(product: any) {
+    this.productList.push({
+      'description': product.attributes.description,
+      'partNo': product.attributes.partno
+    });
+  }
 
   mapCust() {
     var count = 0;
@@ -151,5 +170,6 @@ export class DataService {
     await this.storage.addCustomers(this.customerList);
     await this.storage.addInvoices(this.invoiceList);
     await this.storage.addInvoiceItems(this.invoiceItemList);
+    await this.storage.addProductItems(this.productList);
   }
 }
