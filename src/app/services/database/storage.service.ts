@@ -365,4 +365,13 @@ export class StorageService {
         await Promise.all([this.loadHomePageData(), this.loadReturnsData()]);
         this.isDatabaseReady.next(true);
     }
+
+  async getAllProducts() {
+    const result: Product[] = (await this.db.query('SELECT * FROM products')).values as Product[];
+    if (result.length > 0) {
+      return result;
+    } else {
+      return null;
+    }
+  }
 }

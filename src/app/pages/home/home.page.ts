@@ -58,7 +58,7 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
       this.returnInvoices = data;
       await this.filter(this.filterParameter, this.startDate, this.endDate);
     })
-    
+
     this.searchService.showSearch$.subscribe(state => {
       if (state === true) {
         this.showSearch = true;
@@ -88,7 +88,7 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
   filterInvoices(event: any) {
     const rawQuery = event.target.value || '';
     const query = normalize(rawQuery);
-  
+
     this.filteredInvoices = this.invoices.filter(invoice => {
       return normalize(invoice.company).includes(query) ||
              invoice.invoiceNo.toString().includes(query) ||
@@ -169,11 +169,13 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
   // Creates Modal for Invoice Details
   async openInvoiceDetails(invoice: Invoice) {
     const items = await this.storage.getInvoiceItems(invoice.orderNo)
+    const products = await this.storage.getAllProducts()
     const modal = await this.modalCtrl.create({
       component: InvoicedetailsComponent,
-      componentProps: { 
-        invoice, 
-        items
+      componentProps: {
+        invoice,
+        items,
+        products
       }, // Pass invoice data to modal
     });
     return await modal.present();
@@ -221,7 +223,7 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
       translucent: true,
       showBackdrop: false
     });
-  
+
     await popover.present();
 
     const { data, role } = await popover.onWillDismiss();

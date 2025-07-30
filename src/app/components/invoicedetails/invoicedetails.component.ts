@@ -18,6 +18,7 @@ import { NyxPrinter } from 'nyx-printer/src';
 export class InvoicedetailsComponent {
   @Input() invoice!: any;
   @Input() items!: any;
+  @Input() products!: any;
   receipt: string = '';
   total: number = 0;
   vat: number = 0;
@@ -31,7 +32,7 @@ export class InvoicedetailsComponent {
 
   async confirmDelivery() {
     await this.storage.updateInvoiceStatus(this.invoice.invoiceNo, 'Y');
-    this.generateReceipt();
+    await this.generateReceipt();
     console.log("Delivery confirmed for Invoice:", this.invoice.invoiceNo);
     NyxPrinter.isReady().then(res => {
       if (res.connected) {
@@ -54,9 +55,18 @@ export class InvoicedetailsComponent {
   async generateReceipt() {
     this.receipt = `Confirmation of Delivery\n${this.invoice.company}\nInvoice: ${this.invoice.invoiceNo}\nRoute: ${this.invoice.routeNo}\nCustomer: ${this.invoice.custNo}\nDate: ${this.invoice.invoiceDate.split('T')[0]}\nNote: ${this.invoice.generalNote}\n\nList of Items:\n`;
     for (const item of this.items) {
-      this.receipt += `${item.itemNo} x ${item.quantity} units\n` 
+      this.receipt += `${this.getProductName(item.partNo)} x ${item.quantity} units\n`
     }
     this.receipt += `Total: ${this.invoice.totalItems.toFixed(2)}\n\n\n____________________________\nSignature\n\n\n`;
+  }
+
+  getProductName(partNo:string){
+    for (const product of this.products){
+      if (product.partNo === partNo){
+        return product.description;
+      }
+    }
+    return partNo;
   }
 
   async ngOnInit() {
