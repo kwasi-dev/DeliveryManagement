@@ -35,19 +35,22 @@ export class DataService {
         const customers_items = (data as any).customer_details;
 
         if (customers_items) {
-          for (const record of customers_items) {
-            if (this.checkRecord(record) == 'customer') {
-              this.pushCustomer(record);
-            } else {
-              this.pushInvoiceItem(record);
-            }
-          }
+          customers_items.forEach((customer:any) => {
+            this.pushCustomer(customer);
+          });
         }
 
         const invoices = (data as any).invoice_master;
         if (invoices) {
           invoices.forEach((record: any) => {
             this.pushInvoice(record);
+          })
+        }
+
+        const invoice_items = (data as any).invoice_items;
+        if (invoice_items) {
+          invoice_items.forEach((record: any) => {
+            this.pushInvoiceItem(record);
           })
         }
 
@@ -82,13 +85,6 @@ export class DataService {
     this.invoiceList.forEach(invoice=> receiept += `${invoice.invoiceNo}\n`);
     receiept += "\n\n\n_____________________\n   Signature\n\n\n";
     return receiept;
-  }
-
-  checkRecord(record: any) {
-    if ('company' in record.attributes) {
-      return 'customer';
-    }
-    return 'invoiceItem';
   }
 
   pushCustomer(record: any) {
