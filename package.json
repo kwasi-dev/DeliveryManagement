@@ -13,7 +13,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "ionic:build": "npm run build",
-    "ionic:serve": "npm run start -- --open"
+    "ionic:serve": "npm run start -- --open",
+    "android": "ionic cap run android -l --external"
   },
   "private": true,
   "dependencies": {

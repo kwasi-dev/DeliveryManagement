@@ -17,7 +17,7 @@
         <ion-label>Order Number:</ion-label>
         <ion-note slot="end" class="bold-note">{{ invoice.orderNo }}</ion-note>
       </ion-item>
-      
+
       <ion-item lines="none" class="transparent-item">
         <ion-label>Customer Number:</ion-label>
         <ion-note slot="end" class="bold-note">{{ invoice.custNo }}</ion-note>
@@ -58,7 +58,7 @@
         </ion-row>
 
         <ion-row *ngFor="let item of items">
-          <ion-col>{{ item.itemNo }}</ion-col>
+          <ion-col>{{ item.partNo }}</ion-col>
           <ion-col>{{ item.price.toFixed(2) }}</ion-col>
           <ion-col>{{ item.quantity }}</ion-col>
           <ion-col>${{ (item.price * item.quantity).toFixed(2) }}</ion-col>

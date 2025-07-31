@@ -63,7 +63,7 @@ export class InvoicedetailsComponent {
   getProductName(partNo:string){
     for (const product of this.products){
       if (product.partNo === partNo){
-        return product.description;
+        return `${partNo} - ${product.description}`;
       }
     }
     return partNo;
