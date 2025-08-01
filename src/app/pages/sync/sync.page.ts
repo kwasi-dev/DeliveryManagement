@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule, LoadingController, NavController } from '@ionic/angular';
+import {IonicModule, LoadingController, NavController, ToastController} from '@ionic/angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DataService } from 'src/app/services/database/data.service';
-import { ToastController } from '@ionic/angular';
 import { StorageService } from 'src/app/services/database/storage.service';
 import { Invoice } from 'src/app/models/invoice';
 
@@ -23,10 +22,9 @@ export class SyncPage implements OnInit {
 
   constructor(private loadingCtrl: LoadingController, private http: HttpClient, private data: DataService, private toastController: ToastController, private storage: StorageService, private navCtrl: NavController) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    console.log("")
   }
-
-
 
   goBack() {
     setTimeout(() => {
@@ -61,11 +59,13 @@ export class SyncPage implements OnInit {
 
     await loading.present();
     try {
-
-      this.data.fetchData(this.selectedDate, this.routeNo);
+      await this.data.fetchData(this.selectedDate, this.routeNo);
     } catch (err) {
+      loading.message = `Download failed. Please try again`;
       console.log('Ionic Download failed: ', err);
+      await new Promise(resolve => setTimeout(resolve, 2000));
     } finally {
+      await new Promise(resolve => setTimeout(resolve, 750));
       await loading.dismiss();
     }
   }
@@ -81,37 +81,52 @@ export class SyncPage implements OnInit {
 
     try {
       const invoices = await this.storage.getAllInvoices();
-      const invoiceItems = await this.storage.getAllInvoiceItems();
+      if (invoices !== null){
+        const invoiceItems = await this.storage.getAllInvoiceItems();
+        const itemMap = new Map<number, { itemNo: number; returnsNo: number; discrepancies: number; }[]>();
 
-      const itemMap = new Map<number, { itemNo: number; returnsNo: number; discrepancies: number; }[]>();
-
-      if (invoiceItems != null ) {
-        invoiceItems.forEach((invoiceItem) => {
-          if (!itemMap.has(invoiceItem.orderNo)) {
-            itemMap.set(invoiceItem.orderNo, []);
+        const requestTemplate = {
+          "data": {
+            "attributes":{
+              "route": "",
+              "routeuser": "",
+              "returndate": "",
+              "returnitems": [],
+              "returns": []
+            }
           }
+        }
 
-          if (invoiceItem.returnsNo > 0 || invoiceItem.discrepancies > 0) {
-            itemMap.get(invoiceItem.orderNo)!.push({
-              itemNo: invoiceItem.itemNo,
-              returnsNo: invoiceItem.returnsNo,
-              discrepancies: invoiceItem.discrepancies
-            });
-          }
-        });
+        if (invoiceItems != null ) {
+          invoiceItems.forEach((invoiceItem) => {
+            if (!itemMap.has(invoiceItem.orderNo)) {
+              itemMap.set(invoiceItem.orderNo, []);
+            }
 
-        const data = invoices?.map(invoice => ({
-          invoiceNo: invoice.invoiceNo,
-          orderNo: invoice.orderNo,
-          generalNote: invoice.generalNote,
-          invoiceStatus: invoice.generate,
-          items: itemMap.get(invoice.orderNo) || []
-        }));
+            if (invoiceItem.returnsNo > 0 || invoiceItem.discrepancies > 0) {
+              itemMap.get(invoiceItem.orderNo)!.push({
+                itemNo: invoiceItem.itemNo,
+                returnsNo: invoiceItem.returnsNo,
+                discrepancies: invoiceItem.discrepancies
+              });
+            }
+          });
 
-        //const uploadURL = "http://3/208.13.82:2078/akiproorders/uploadinvoices";
-        //const response = await this.http.post(uploadURL, data).toPromise();
-        //console.log('Upload Success: ', response);
+          const data = invoices?.map(invoice => ({
+            invoiceNo: invoice.invoiceNo,
+            orderNo: invoice.orderNo,
+            generalNote: invoice.generalNote,
+            invoiceStatus: invoice.generate,
+            items: itemMap.get(invoice.orderNo) || []
+          }));
+
+          //const uploadURL = "http://3/208.13.82:2078/akiproorders/uploadinvoices";
+          //const response = await this.http.post(uploadURL, data).toPromise();
+          //console.log('Upload Success: ', response);
+        }
       }
+
+
     } catch (err) {
       console.log('Uploading Failed: ', err)
       throw err;
@@ -119,4 +134,6 @@ export class SyncPage implements OnInit {
       await loading.dismiss();
     }
   }
+
+
 }

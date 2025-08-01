@@ -16,11 +16,13 @@ import { InvoiceItem } from 'src/app/models/invoice_item';
 })
 export class ReturnDiscrepancyModalComponent implements OnInit {
   @Input() invoice!: any;
+  @Input() products!: any;
   items!: any;
   selectedItems: any[] = [];
-  selectedType: string = "return";
+  selectedType: string = "R";
   quantityArr!: number[];
   generalNote = '';
+  returnDate: any;
 
   constructor(private modalCtrl: ModalController, private storage: StorageService) {}
 
@@ -30,15 +32,30 @@ export class ReturnDiscrepancyModalComponent implements OnInit {
   }
 
   async postChange() {
+
     const returns = this.items.map((item: InvoiceItem, index: number) => ({
-      itemNo: item.itemNo, 
-      orderNo: item.orderNo, 
-      returnsNo: this.quantityArr[index], 
-      generalNote: ''
-    })).filter((r: { returnsNo: number }) => r.returnsNo > 0);
+      partNo: item.partNo,
+      invoiceNo: this.invoice.invoiceNo,
+      qtyadj: this.quantityArr[index],
+      returntype: this.selectedType,
+      returndate: this.returnDate,
+      route: this.invoice.routeNo,
+      routeuser: this.invoice.routeNo,
+      generalNote: this.generalNote,
+    })).filter((r: { qtyadj: number }) => r.qtyadj > 0);
 
     await this.storage.logReturns(returns);
+    console.log(`Processing returns for ${returns}`)
     this.modalCtrl.dismiss();
+  }
+
+  getProductName(partNo:string){
+    for (const product of this.products){
+      if (product.partNo === partNo){
+        return `${partNo} - ${product.description}`;
+      }
+    }
+    return partNo;
   }
 
   close() {
@@ -50,7 +67,7 @@ export class ReturnDiscrepancyModalComponent implements OnInit {
       this.quantityArr[index]++;
     }
   }
-  
+
   decrease(index: number) {
     if (this.quantityArr[index] > 0) {
       this.quantityArr[index]--;
@@ -60,7 +77,7 @@ export class ReturnDiscrepancyModalComponent implements OnInit {
   validateInput(index: number) {
     const max = this.items[index].quantity;
     let value = this.quantityArr[index];
-  
+
     if (value < 0) {
       this.quantityArr[index] = 0;
     } else if (value > max) {

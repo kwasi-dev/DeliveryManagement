@@ -13,14 +13,20 @@
   <ion-item>
     <ion-label><b>Select Type</b></ion-label>
     <ion-select [(ngModel)]="selectedType">
-      <ion-select-option value="return">Return</ion-select-option>
-      <ion-select-option value="discrepancy">Discrepancy</ion-select-option>
+      <ion-select-option value="R">Return</ion-select-option>
+      <ion-select-option value="D">Discrepancy</ion-select-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label position="stacked"><b>General Note</b></ion-label>
     <ion-textarea [(ngModel)]="generalNote" placeholder="Optional"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked"><b>Return Date</b></ion-label>
+    <ion-datetime [(ngModel)]="returnDate" presentation="date" preferWheel="false"></ion-datetime>
+
   </ion-item>
 
   <ion-card>
@@ -32,10 +38,10 @@
 
       <ion-grid>
         <ion-row *ngFor="let item of items; let i = index">
-          <ion-col class="item-number">{{ item.itemNo }}</ion-col>
+          <ion-col class="item-number">{{ getProductName(item.partNo) }}</ion-col>
           <ion-col>
             <div class="quantity-toggle">
-              <ion-button size="small" (click)="decrease(i)" [disabled]="quantityArr[i] == 0" color="tertiary">-</ion-button>
+              <ion-button size="small" (click)="decrease(i)" [disabled]="quantityArr[i] === 0" color="tertiary">-</ion-button>
 
               <ion-input type="number" [(ngModel)]="quantityArr[i]" (ionChange)="validateInput(i)" [ngClass]="{
                         'valid-input': quantityArr[i] <= items[i].quantity && quantityArr[i] >= 0,

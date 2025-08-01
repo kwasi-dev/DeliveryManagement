@@ -18,6 +18,7 @@ import { provideHttpClient } from '@angular/common/http';
 if (environment.production) {
   enableProdMode();
 }
+
 // --> Below only required if you want to use a web platform
 const platform = Capacitor.getPlatform();
 if (platform === "web") {

@@ -60,6 +60,18 @@ export class UserUpgradeStatements {
           `CREATE TABLE IF NOT EXISTS products(
             description TEXT NOT NULL,
             partNo TEXT NOT NULL
+          );`,
+          `CREATE TABLE IF NOT EXISTS invoicereturns(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            partNo TEXT NOT NULL,
+            invoiceNo INTEGER,
+            qtyadj REAL NOT NULL,
+            returntype TEXT NOT NULL,
+            returndate TEXT NOT NULL,
+            route TEXT NOT NULL,
+            routeuser TEXT NOT NULL,
+            generalNote TEXT,
+            control INTEGER
           );`
         ]
         },

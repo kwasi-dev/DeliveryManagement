@@ -215,23 +215,15 @@ export class StorageService {
         }
     }
 
-    async logReturns( items: { itemNo: number, orderNo: number, returnsNo: number, generalNote: string | null}[]) {
+    async logReturns( items: { partNo: string, invoiceNo: number, qtyadj: number, returntype: string, returndate:string, route:string, routeuser:string,  generalNote: string}[]) {
         try {
             //await this.db.execute('BEGIN TRANSACTION;');
 
-            for (const item of items) {
-                const { itemNo, orderNo, returnsNo, generalNote } = item;
-                await this.db.run(
-                    'UPDATE invoiceitems SET returnsNo = ? WHERE itemNo = ? AND orderNo = ?',
-                    [returnsNo, itemNo, orderNo]);
+          const sql = `INSERT OR IGNORE INTO invoicereturns (partNo, invoiceNo, qtyadj, returntype, returndate, route, routeuser, generalNote, control) VALUES `;
 
-                if (generalNote != null) {
-                    await this.db.run(
-                        'UPDATE invoices SET generalNote = ? WHERE orderNo = ?',
-                        [generalNote, orderNo]
-                    );
-                }
-            }
+           var values = items.map(item => `('${item.partNo.replace(/'/g, "''")}', ${item.invoiceNo}, ${item.qtyadj}, '${item.returntype},', ${item.returndate}, '${item.route.replace(/'/g, "''")}', '${item.route.replace(/'/g, "''")}', '${item.generalNote.replace(/'/g, "''")}', 0)`).join(",\n");
+           values += ';';
+           await this.db.execute(sql + values);
 
             //await this.db.execute('COMMIT');
             await this.loadData();

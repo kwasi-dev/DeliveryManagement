@@ -47,7 +47,7 @@ export class InvoicedetailsComponent {
   async handleReturnOrDiscrepancy() {
     const modal = await this.modalCtrl.create({
       component: ReturnDiscrepancyModalComponent,
-      componentProps: { invoice: this.invoice }
+      componentProps: { invoice: this.invoice, products: this.products }
     });
     return await modal.present();
   }
