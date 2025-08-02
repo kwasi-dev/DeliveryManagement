@@ -9,6 +9,7 @@ import { Invoice } from '../../models/invoice';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Toast } from '@capacitor/toast';
 import {Product} from "../../models/product";
+import {InvoiceReturn} from "../../models/invoice_return";
 
 @Injectable()
 export class StorageService {
@@ -221,12 +222,18 @@ export class StorageService {
 
           const sql = `INSERT OR IGNORE INTO invoicereturns (partNo, invoiceNo, qtyadj, returntype, returndate, route, routeuser, generalNote, control) VALUES `;
 
-           var values = items.map(item => `('${item.partNo.replace(/'/g, "''")}', ${item.invoiceNo}, ${item.qtyadj}, '${item.returntype},', ${item.returndate}, '${item.route.replace(/'/g, "''")}', '${item.route.replace(/'/g, "''")}', '${item.generalNote.replace(/'/g, "''")}', 0)`).join(",\n");
+           var values = items.map(item => `('${item.partNo.replace(/'/g, "''")}', ${item.invoiceNo}, ${item.qtyadj}, '${item.returntype}', '${item.returndate}', '${item.route.replace(/'/g, "''")}', '${item.route.replace(/'/g, "''")}', '${item.generalNote.replace(/'/g, "''")}', 0)`).join(",\n");
            values += ';';
            await this.db.execute(sql + values);
 
             //await this.db.execute('COMMIT');
             await this.loadData();
+          await Toast.show({
+            text: 'Return Logged Successfully!',
+            duration: 'short',
+            position: 'bottom',
+          });
+
         } catch (error) {
             await this.db.execute('ROLLBACK');
             await Toast.show({
@@ -365,5 +372,19 @@ export class StorageService {
     } else {
       return null;
     }
+  }
+
+  async getAllUnsyncedReturns() {
+    const result: InvoiceReturn[] = (await this.db.query('SELECT * FROM invoicereturns where control = 0;')).values as InvoiceReturn[];
+    if (result.length > 0) {
+      return result;
+    } else {
+      return null;
+    }
+  }
+
+  async setControlId(controlId: number, ids: number[]) {
+    await this.db.run(`UPDATE invoicereturns SET control = ? WHERE id in (${ids.join(",")})`, [controlId])
+
   }
 }

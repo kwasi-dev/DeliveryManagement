@@ -6,6 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DataService } from 'src/app/services/database/data.service';
 import { StorageService } from 'src/app/services/database/storage.service';
 import { Invoice } from 'src/app/models/invoice';
+import {Toast} from "@capacitor/toast";
 
 
 @Component({
@@ -80,49 +81,85 @@ export class SyncPage implements OnInit {
     await loading.present();
 
     try {
-      const invoices = await this.storage.getAllInvoices();
-      if (invoices !== null){
-        const invoiceItems = await this.storage.getAllInvoiceItems();
-        const itemMap = new Map<number, { itemNo: number; returnsNo: number; discrepancies: number; }[]>();
+      const returns = await this.storage.getAllUnsyncedReturns();
+      console.log(JSON.stringify(returns));
 
-        const requestTemplate = {
-          "data": {
-            "attributes":{
-              "route": "",
-              "routeuser": "",
-              "returndate": "",
-              "returnitems": [],
-              "returns": []
+      if (returns !== null){
+        let datas: any[] = []
+
+        returns.forEach((ret)=>{
+          let matchingRoute = datas.find(element => element.data.attributes.route == ret.route && element.data.attributes.returndate == ret.returndate);
+          if (matchingRoute === undefined){
+            matchingRoute = {
+              "data": {
+                "attributes":{
+                  "route": ret.route,
+                  "routeuser": ret.routeuser,
+                  "returndate": ret.returndate,
+                  "notes": [],
+                  "returnitems": [],
+                  "mobile_ids": []
+                }
+              }
             }
+            datas.push(matchingRoute);
           }
-        }
-
-        if (invoiceItems != null ) {
-          invoiceItems.forEach((invoiceItem) => {
-            if (!itemMap.has(invoiceItem.orderNo)) {
-              itemMap.set(invoiceItem.orderNo, []);
-            }
-
-            if (invoiceItem.returnsNo > 0 || invoiceItem.discrepancies > 0) {
-              itemMap.get(invoiceItem.orderNo)!.push({
-                itemNo: invoiceItem.itemNo,
-                returnsNo: invoiceItem.returnsNo,
-                discrepancies: invoiceItem.discrepancies
-              });
-            }
+          if (ret.generalNote !== ''){
+            matchingRoute.data.attributes.notes.push({
+              "notes": ret.generalNote,
+              "invoiceno": ret.invoiceNo
+            });
+          }
+          matchingRoute.data.attributes.returnitems.push({
+            "partno": ret.partNo,
+            "invoiceno": ret.invoiceNo,
+            "qtyadj": ret.qtyadj,
+            "returntype": ret.returntype
           });
+          matchingRoute.data.attributes.mobile_ids.push(ret.id);
+        });
 
-          const data = invoices?.map(invoice => ({
-            invoiceNo: invoice.invoiceNo,
-            orderNo: invoice.orderNo,
-            generalNote: invoice.generalNote,
-            invoiceStatus: invoice.generate,
-            items: itemMap.get(invoice.orderNo) || []
-          }));
+        for (const data of datas){
+          try {
+            console.log(`Posting return data to server: ${JSON.stringify(data)}`);
 
-          //const uploadURL = "http://3/208.13.82:2078/akiproorders/uploadinvoices";
-          //const response = await this.http.post(uploadURL, data).toPromise();
-          //console.log('Upload Success: ', response);
+            const response = await fetch('http://3.208.13.82:2078/akiproorders/uploadadjustments', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            } else {
+              const json = await response.json();
+              const controlId = json.data.attributes.controlid;
+              console.log(`Success JSON ${JSON.stringify(json)}`);
+              console.log(`Got control ID: ${controlId}`);
+
+              console.log(`Update control ID for internal IDS: ${data.data.attributes.mobile_ids}`)
+              await this.storage.setControlId(controlId,data.data.attributes.mobile_ids,)
+
+              const resp2 = await fetch('http://3.208.13.82:2078/akiproorders/uploadcontrol', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  "data":{
+                    "attributes":{
+                      "controlid": controlId,
+                      "controlaction": "ComfirmUploadReturns"
+                    }
+                  }
+                }),
+              });
+
+            }
+            console.log('Data posted successfully');
+
+          } catch (error){
+            console.error('Error posting data:', error);
+            await Toast.show({text: "Failed to sync data. Please check your internet connection and try again!"});
+          }
         }
       }
 

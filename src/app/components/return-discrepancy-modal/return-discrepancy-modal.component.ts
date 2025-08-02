@@ -22,7 +22,7 @@ export class ReturnDiscrepancyModalComponent implements OnInit {
   selectedType: string = "R";
   quantityArr!: number[];
   generalNote = '';
-  returnDate: any;
+  returnDate: string = new Date().toISOString();
 
   constructor(private modalCtrl: ModalController, private storage: StorageService) {}
 
@@ -38,15 +38,16 @@ export class ReturnDiscrepancyModalComponent implements OnInit {
       invoiceNo: this.invoice.invoiceNo,
       qtyadj: this.quantityArr[index],
       returntype: this.selectedType,
-      returndate: this.returnDate,
+      returndate: this.returnDate.split('T')[0],
       route: this.invoice.routeNo,
       routeuser: this.invoice.routeNo,
       generalNote: this.generalNote,
     })).filter((r: { qtyadj: number }) => r.qtyadj > 0);
 
-    await this.storage.logReturns(returns);
-    console.log(`Processing returns for ${returns}`)
-    this.modalCtrl.dismiss();
+    if (returns.length > 0){
+      await this.storage.logReturns(returns);
+    }
+    await this.modalCtrl.dismiss();
   }
 
   getProductName(partNo:string){
