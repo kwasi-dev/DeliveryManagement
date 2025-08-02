@@ -10,6 +10,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Toast } from '@capacitor/toast';
 import {Product} from "../../models/product";
 import {InvoiceReturn} from "../../models/invoice_return";
+import {Setting} from "../../models/setting";
 
 @Injectable()
 export class StorageService {
@@ -385,6 +386,17 @@ export class StorageService {
 
   async setControlId(controlId: number, ids: number[]) {
     await this.db.run(`UPDATE invoicereturns SET control = ? WHERE id in (${ids.join(",")})`, [controlId])
+  }
+
+  async getBaseUrl(){
+    const result: Setting[] = (await this.db.query("SELECT * FROM settings where name = 'baseurl';")).values as Setting[];
+      console.log(result);
+      return result[0].value;
+  }
+
+  async updateBaseUrl(url:string){
+      console.log("Updating the base url")
+    await this.db.run(`UPDATE settings SET value = ? WHERE name = 'baseurl'`, [url])
 
   }
 }

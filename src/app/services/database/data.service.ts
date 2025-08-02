@@ -13,7 +13,7 @@ import {Product} from "../../models/product";
 })
 
 export class DataService {
-  private baseURL = "http://3.208.13.82:2078/akiproorders/downloadinvoices";
+  private baseURL = "";
   private customerList: Customer[] = [];
   private invoiceItemList: InvoiceItem[] = [];
   private invoiceList: Invoice[] = [];
@@ -26,8 +26,9 @@ export class DataService {
     this.invoiceItemList = [];
     this.invoiceList = [];
     this.productList = [];
+    this.baseURL = await this.storage.getBaseUrl();
 
-    const url = `${this.baseURL}/${date}/${route}`
+    const url = `${this.baseURL}/akiproorders/downloadinvoices/${date}/${route}`
 
     this.http.get(url).subscribe({
       next: async (data) => {

@@ -18,7 +18,7 @@ import {Toast} from "@capacitor/toast";
 export class SyncPage implements OnInit {
   selectedDate: string = '';
   routeNo: string = '';
-  baseURL: string = "http://3.208.13.82:2078/akiproorders/downloadinvoices"
+  baseURL: string = ""
   routes: string[] = ['ROUTE1', 'ROUTE2', 'ROUTE3', 'ROUTE4', 'ROUTE5', 'ROUTE6', 'ROUTE7', 'ROUTE8', 'ROUTE9', 'ROUTE10']
 
   constructor(private loadingCtrl: LoadingController, private http: HttpClient, private data: DataService, private toastController: ToastController, private storage: StorageService, private navCtrl: NavController) { }
@@ -79,6 +79,7 @@ export class SyncPage implements OnInit {
     });
 
     await loading.present();
+    let url = await this.storage.getBaseUrl();
 
     try {
       const returns = await this.storage.getAllUnsyncedReturns();
@@ -123,7 +124,7 @@ export class SyncPage implements OnInit {
           try {
             console.log(`Posting return data to server: ${JSON.stringify(data)}`);
 
-            const response = await fetch('http://3.208.13.82:2078/akiproorders/uploadadjustments', {
+            const response = await fetch(`${url}/akiproorders/uploadadjustments`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify(data),
@@ -140,7 +141,7 @@ export class SyncPage implements OnInit {
               console.log(`Update control ID for internal IDS: ${data.data.attributes.mobile_ids}`)
               await this.storage.setControlId(controlId,data.data.attributes.mobile_ids,)
 
-              const resp2 = await fetch('http://3.208.13.82:2078/akiproorders/uploadcontrol', {
+              const resp2 = await fetch(`${url}/akiproorders/uploadcontrol`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

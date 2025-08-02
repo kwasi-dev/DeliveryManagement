@@ -72,7 +72,13 @@ export class UserUpgradeStatements {
             routeuser TEXT NOT NULL,
             generalNote TEXT,
             control INTEGER
-          );`
+          );`,
+          `CREATE TABLE IF NOT EXISTS settings(
+            id INTEGER PRIMARY KEY,
+            name TEXT UNIQUE NOT NULL,
+            value TEXT
+            );`,
+          `INSERT INTO settings (name, value) VALUES ('baseurl', 'http://3.208.13.82:2078')`
         ]
         },
         //{

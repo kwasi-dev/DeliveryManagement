@@ -6,6 +6,7 @@ import { NavController, LoadingController } from '@ionic/angular';
 import { Network } from '@capacitor/network'
 import { NyxPrinter } from 'nyx-printer/src';
 import { Toast } from '@capacitor/toast';
+import {StorageService} from "../../services/database/storage.service";
 
 @Component({
   selector: 'app-settings',
@@ -18,13 +19,14 @@ export class SettingsPage implements OnInit {
   printerName: string = "default";
   printerStatus: string = 'default';
   wifiStatus: string = 'default';
+  baseUrl:string = '';
   paymentTerminalName: string = "default";
   paymentTerminalStatus: string = "default";
 
   printStatus: boolean = false;
   paymentStatus: boolean = false;
 
-  constructor(private navCtrl: NavController, private zone: NgZone, private loadingCtrl: LoadingController) {}
+  constructor(private navCtrl: NavController, private zone: NgZone, private loadingCtrl: LoadingController, private storage: StorageService) {}
 
   goBack() {
     setTimeout(() => {
@@ -42,11 +44,14 @@ export class SettingsPage implements OnInit {
     await Network.getStatus().then(currentStatus => {
       this.wifiStatus = currentStatus.connected ? 'Connected' : 'Disconnected';
     });
-    
+
     this.zone.run(async () => {
       await this.getPrinterModel();
       await this.updatePrinterStatus();
-    })
+    });
+
+    this.baseUrl = await this.storage.getBaseUrl();
+
   }
 
   async ngOnDestroy() {
@@ -98,6 +103,11 @@ export class SettingsPage implements OnInit {
     await Network.getStatus().then(currentStatus => {
       this.wifiStatus = currentStatus.connected ? 'Connected' : 'Disconnected';
     });
+  }
+
+  async updateBaseUrl(){
+    await this.storage.updateBaseUrl(this.baseUrl);
+
   }
 }
 
