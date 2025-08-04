@@ -75,20 +75,20 @@
         <ion-row>
           <ion-col><b>Discount</b></ion-col>
           <ion-col></ion-col>
-          <ion-col>${{ invoice.totalItems * invoice.taxRate / 100 }}</ion-col>
+          <ion-col>${{ invoice.totalDiscount.toFixed(2)  }}</ion-col>
         </ion-row>
 
         <ion-row>
           <ion-col><b>VAT</b></ion-col>
           <ion-col></ion-col>
-          <ion-col>${{ vat.toFixed(2) }}</ion-col>
+          <ion-col>${{ invoice.totalVat.toFixed(2) }}</ion-col>
         </ion-row>
 
 
         <ion-row>
-          <ion-col><b>Amount Due</b></ion-col>
+          <ion-col><b>Total</b></ion-col>
           <ion-col></ion-col>
-          <ion-col>${{ invoice.totalItems.toFixed(2) }}</ion-col>
+          <ion-col>${{ (invoice.totalItems - invoice.totalDiscount+ invoice.totalVat).toFixed(2)}}</ion-col>
         </ion-row>
       </ion-grid>
     </ion-card-content>
