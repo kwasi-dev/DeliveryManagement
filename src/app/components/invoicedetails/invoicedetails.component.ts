@@ -22,6 +22,7 @@ export class InvoicedetailsComponent {
   receipt: string = '';
   total: number = 0;
   vat: number = 0;
+  discount: number = 0;
 
   constructor(public modalCtrl: ModalController, private storage: StorageService) {
   }

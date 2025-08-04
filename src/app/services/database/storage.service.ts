@@ -81,6 +81,9 @@ export class StorageService {
     // Adds a list of invoice items
     async addInvoiceItems(items: InvoiceItem[]) {
       if (items.length > 0 ){
+        const clear = "DELETE FROM invoiceitems;";
+        await this.db.execute(clear);
+
         const sql = `INSERT INTO invoiceitems (itemNo, numPerPack, orderNo, packs, partNo, quantity, returnsNo, price, vat, vatRate, discrepancies, discount, creditNotes)
         VALUES `;
 
@@ -96,7 +99,7 @@ export class StorageService {
 
     async addProductItems(products: Product[]){
       if (products.length > 0){
-        const sql = `INSERT INTO products (description, partNo) VALUES `;
+        const sql = `INSERT or IGNORE INTO products (description, partNo) VALUES `;
 
         var values = products.map(item => `( '${item.description.replace(/'/g, "''")}','${item.partNo.replace(/'/g, "''")}' )`).join(",\n");
         values += ';';

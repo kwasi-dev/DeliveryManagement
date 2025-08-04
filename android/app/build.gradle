@@ -4,7 +4,7 @@ android {
     namespace "ionic.deliverymanagementapp"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "ionic.deliverymanagementapp"
+        applicationId "dev.akisoft.dms"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

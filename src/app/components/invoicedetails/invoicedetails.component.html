@@ -67,9 +67,15 @@
 
       <ion-grid class="column-headings">
         <ion-row>
-          <ion-col><b>Subtotal</b></ion-col>
+          <ion-col><b>Grand Total</b></ion-col>
           <ion-col></ion-col>
-          <ion-col>${{ total.toFixed(2) }}</ion-col>
+          <ion-col>${{ invoice.totalItems }}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col><b>Discount</b></ion-col>
+          <ion-col></ion-col>
+          <ion-col>${{ invoice.totalItems * invoice.taxRate / 100 }}</ion-col>
         </ion-row>
 
         <ion-row>
@@ -78,17 +84,6 @@
           <ion-col>${{ vat.toFixed(2) }}</ion-col>
         </ion-row>
 
-        <ion-row>
-          <ion-col><b>Tax</b></ion-col>
-          <ion-col></ion-col>
-          <ion-col>${{ total * invoice.taxRate / 100 }}</ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col><b>Discount</b></ion-col>
-          <ion-col></ion-col>
-          <ion-col>${{ invoice.totalItems * invoice.taxRate / 100 }}</ion-col>
-        </ion-row>
 
         <ion-row>
           <ion-col><b>Amount Due</b></ion-col>

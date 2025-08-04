@@ -61,12 +61,13 @@ export class SyncPage implements OnInit {
     await loading.present();
     try {
       await this.data.fetchData(this.selectedDate, this.routeNo);
+      loading.message = `Download success! Loading Data!`;
     } catch (err) {
       loading.message = `Download failed. Please try again`;
       console.log('Ionic Download failed: ', err);
       await new Promise(resolve => setTimeout(resolve, 2000));
     } finally {
-      await new Promise(resolve => setTimeout(resolve, 750));
+      await new Promise(resolve => setTimeout(resolve, 2000));
       await loading.dismiss();
     }
   }
