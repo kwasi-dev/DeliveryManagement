@@ -12,6 +12,7 @@ import { ViewChild } from '@angular/core';
 import { SearchService } from 'src/app/services/search/search.service';
 import { PopoverController } from "@ionic/angular";
 import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter-popover.component';
+import {InvoiceReturn} from "../../models/invoice_return";
 
  @Component({
  selector: 'app-home',
@@ -45,6 +46,9 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
     startDate: any = null;
     endDate: any = null;
 
+
+    groupedReturns: { [key: string]: InvoiceReturn[] } ={};
+
   constructor(private storage: StorageService, private modalCtrl: ModalController, private searchService: SearchService, private popOverCtrl: PopoverController) {}
 
   // Listen for data updates and auto update UI
@@ -56,6 +60,13 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
 
     this.storage.returnsList.subscribe(async data => {
       this.returnInvoices = data;
+      this.groupedReturns = {};
+      for (let retInv of this.returnInvoices){
+          if (!(retInv.invoiceNo in this.groupedReturns)){
+            this.groupedReturns[retInv.invoiceNo] = [];
+          }
+          this.groupedReturns[retInv.invoiceNo].push(retInv);
+      }
       await this.filter(this.filterParameter, this.startDate, this.endDate);
     })
 
@@ -81,7 +92,8 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
   updateInvoiceSummary() {
     this.deliveredCount =  this.shownInvoices.filter(inv => inv.generate === 'Y').length;
     this.undeliveredCount = this.shownInvoices.filter(inv => inv.generate !== 'Y').length;
-    this.returnsCount = this.shownReturns.reduce((total, inv) => total + (inv.returnsNo || 0), 0);
+    this.returnsCount = this.shownReturns.reduce((total, inv) => total + (inv.qtyadj || 0), 0);
+    console.log(`Returns count ${this.returnsCount}`)
   }
 
   // Search based on Company Name, Invoice number and Date.
@@ -102,14 +114,28 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
   filterByToday() {
     const date = '2024-09-02';
     this.shownInvoices = this.invoices.filter(invoice => invoice.invoiceDate.includes(date));
-    this.shownReturns = this.returnInvoices.filter(inv => inv.invoiceDate.includes(date));
+    this.shownReturns = this.returnInvoices.filter(inv => inv.returndate.includes(date));
+    this.groupedReturns = {};
+    for (let retInv of this.shownReturns){
+      if (!(retInv.invoiceNo in this.groupedReturns)){
+        this.groupedReturns[retInv.invoiceNo] = [];
+      }
+      this.groupedReturns[retInv.invoiceNo].push(retInv);
+    }
     this.filterParameter = 'Today';
   }
 
   filterByDate(date: string) {
     const dateString = date.split('T')[0];
     this.shownInvoices = this.invoices.filter(invoice => invoice.invoiceDate.includes(dateString));
-    this.shownReturns = this.returnInvoices.filter(inv => inv.invoiceDate.includes(dateString));
+    this.shownReturns = this.returnInvoices.filter(inv => inv.returndate.includes(dateString));
+    this.groupedReturns = {};
+    for (let retInv of this.shownReturns){
+      if (!(retInv.invoiceNo in this.groupedReturns)){
+        this.groupedReturns[retInv.invoiceNo] = [];
+      }
+      this.groupedReturns[retInv.invoiceNo].push(retInv);
+    }
     this.filterParameter = 'Specific Date';
   }
 
@@ -117,6 +143,14 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
     this.returnSelected = false;
     this.shownInvoices = this.invoices;
     this.shownReturns = this.returnInvoices;
+    this.groupedReturns = {};
+    for (let retInv of this.shownReturns){
+      if (!(retInv.invoiceNo in this.groupedReturns)){
+        this.groupedReturns[retInv.invoiceNo] = [];
+      }
+      this.groupedReturns[retInv.invoiceNo].push(retInv);
+    }
+
     this.filterParameter = 'All';
   }
 
@@ -125,7 +159,7 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
     const endDate = new Date(end).toISOString().split('T')[0];
 
     this.shownInvoices = this.invoices.filter(invoice => {
-      const invDate = new Date(invoice.invoiceDate).toISOString().split('T')[0];
+      const invDate = new Date(invoice.returndate).toISOString().split('T')[0];
       return invDate >= startDate && invDate <= endDate;
     });
 
@@ -134,6 +168,14 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
       return invDate >= startDate && invDate <= endDate;
     });
 
+    this.groupedReturns = {};
+    for (let retInv of this.shownReturns){
+      if (!(retInv.invoiceNo in this.groupedReturns)){
+        this.groupedReturns[retInv.invoiceNo] = [];
+      }
+      this.groupedReturns[retInv.invoiceNo].push(retInv);
+    }
+
     this.filterParameter = 'Range';
   }
 
@@ -141,25 +183,25 @@ import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter
     switch (type) {
       case 'All':
         this.filterByAll();
-        this.setTopTab(this.selectedTab);
+        await this.setTopTab(this.selectedTab);
         this.updateInvoiceSummary();
         break;
       case 'Today':
         this.filterByToday();
-        this.setTopTab(this.selectedTab);
+        await this.setTopTab(this.selectedTab);
         this.updateInvoiceSummary();
         break;
       case 'Range':
         if (start != null && end != null) {
         this.filterByRange(start, end);
-        this.setTopTab(this.selectedTab);
+        await this.setTopTab(this.selectedTab);
         this.updateInvoiceSummary();
         }
         break;
       case 'Specific Date':
         if (start != null) {
           this.filterByDate(start);
-          this.setTopTab(this.selectedTab);
+          await this.setTopTab(this.selectedTab);
           this.updateInvoiceSummary();
         }
         break;

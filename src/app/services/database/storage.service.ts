@@ -309,28 +309,23 @@ export class StorageService {
 
     // Loads Returns Data into returnsList
     async loadReturnsData() {
-        const result = (await this.db.query('SELECT inv.*, inv_item.* FROM invoices inv JOIN invoiceitems inv_item ON inv.orderNo = inv_item.orderNo WHERE inv_item.returnsNo > 0'))
+        const result = (await this.db.query('SELECT * from invoicereturns;'))
         const results = result.values
         if (results != null) {
-            const grouped: any = {};
+          this.returnsList.next(results);
+            // const grouped: any = {};
+            //
+            // results.forEach(row => {
+            //     const invoiceNo = row.invoiceNo;
+            //     if (!grouped[invoiceNo]) {
+            //         grouped[invoiceNo] = {
+            //             "invoiceNo": row.invoiceNo,
+            //             items: []
+            //         };
+            //     }
+            //     grouped[invoiceNo].items.push(row);
+            // });
 
-            results.forEach(row => {
-                const orderNo = row.orderNo;
-                if (!grouped[orderNo]) {
-                    grouped[orderNo] = {
-                        ...row,
-                        items: []
-                    };
-                }
-                grouped[orderNo].items.push({
-                    'itemNo': row.itemNo,
-                    'returnsNo': row.returnsNo,
-                    'discrepancies': row.discrepancies,
-                });
-            });
-
-            const groupedArr = Object.values(grouped);
-            this.returnsList.next(groupedArr);
         } else {
             this.returnsList.next([]);
         }
