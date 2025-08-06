@@ -21,10 +21,6 @@ export const routes: Routes = [
         pathMatch: 'full',
       },
       {
-        path: 'search',
-        redirectTo: 'home'
-      },
-      {
         path: 'upload',
         loadComponent: () => import('./pages/sync/sync.page').then((m)=> m.SyncPage),
       },

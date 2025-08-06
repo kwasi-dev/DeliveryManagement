@@ -23,10 +23,8 @@ ion-card {
   background-color: var(--ion-color-secondary);
 }
 
-/* Padding to avoid overflow with android notification bar*/
 ion-header {
-  padding-top: 24px;
-  background-color: var(--ion-color-secondary);
+  background-color: var(--ion-color-lightblue);
 }
 
 /* Top Navigation Bar*/
@@ -44,7 +42,7 @@ ion-tab-button.selected {
 }
 
 ion-searchbar {
-  --cancel-button-color: var(--ion-color-primary);
+  --cancel-button-color: var(--ion-color-orange);
 }
 
 .returns-title {

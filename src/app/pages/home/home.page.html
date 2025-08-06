@@ -1,6 +1,10 @@
-<!-- Invoice Management Page -->
 <ion-header [translucent]="true">
-  <ion-toolbar *ngIf="showToolbar">
+  <ion-toolbar color="translucent">
+    <ion-searchbar color="light"
+                   #searchBar mode="ios" [(ngModel)]="searchQuery" (ionInput)="filterInvoices($event)"
+                   (ionCancel)="cancelSearch()" placeholder="Search for Customer or Invoice...">
+    </ion-searchbar>
+
     <ion-tab-bar class="top-tab-bar">
       <ion-tab-button [class.selected]="selectedTab === 'delivered'" (click)="setTopTab('delivered')">
         <div class="tab-count">{{ deliveredCount }}</div>
@@ -20,10 +24,6 @@
       </ion-tab-button>
     </ion-tab-bar>
   </ion-toolbar>
-
-  <ion-searchbar *ngIf="showSearch" #searchBar mode="ios" [(ngModel)]="searchQuery" (ionInput)="filterInvoices($event)"
-    show-cancel-button="always" cancel-button-text="Cancel Search" (ionCancel)="cancelSearch()" placeholder="Search by Customer">
-  </ion-searchbar>
 </ion-header>
 
 <ion-content class="ion-padding">

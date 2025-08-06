@@ -70,14 +70,6 @@ import {InvoiceReturn} from "../../models/invoice_return";
       await this.filter(this.filterParameter, this.startDate, this.endDate);
     })
 
-    this.searchService.showSearch$.subscribe(state => {
-      if (state === true) {
-        this.showSearch = true;
-        this.ngAfterViewInit()
-      } else {
-        this.showSearch = state;
-      }
-    });
 
     this.searchService.showToolbar$.subscribe(ToolbarState => {
       if (ToolbarState === true) {
@@ -280,29 +272,14 @@ import {InvoiceReturn} from "../../models/invoice_return";
     }
   }
 
-  // Opens keyboard to search bar after small delay when search is clicked
-  @ViewChild('searchBar', { static: false }) searchBar!: IonSearchbar;
-  ngAfterViewInit() {
-    setTimeout(() => {
-      this.searchBar?.setFocus();
-    }, 300);
-  }
 
   // Handles cancel search click back to home page
   cancelSearch() {
     setTimeout(() => {
       this.searchQuery = ''
-      this.toggleSearchBar()
     }, 300);
   }
 
-  // Hide Search Bar
-  toggleSearchBar() {
-    if (this.showSearch === true) {
-      this.showSearch = !this.showSearch;
-      this.showToolbar = !this.showToolbar;
-    }
-  }
 }
 
 // Functions to convert dateformat to readable

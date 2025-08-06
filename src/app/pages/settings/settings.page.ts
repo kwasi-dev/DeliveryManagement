@@ -28,11 +28,6 @@ export class SettingsPage implements OnInit {
 
   constructor(private navCtrl: NavController, private zone: NgZone, private loadingCtrl: LoadingController, private storage: StorageService) {}
 
-  goBack() {
-    setTimeout(() => {
-      this.navCtrl.back();
-    }, 200)
-  }
 
   async ngOnInit() {
     await Network.addListener('networkStatusChange', status => {

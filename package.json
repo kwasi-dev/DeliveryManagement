@@ -13,7 +13,7 @@
     "lint": "ng lint",
     "ionic:build": "npm run build",
     "ionic:serve": "npm run start -- --open",
-    "android": "ionic cap run android -l --external",
+    "android": "ionic cap run android -l --no-open --external --debug --target 192.168.1.143:34569 --host 192.168.1.147",
     "build-prod": "ionic cap build android --prod"
   },
   "private": true,
@@ -21,6 +21,7 @@
     "@angular/animations": "^19.0.0",
     "@angular/compiler": "^19.0.0",
     "@angular/router": "^19.0.0",
+    "@awesome-cordova-plugins/status-bar": "^8.0.2",
     "@capacitor-community/sqlite": "^7.0.0",
     "@capacitor/android": "7.2.0",
     "@capacitor/app": "7.0.0",

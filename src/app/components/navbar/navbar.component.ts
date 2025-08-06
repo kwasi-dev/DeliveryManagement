@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { SearchService } from 'src/app/services/search/search.service';
 import { Router, NavigationEnd} from "@angular/router";
+import { Platform, NavController } from '@ionic/angular';
+import { ViewChild } from '@angular/core';
+import { IonTabs } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-navbar',
@@ -13,31 +16,42 @@ import { Router, NavigationEnd} from "@angular/router";
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class NavbarComponent  implements OnInit {
-  showSearch: boolean = false;
-  showToolbar: boolean = true;
-  selectedBottomTab: string = "";
+  selectedBottomTab: string = "home";
+  visitedTabs: string[] = [];
+  @ViewChild('tabs', { static: false }) tabs!: IonTabs;
 
-  constructor(private searchService: SearchService, private router: Router) {
+  constructor(private router: Router, private platform: Platform, private navCtrl: NavController) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         const url = event.urlAfterRedirects;
+        console.log('Current URL:', url);
 
-        if (url.includes('/navbar/home')) {
+        if (url.includes('home')) {
           this.selectedBottomTab = 'home';
-        } else if (url.includes('/navbar/settings')) {
-          this.selectedBottomTab = 'settings';
-        } else if (url.includes('/navbar/upload')) {
+        } else if (url.includes('upload')) {
           this.selectedBottomTab = 'upload';
+        } else {
+          this.selectedBottomTab = 'settings';
         }
+        this.visitedTabs.push(this.selectedBottomTab);
+        console.log(this.visitedTabs)
+        console.log(`Changed bottomtab to ${this.selectedBottomTab} for URL ${url}`)
       }
     });
   }
 
   ngOnInit() {
-    this.searchService.init();
+    this.platform.backButton.subscribeWithPriority(10, async () => {
+     await this.goBackInTabs();
+    });
+  }
+  async goBackInTabs() {
+    if (this.visitedTabs.length > 1) {
+      this.visitedTabs.pop();
+      const previousTab = this.visitedTabs[this.visitedTabs.length - 1];
+      this.selectedBottomTab = previousTab;
+      this.tabs.select(previousTab);
+    }
   }
 
-  toggleSearch() {
-    this.searchService.toggle();
-  }
 }

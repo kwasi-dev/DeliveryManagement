@@ -2,7 +2,6 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Component, EnvironmentInjector, inject } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +14,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   public environmentInjector = inject(EnvironmentInjector);
 
-  constructor(private router: Router) {
+  constructor() {
+
   }
 }
