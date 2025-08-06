@@ -6,7 +6,7 @@ import { UserUpgradeStatements } from '../../upgrades/user.upgrade.statements';
 import { Customer } from '../../models/customer';
 import { InvoiceItem } from '../../models/invoice_item';
 import { Invoice } from '../../models/invoice';
-import { BehaviorSubject, Observable } from 'rxjs';
+import {BehaviorSubject, Observable, timestamp} from 'rxjs';
 import { Toast } from '@capacitor/toast';
 import {Product} from "../../models/product";
 import {InvoiceReturn} from "../../models/invoice_return";
@@ -222,11 +222,11 @@ export class StorageService {
 
     async logReturns( items: { partNo: string, invoiceNo: number, qtyadj: number, returntype: string, returndate:string, route:string, routeuser:string,  generalNote: string}[]) {
         try {
-            //await this.db.execute('BEGIN TRANSACTION;');
+          const msSinceEpoch = Date.now();
 
-          const sql = `INSERT OR IGNORE INTO invoicereturns (partNo, invoiceNo, qtyadj, returntype, returndate, route, routeuser, generalNote, control) VALUES `;
+          const sql = `INSERT OR IGNORE INTO invoicereturns (partNo, invoiceNo, qtyadj, returntype, returndate, route, routeuser, generalNote, control, timestamp) VALUES `;
 
-           var values = items.map(item => `('${item.partNo.replace(/'/g, "''")}', ${item.invoiceNo}, ${item.qtyadj}, '${item.returntype}', '${item.returndate}', '${item.route.replace(/'/g, "''")}', '${item.route.replace(/'/g, "''")}', '${item.generalNote.replace(/'/g, "''")}', 0)`).join(",\n");
+           var values = items.map(item => `('${item.partNo.replace(/'/g, "''")}', ${item.invoiceNo}, ${item.qtyadj}, '${item.returntype}', '${item.returndate}', '${item.route.replace(/'/g, "''")}', '${item.route.replace(/'/g, "''")}', '${item.generalNote.replace(/'/g, "''")}', 0, ${msSinceEpoch})`).join(",\n");
            values += ';';
            await this.db.execute(sql + values);
 

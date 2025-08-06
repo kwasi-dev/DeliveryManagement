@@ -9,6 +9,13 @@
     border-radius: 4px;
 }
 
+ion-header, ion-toolbar {
+  padding-top: env(safe-area-inset-top);
+}
+ion-footer{
+  padding-bottom: env(safe-area-inset-bottom);
+
+}
 .header-toolbar {
     padding-top: 24px;
 }

@@ -83,9 +83,13 @@ export class DataService {
 
   generateReceipt(route: string, date: string) {
     var receiept = `Confirmation of Download\nRoute: ${route}\nDate: ${date}\nList of Invoices\n`;
-    this.invoiceList.forEach(invoice=> receiept += `${invoice.invoiceNo}\n`);
+    this.invoiceList.forEach(invoice=> receiept += `${this.getCustomerForInvoice(invoice.invoiceNo)} - ${invoice.invoiceNo}\n`);
     receiept += "\n\n\n_____________________\n   Signature\n\n\n";
     return receiept;
+  }
+
+  getCustomerForInvoice(invoiceNumber: number){
+    return this.customerList.find(c => c.id === invoiceNumber)?.company || 'Unknown Customer';
   }
 
   pushCustomer(record: any) {

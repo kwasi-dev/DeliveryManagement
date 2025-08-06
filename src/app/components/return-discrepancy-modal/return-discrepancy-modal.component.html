@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar class="header-toolbar">
+<ion-toolbar class="header-toolbar">
     <ion-buttons slot="start">
       <ion-button (click)="close()">
         <ion-icon name="arrow-back"></ion-icon>
@@ -60,5 +60,10 @@
 </ion-content>
 
 <ion-footer>
-  <ion-button expand="full" (click)="postChange()" class="confirm-button" color="success">Post Change</ion-button>
+  <ion-row>
+    <ion-col size="12">
+      <ion-button expand="full" (click)="postChange()" class="confirm-button" color="success">Post Change</ion-button>
+    </ion-col>
+
+  </ion-row>
 </ion-footer>

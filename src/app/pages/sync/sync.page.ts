@@ -100,7 +100,7 @@ export class SyncPage implements OnInit {
                   "returndate": ret.returndate,
                   "notes": [],
                   "returnitems": [],
-                  "mobile_ids": []
+                  "mobile_ids": [],
                 }
               }
             }
@@ -116,7 +116,8 @@ export class SyncPage implements OnInit {
             "partno": ret.partNo,
             "invoiceno": ret.invoiceNo,
             "qtyadj": ret.qtyadj,
-            "returntype": ret.returntype
+            "returntype": ret.returntype,
+            "timestamp": ret.timestamp
           });
           matchingRoute.data.attributes.mobile_ids.push(ret.id);
         });

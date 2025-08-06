@@ -84,8 +84,15 @@ import {InvoiceReturn} from "../../models/invoice_return";
   updateInvoiceSummary() {
     this.deliveredCount =  this.shownInvoices.filter(inv => inv.generate === 'Y').length;
     this.undeliveredCount = this.shownInvoices.filter(inv => inv.generate !== 'Y').length;
-    this.returnsCount = this.shownReturns.reduce((total, inv) => total + (inv.qtyadj || 0), 0);
-    console.log(`Returns count ${this.returnsCount}`)
+
+    for (let retInv of this.shownReturns){
+      if (!(retInv.invoiceNo in this.groupedReturns)){
+        this.groupedReturns[retInv.invoiceNo] = [];
+      }
+      this.groupedReturns[retInv.invoiceNo].push(retInv);
+    }
+
+    this.returnsCount = new Set(this.shownReturns.map(item => item.invoiceNo)).size;
   }
 
   // Search based on Company Name, Invoice number and Date.

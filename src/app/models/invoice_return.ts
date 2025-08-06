@@ -9,4 +9,5 @@ export interface InvoiceReturn {
   routeuser: string;
   generalNote: string;
   control: number;
+  timestamp: number;
 }

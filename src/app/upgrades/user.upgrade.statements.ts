@@ -81,13 +81,10 @@ export class UserUpgradeStatements {
           `INSERT INTO settings (name, value) VALUES ('baseurl', 'http://3.208.13.82:2078')`
         ]
         },
-        //{
-            /*
+        {
         toVersion: 2,
         statements: [
-
-        ]
-            */
-       // },
+          `ALTER TABLE invoicereturns ADD COLUMN timestamp INTEGER;`
+        ]},
     ]
 }
