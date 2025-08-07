@@ -81,7 +81,6 @@ export class SyncPage implements OnInit {
 
     await loading.present();
     let url = await this.storage.getBaseUrl();
-
     try {
       const returns = await this.storage.getAllUnsyncedReturns();
       console.log(JSON.stringify(returns));
@@ -137,10 +136,7 @@ export class SyncPage implements OnInit {
             } else {
               const json = await response.json();
               const controlId = json.data.attributes.controlid;
-              console.log(`Success JSON ${JSON.stringify(json)}`);
-              console.log(`Got control ID: ${controlId}`);
 
-              console.log(`Update control ID for internal IDS: ${data.data.attributes.mobile_ids}`)
               await this.storage.setControlId(controlId,data.data.attributes.mobile_ids,)
 
               const resp2 = await fetch(`${url}/akiproorders/uploadcontrol`, {

@@ -313,19 +313,6 @@ export class StorageService {
         const results = result.values
         if (results != null) {
           this.returnsList.next(results);
-            // const grouped: any = {};
-            //
-            // results.forEach(row => {
-            //     const invoiceNo = row.invoiceNo;
-            //     if (!grouped[invoiceNo]) {
-            //         grouped[invoiceNo] = {
-            //             "invoiceNo": row.invoiceNo,
-            //             items: []
-            //         };
-            //     }
-            //     grouped[invoiceNo].items.push(row);
-            // });
-
         } else {
             this.returnsList.next([]);
         }
@@ -382,6 +369,15 @@ export class StorageService {
     }
   }
 
+  async getReturnsForInvoice(invoiceNo: number) {
+    const result: InvoiceReturn[] = (await this.db.query('SELECT * FROM invoicereturns where invoiceNo = ?;', [invoiceNo])).values as InvoiceReturn[];
+    if (result.length > 0) {
+      return result;
+    } else {
+      return [];
+    }
+  }
+
   async setControlId(controlId: number, ids: number[]) {
     await this.db.run(`UPDATE invoicereturns SET control = ? WHERE id in (${ids.join(",")})`, [controlId])
   }
@@ -397,4 +393,6 @@ export class StorageService {
     await this.db.run(`UPDATE settings SET value = ? WHERE name = 'baseurl'`, [url])
 
   }
+
+
 }

@@ -33,24 +33,34 @@
     <ion-card-content>
       <ion-row class="heading-row">
         <ion-col><b>Item</b></ion-col>
+        <ion-col><b>Total</b></ion-col>
+        <ion-col><b>Previously Returned</b></ion-col>
         <ion-col class="quantity-col"><b>Quantity</b></ion-col>
       </ion-row>
 
       <ion-grid>
         <ion-row *ngFor="let item of items; let i = index">
           <ion-col class="item-number">{{ getProductName(item.partNo) }}</ion-col>
-          <ion-col>
+          <ion-col class="item-number">{{ item.quantity }}</ion-col>
+          <ion-col class="item-number">{{ getReturnCount(item.partNo) }}</ion-col>
+          <ion-col class="item-number">
             <div class="quantity-toggle">
-              <ion-button size="small" (click)="decrease(i)" [disabled]="quantityArr[i] === 0" color="tertiary">-</ion-button>
-
-              <ion-input type="number" [(ngModel)]="quantityArr[i]" (ionChange)="validateInput(i)" [ngClass]="{
-                        'valid-input': quantityArr[i] <= items[i].quantity && quantityArr[i] >= 0,
-                        'invalid-input': quantityArr[i] > items[i].quantity || quantityArr[i] < 0
-                      }" min="0" style="width: 60px; text-align: center;">
+              <ion-input
+                type="number"
+                [(ngModel)]="quantityArr[i]"
+                (ionChange)="validateInput(i)"
+                [ngClass]="{
+        'valid-input': quantityArr[i] <= items[i].quantity && quantityArr[i] >= 0,
+        'invalid-input': quantityArr[i] > (items[i].quantity - getReturnCount(item.partNo)) || quantityArr[i] < 0
+      }"
+                min="0"
+                class="quantity-input">
               </ion-input>
 
-              <ion-button size="small" (click)="increase(i)"
-                [disabled]="quantityArr[i] >= items[i].quantity" color="tertiary">+</ion-button>
+              <div class="button-stack">
+                <ion-button size="small" (click)="increase(i)" [disabled]="quantityArr[i] >= (items[i].quantity - getReturnCount(item.partNo))" color="tertiary">+</ion-button>
+                <ion-button size="small" (click)="decrease(i)" [disabled]="quantityArr[i] === 0" color="tertiary">-</ion-button>
+              </div>
             </div>
           </ion-col>
         </ion-row>

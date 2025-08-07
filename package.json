@@ -13,7 +13,7 @@
     "lint": "ng lint",
     "ionic:build": "npm run build",
     "ionic:serve": "npm run start -- --open",
-    "android": "ionic cap run android -l --no-open --external --debug --target 192.168.1.143:34569 --host 192.168.1.147",
+    "android": "ionic cap run android -l --no-open --external --debug --target adb-4B051FDAP007JD-nGVoPu._adb-tls-connect._tcp --host 192.168.1.147",
     "build-prod": "ionic cap build android --prod"
   },
   "private": true,

@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { StorageService } from 'src/app/services/database/storage.service';
 import { Toast } from '@capacitor/toast';
 import { InvoiceItem } from 'src/app/models/invoice_item';
+import {InvoiceReturn} from "../../models/invoice_return";
 
 @Component({
   selector: 'app-return-discrepancy-modal',
@@ -23,12 +24,24 @@ export class ReturnDiscrepancyModalComponent implements OnInit {
   quantityArr!: number[];
   generalNote = '';
   returnDate: string = new Date().toISOString();
+  previousReturns: InvoiceReturn[]=[];
 
   constructor(private modalCtrl: ModalController, private storage: StorageService) {}
 
   async ngOnInit() {
     this.items = await this.storage.getInvoiceItems(this.invoice.orderNo);
     this.quantityArr = await Array(this.items.length).fill(0);
+    this.previousReturns = await this.storage.getReturnsForInvoice(this.invoice!.invoiceNo);
+  }
+
+  getReturnCount(partNo: string){
+    let retQty = 0;
+    for (let ret of this.previousReturns){
+      if (ret.partNo == partNo){
+        retQty += ret.qtyadj;
+      }
+    }
+    return retQty;
   }
 
   async postChange() {
