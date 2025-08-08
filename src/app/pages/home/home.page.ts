@@ -13,6 +13,7 @@ import { SearchService } from 'src/app/services/search/search.service';
 import { PopoverController } from "@ionic/angular";
 import { FilterPopoverComponent } from 'src/app/components/filter-popover/filter-popover.component';
 import {InvoiceReturn} from "../../models/invoice_return";
+import {InvoiceReturnItem} from "../../models/invoice_return_item";
 
  @Component({
  selector: 'app-home',
@@ -47,7 +48,7 @@ import {InvoiceReturn} from "../../models/invoice_return";
     endDate: any = null;
 
 
-    groupedReturns: { [key: string]: InvoiceReturn[] } ={};
+    groupedReturns: { [key: string]: InvoiceReturnItem[] } ={};
 
   constructor(private storage: StorageService, private modalCtrl: ModalController, private searchService: SearchService, private popOverCtrl: PopoverController) {}
 
@@ -60,13 +61,7 @@ import {InvoiceReturn} from "../../models/invoice_return";
 
     this.storage.returnsList.subscribe(async data => {
       this.returnInvoices = data;
-      this.groupedReturns = {};
-      for (let retInv of this.returnInvoices){
-          if (!(retInv.invoiceNo in this.groupedReturns)){
-            this.groupedReturns[retInv.invoiceNo] = [];
-          }
-          this.groupedReturns[retInv.invoiceNo].push(retInv);
-      }
+      this.groupReturns();
       await this.filter(this.filterParameter, this.startDate, this.endDate);
     })
 
@@ -80,11 +75,22 @@ import {InvoiceReturn} from "../../models/invoice_return";
     });
   }
 
+  groupReturns(){
+    this.groupedReturns = {};
+    for (let retInv of this.returnInvoices){
+      if (!(retInv.invoiceReturnId in this.groupedReturns)){
+        this.groupedReturns[retInv.invoiceReturnId] = [];
+      }
+      this.groupedReturns[retInv.invoiceReturnId].push(retInv);
+    }
+  }
+
+
   // Dynamically Update the Toolbar upon changes
   updateInvoiceSummary() {
     this.deliveredCount =  this.shownInvoices.filter(inv => inv.generate === 'Y').length;
     this.undeliveredCount = this.shownInvoices.filter(inv => inv.generate !== 'Y').length;
-    this.returnsCount = new Set(this.shownReturns.map(item => item.invoiceNo)).size;
+    this.returnsCount = new Set(this.shownReturns.map(item => item.invoiceReturnId)).size;
   }
 
   // Search based on Company Name, Invoice number and Date.
@@ -106,13 +112,8 @@ import {InvoiceReturn} from "../../models/invoice_return";
     const date = '2024-09-02';
     this.shownInvoices = this.invoices.filter(invoice => invoice.invoiceDate.includes(date));
     this.shownReturns = this.returnInvoices.filter(inv => inv.returndate.includes(date));
-    this.groupedReturns = {};
-    for (let retInv of this.shownReturns){
-      if (!(retInv.invoiceNo in this.groupedReturns)){
-        this.groupedReturns[retInv.invoiceNo] = [];
-      }
-      this.groupedReturns[retInv.invoiceNo].push(retInv);
-    }
+    this.groupReturns();
+
     this.filterParameter = 'Today';
   }
 
@@ -120,13 +121,8 @@ import {InvoiceReturn} from "../../models/invoice_return";
     const dateString = date.split('T')[0];
     this.shownInvoices = this.invoices.filter(invoice => invoice.invoiceDate.includes(dateString));
     this.shownReturns = this.returnInvoices.filter(inv => inv.returndate.includes(dateString));
-    this.groupedReturns = {};
-    for (let retInv of this.shownReturns){
-      if (!(retInv.invoiceNo in this.groupedReturns)){
-        this.groupedReturns[retInv.invoiceNo] = [];
-      }
-      this.groupedReturns[retInv.invoiceNo].push(retInv);
-    }
+    this.groupReturns();
+
     this.filterParameter = 'Specific Date';
   }
 
@@ -134,13 +130,8 @@ import {InvoiceReturn} from "../../models/invoice_return";
     this.returnSelected = false;
     this.shownInvoices = this.invoices;
     this.shownReturns = this.returnInvoices;
-    this.groupedReturns = {};
-    for (let retInv of this.shownReturns){
-      if (!(retInv.invoiceNo in this.groupedReturns)){
-        this.groupedReturns[retInv.invoiceNo] = [];
-      }
-      this.groupedReturns[retInv.invoiceNo].push(retInv);
-    }
+    this.groupReturns();
+
 
     this.filterParameter = 'All';
   }
@@ -158,15 +149,7 @@ import {InvoiceReturn} from "../../models/invoice_return";
       const invDate = new Date(inv.invoiceDate).toISOString().split('T')[0];
       return invDate >= startDate && invDate <= endDate;
     });
-
-    this.groupedReturns = {};
-    for (let retInv of this.shownReturns){
-      if (!(retInv.invoiceNo in this.groupedReturns)){
-        this.groupedReturns[retInv.invoiceNo] = [];
-      }
-      this.groupedReturns[retInv.invoiceNo].push(retInv);
-    }
-
+    this.groupReturns();
     this.filterParameter = 'Range';
   }
 

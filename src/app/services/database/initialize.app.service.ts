@@ -19,7 +19,7 @@ export class InitializeAppService {
                     await this.sqliteService.initWebStore();
                 }
 
-                const DB_CUSTOMERS = 'deliveryManagementDB_Test21'
+                const DB_CUSTOMERS = 'deliveryManagementDB_Test1'
                 await this.storageService.initializeDatabase(DB_CUSTOMERS);
 
                 if (this.sqliteService.platform === 'web') {

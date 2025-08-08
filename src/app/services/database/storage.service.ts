@@ -11,6 +11,7 @@ import { Toast } from '@capacitor/toast';
 import {Product} from "../../models/product";
 import {InvoiceReturn} from "../../models/invoice_return";
 import {Setting} from "../../models/setting";
+import {InvoiceReturnItem} from "../../models/invoice_return_item";
 
 @Injectable()
 export class StorageService {
@@ -220,23 +221,49 @@ export class StorageService {
         }
     }
 
-    async logReturns( items: { partNo: string, invoiceNo: number, qtyadj: number, returntype: string, returndate:string, route:string, routeuser:string,  generalNote: string}[]) {
+    async logReturns(
+      returns: {route:string, routeuser:string,  returnnote: string, returntype: string, returndate:string},
+      items: { partNo: string, itemNo: number, invoiceNo: number, qtyadj: number}[]) {
         try {
-          const msSinceEpoch = Date.now();
 
-          const sql = `INSERT OR IGNORE INTO invoicereturns (partNo, invoiceNo, qtyadj, returntype, returndate, route, routeuser, generalNote, control, timestamp) VALUES `;
+          const sql = `INSERT INTO invoicereturns (route, routeuser, returndate, returnnote, returntype, control)
+                    VALUES (?, ?, ?, ?, ?, ?);`;
 
-           var values = items.map(item => `('${item.partNo.replace(/'/g, "''")}', ${item.invoiceNo}, ${item.qtyadj}, '${item.returntype}', '${item.returndate}', '${item.route.replace(/'/g, "''")}', '${item.route.replace(/'/g, "''")}', '${item.generalNote.replace(/'/g, "''")}', 0, ${msSinceEpoch})`).join(",\n");
-           values += ';';
-           await this.db.execute(sql + values);
+           const result = await this.db.run(
+             sql,
+             [returns['route'],
+               returns['routeuser'],
+               returns['returndate'],
+               returns['returnnote'],
+               returns['returntype'],
+             0
+             ]);
 
-            //await this.db.execute('COMMIT');
-            await this.loadData();
+          if (result.changes === undefined){
+
+            await Toast.show({
+              text: `An error has occurred saving the return`,
+              duration: 'short',
+              position: 'bottom',
+            });
+            return;
+          }
+
+          const returnId = result.changes.lastId;
+          const sqlItems = `INSERT OR IGNORE INTO invoicereturnitems (invoiceReturnId, qtyadj, invoiceNo, partNo, itemNo)
+        VALUES `;
+
+          var values = items.map(item => `(${returnId}, ${item.qtyadj}, ${item.invoiceNo},'${item.partNo}',${item.itemNo} )`).join(",\n");
+          values += ';';
+          await this.db.execute(sqlItems + values);
+
           await Toast.show({
-            text: 'Return Logged Successfully!',
+            text: `Return Logged Successfully!`,
             duration: 'short',
             position: 'bottom',
           });
+          await this.loadReturnsData();
+
 
         } catch (error) {
             await this.db.execute('ROLLBACK');
@@ -309,7 +336,7 @@ export class StorageService {
 
     // Loads Returns Data into returnsList
     async loadReturnsData() {
-        const result = (await this.db.query('SELECT * from invoicereturns;'))
+        const result = (await this.db.query('SELECT * from invoicereturnitems;'))
         const results = result.values
         if (results != null) {
           this.returnsList.next(results);
@@ -370,7 +397,7 @@ export class StorageService {
   }
 
   async getReturnsForInvoice(invoiceNo: number) {
-    const result: InvoiceReturn[] = (await this.db.query('SELECT * FROM invoicereturns where invoiceNo = ?;', [invoiceNo])).values as InvoiceReturn[];
+    const result: InvoiceReturnItem[] = (await this.db.query('SELECT * FROM invoicereturnitems where invoiceNo = ?;', [invoiceNo])).values as InvoiceReturnItem[];
     if (result.length > 0) {
       return result;
     } else {
@@ -378,8 +405,8 @@ export class StorageService {
     }
   }
 
-  async setControlId(controlId: number, ids: number[]) {
-    await this.db.run(`UPDATE invoicereturns SET control = ? WHERE id in (${ids.join(",")})`, [controlId])
+  async setControlId(controlId: number, returnId: number) {
+    await this.db.run(`UPDATE invoicereturns SET control = ? WHERE id = ?`, [controlId, returnId])
   }
 
   async getBaseUrl(){
@@ -395,4 +422,7 @@ export class StorageService {
   }
 
 
+  async getReturnItemsForReturn(returnId: number) {
+    return (await this.db.query('SELECT * FROM invoicereturnitems WHERE invoiceReturnId = ?', [returnId])).values as InvoiceReturnItem[];
+  }
 }

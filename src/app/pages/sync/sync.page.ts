@@ -83,43 +83,27 @@ export class SyncPage implements OnInit {
     let url = await this.storage.getBaseUrl();
     try {
       const returns = await this.storage.getAllUnsyncedReturns();
-      console.log(JSON.stringify(returns));
 
       if (returns !== null){
         let datas: any[] = []
 
-        returns.forEach((ret)=>{
-          let matchingRoute = datas.find(element => element.data.attributes.route == ret.route && element.data.attributes.returndate == ret.returndate);
-          if (matchingRoute === undefined){
-            matchingRoute = {
+        for (const ret of returns) {
+            const matchingRoute = {
               "data": {
                 "attributes":{
+                  "id": ret.id,
                   "route": ret.route,
                   "routeuser": ret.routeuser,
                   "returndate": ret.returndate,
-                  "notes": [],
-                  "returnitems": [],
-                  "mobile_ids": [],
+                  "returnnote": ret.returnnote,
+                  "transactionid": `${ret.route}-${ret.id}`,
+                  "returntype": ret.returntype,
+                  "returnitems": await this.storage.getReturnItemsForReturn(ret.id),
                 }
               }
             }
             datas.push(matchingRoute);
-          }
-          if (ret.generalNote !== ''){
-            matchingRoute.data.attributes.notes.push({
-              "notes": ret.generalNote,
-              "invoiceno": ret.invoiceNo
-            });
-          }
-          matchingRoute.data.attributes.returnitems.push({
-            "partno": ret.partNo,
-            "invoiceno": ret.invoiceNo,
-            "qtyadj": ret.qtyadj,
-            "returntype": ret.returntype,
-            "timestamp": ret.timestamp
-          });
-          matchingRoute.data.attributes.mobile_ids.push(ret.id);
-        });
+        }
 
         for (const data of datas){
           try {
@@ -137,7 +121,7 @@ export class SyncPage implements OnInit {
               const json = await response.json();
               const controlId = json.data.attributes.controlid;
 
-              await this.storage.setControlId(controlId,data.data.attributes.mobile_ids,)
+              await this.storage.setControlId(controlId,data.data.attributes.id,)
 
               const resp2 = await fetch(`${url}/akiproorders/uploadcontrol`, {
                 method: 'POST',
@@ -154,7 +138,6 @@ export class SyncPage implements OnInit {
 
             }
             console.log('Data posted successfully');
-
           } catch (error){
             console.error('Error posting data:', error);
             await Toast.show({text: "Failed to sync data. Please check your internet connection and try again!"});

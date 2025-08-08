@@ -54,11 +54,12 @@
   <ion-list *ngIf="returnSelected">
     <ion-card class="return-card" *ngFor="let item of groupedReturns | keyvalue">
       <ion-card-header>
-        <ion-card-title class="returns-title"> {{item.key}} </ion-card-title>
+        <ion-card-title class="returns-title">Return #{{item.key}} </ion-card-title>
 
         <ion-item class="return-heading" color="translucent">
           <ion-grid>
             <ion-row>
+              <ion-col>Invoice</ion-col>
               <ion-col>Item Number</ion-col>
               <ion-col class="align-center">Quantity</ion-col>
               <ion-col class="align-center">Reconcile ID</ion-col>
@@ -69,9 +70,10 @@
         <ion-item class="return-item" *ngFor="let entry of item.value" color="transparent" lines="none">
           <ion-grid>
             <ion-row>
+              <ion-col>{{entry.invoiceNo}}</ion-col>
               <ion-col>{{entry.partNo}}</ion-col>
               <ion-col class="align-center">{{entry.qtyadj}}</ion-col>
-              <ion-col class="align-center">{{entry.timestamp}}</ion-col>
+              <ion-col class="align-center">{{entry.invoiceReturnId}}</ion-col>
             </ion-row>
           </ion-grid>
 

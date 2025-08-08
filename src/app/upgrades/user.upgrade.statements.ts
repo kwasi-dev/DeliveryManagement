@@ -81,10 +81,39 @@ export class UserUpgradeStatements {
           `INSERT INTO settings (name, value) VALUES ('baseurl', 'http://3.208.13.82:2078')`
         ]
         },
-        {
+      {
         toVersion: 2,
         statements: [
           `ALTER TABLE invoicereturns ADD COLUMN timestamp INTEGER;`
+        ]},
+      {
+        toVersion: 3,
+        statements: [
+          `ALTER TABLE invoicereturns ADD COLUMN itemNo INTEGER;`
+        ]},
+      {
+        toVersion: 4,
+        statements: [
+          `DROP TABLE invoicereturns;`,
+          `CREATE TABLE IF NOT EXISTS invoicereturns(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            route TEXT NOT NULL,
+            routeuser TEXT NOT NULL,
+            returndate TEXT NOT NULL,
+            returnnote TEXT,
+            returnType TEXT NOT NULL,
+            control INTEGER
+          );`,
+          `CREATE TABLE IF NOT EXISTS invoicereturnitems(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            invoiceReturnId INTEGER NOT NULL,
+            qtyadj REAL NOT NULL,
+            invoiceNo INTEGER,
+            partNo TEXT NOT NULL,
+            itemNo INTEGER,
+            FOREIGN KEY (invoiceReturnId) REFERENCES invoicereturns(id) ON DELETE CASCADE
+            );`,
+
         ]},
     ]
 }

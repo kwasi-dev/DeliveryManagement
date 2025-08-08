@@ -7,6 +7,7 @@ import { StorageService } from 'src/app/services/database/storage.service';
 import { Toast } from '@capacitor/toast';
 import { InvoiceItem } from 'src/app/models/invoice_item';
 import {InvoiceReturn} from "../../models/invoice_return";
+import {InvoiceReturnItem} from "../../models/invoice_return_item";
 
 @Component({
   selector: 'app-return-discrepancy-modal',
@@ -24,7 +25,7 @@ export class ReturnDiscrepancyModalComponent implements OnInit {
   quantityArr!: number[];
   generalNote = '';
   returnDate: string = new Date().toISOString();
-  previousReturns: InvoiceReturn[]=[];
+  previousReturns: InvoiceReturnItem[]=[];
 
   constructor(private modalCtrl: ModalController, private storage: StorageService) {}
 
@@ -45,20 +46,22 @@ export class ReturnDiscrepancyModalComponent implements OnInit {
   }
 
   async postChange() {
-
-    const returns = this.items.map((item: InvoiceItem, index: number) => ({
-      partNo: item.partNo,
-      invoiceNo: this.invoice.invoiceNo,
-      qtyadj: this.quantityArr[index],
-      returntype: this.selectedType,
-      returndate: this.returnDate.split('T')[0],
+    const returns = {
       route: this.invoice.routeNo,
       routeuser: this.invoice.routeNo,
-      generalNote: this.generalNote,
+      returndate: this.returnDate.split('T')[0],
+      returnnote: this.generalNote,
+      returntype: this.selectedType,
+    }
+    const returnItems = this.items.map((item: InvoiceItem, index: number) => ({
+      qtyadj: this.quantityArr[index],
+      invoiceNo: this.invoice.invoiceNo,
+      partNo: item.partNo,
+      itemNo: item.itemNo,
     })).filter((r: { qtyadj: number }) => r.qtyadj > 0);
 
-    if (returns.length > 0){
-      await this.storage.logReturns(returns);
+    if (returnItems.length > 0){
+      await this.storage.logReturns(returns, returnItems);
     }
     await this.modalCtrl.dismiss();
   }
