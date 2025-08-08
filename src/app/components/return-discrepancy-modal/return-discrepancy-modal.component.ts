@@ -38,7 +38,7 @@ export class ReturnDiscrepancyModalComponent implements OnInit {
   getReturnCount(partNo: string){
     let retQty = 0;
     for (let ret of this.previousReturns){
-      if (ret.partNo == partNo){
+      if (ret.partno == partNo){
         retQty += ret.qtyadj;
       }
     }

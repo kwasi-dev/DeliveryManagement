@@ -250,7 +250,7 @@ export class StorageService {
           }
 
           const returnId = result.changes.lastId;
-          const sqlItems = `INSERT OR IGNORE INTO invoicereturnitems (invoiceReturnId, qtyadj, invoiceNo, partNo, itemNo)
+          const sqlItems = `INSERT OR IGNORE INTO invoicereturnitems (invoicereturnid, qtyadj, invoiceno, partno, itemno)
         VALUES `;
 
           var values = items.map(item => `(${returnId}, ${item.qtyadj}, ${item.invoiceNo},'${item.partNo}',${item.itemNo} )`).join(",\n");
@@ -389,6 +389,7 @@ export class StorageService {
 
   async getAllUnsyncedReturns() {
     const result: InvoiceReturn[] = (await this.db.query('SELECT * FROM invoicereturns where control = 0;')).values as InvoiceReturn[];
+    console.log(JSON.stringify(result));
     if (result.length > 0) {
       return result;
     } else {

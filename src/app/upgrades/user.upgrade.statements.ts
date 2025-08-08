@@ -101,17 +101,17 @@ export class UserUpgradeStatements {
             routeuser TEXT NOT NULL,
             returndate TEXT NOT NULL,
             returnnote TEXT,
-            returnType TEXT NOT NULL,
+            returntype TEXT NOT NULL,
             control INTEGER
           );`,
           `CREATE TABLE IF NOT EXISTS invoicereturnitems(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            invoiceReturnId INTEGER NOT NULL,
+            invoicereturnid INTEGER NOT NULL,
             qtyadj REAL NOT NULL,
-            invoiceNo INTEGER,
-            partNo TEXT NOT NULL,
-            itemNo INTEGER,
-            FOREIGN KEY (invoiceReturnId) REFERENCES invoicereturns(id) ON DELETE CASCADE
+            invoiceno INTEGER,
+            partno TEXT NOT NULL,
+            itemno INTEGER,
+            FOREIGN KEY (invoicereturnid) REFERENCES invoicereturns(id) ON DELETE CASCADE
             );`,
 
         ]},

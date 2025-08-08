@@ -1,8 +1,8 @@
 export interface InvoiceReturnItem {
   id: number;
-  invoiceReturnId: number;
+  invoicereturnid: number;
   qtyadj: number;
-  invoiceNo: number;
-  partNo: string;
-  itemNo: number;
+  invoiceno: number;
+  partno: string;
+  itemno: number;
 }
